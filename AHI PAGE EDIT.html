@@ -42,7 +42,20 @@
       .property-image {
             width: 100%;
             border-radius: 10px;
+            object-fit: cover;
+            overflow: hidden;
       }
+
+      .image-container {
+        
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 250px;
+        border-radius: 10px;
+        
+      }
+
       
       .property-name {
           font-size: 1.2rem;
@@ -126,6 +139,8 @@
       .CTA-apply img {
           position: relative;
           left: -10px;
+
+          /* add on hover pseudoclass for cursor on hover and color change on hover*/
       }
      
       
@@ -168,14 +183,15 @@
                 <div class="card-container">
                         <!--card starts here-->
                         <div class="card" >
-                            <img class="property-image" alt="property image" src="https://cdngeneralcf.rentcafe.com/dmslivecafe/2/82930/BocaPalms_Villa2_ April2013.jpg" >      
-                              <h3 class="property-name">Property Name</h3>
+                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"</div>
+                            <!-- <img class="property-image" alt="property image" src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg" > -->          
+                        </div>
+                            <h3 class="property-name">Property Name</h3>
                               
-                                // all icons must be added to the rentcafe media library and referenced from there:
+                               
 
                                 <div class="card-body">
-                                    <div> //added gap and justify-content space-around to ".card-body class above
-
+                                    <div> 
                                         <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/location-dot-solid.svg">
                                         <h4 class="address">[Address or city]</h4>
                                         <div class="unit-details">
@@ -194,11 +210,14 @@
 
                                     
                                 </div>
+                         
                          </div>
                         <!--card ends-->
                         <!--card starts-->
                         <div class="card" >
-                            <img class="property-image" alt="property image" src="https://cdngeneralcf.rentcafe.com/dmslivecafe/2/82930/BocaPalms_Villa2_ April2013.jpg" >      
+                            <div class="image-container" style="background-image: url(https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/Types%20Of%20Homes/Stock-Gray-Ranch-Style-Home-AdobeStock_279953994-copy.jpeg);"</div>
+                            </div>
+                                <!-- <img class="property-image" alt="property image" src="https://www.thehousedesigners.com/images/uploads/SiteImage-Landing-contemporary-house-plans-1.webp" > -->      
                               <h3 class="property-name">Property Name</h3>
                               <h4 class="address">[Address or city]</h4>
 
@@ -210,11 +229,12 @@
                                     </ul>
                                 </div>
                                 <p class="date-updated" >updated:[date]</p>
-                         </div>
+                         
+                        </div>
                         <!--card ends-->
                         <!--card starts-->
                             <div class="card" >
-                                <img class="property-image" alt="property image" src="https://cdngeneralcf.rentcafe.com/dmslivecafe/2/82930/BocaPalms_Villa2_ April2013.jpg" >      
+                                <img class="property-image" alt="property image" src="https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/Types%20Of%20Homes/Stock-Gray-Ranch-Style-Home-AdobeStock_279953994-copy.jpeg" >      
                                   <h3 class="property-name">Property Name</h3>
                                   <h4 class="address">[Address or city]</h4>
 
