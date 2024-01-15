@@ -9,7 +9,7 @@
       
       body { 
           font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-             background-color: #FFFFFF;
+             
           
             
 
@@ -31,6 +31,7 @@
             grid-template-columns: repeat(3, 1fr);
             grid-auto-rows: auto;
             grid-gap: 1rem;
+            
       }
       
       @media(max-width:700px){
@@ -39,6 +40,8 @@
           }
       }
       
+      
+
       .property-image {
             width: 100%;
             border-radius: 10px;
@@ -60,30 +63,36 @@
       .property-name {
           font-size: 1.2rem;
           text-align: start;
-          margin: 10px;
+          margin-top: 15px;
+          margin-left: 15px;
       }
       
       
       
       .card {
             border-radius: 10px;
-            box-shadow:  1px 5px 5px 1px #9C9C9C;
-            background: #ffffff;
+            box-shadow:  1px 5px 5px 1px #b3b2b2;
+            background-color: #ffffff;
             padding: .7rem;
+      }
+
+      .card:hover, 
+      .card:focus {
+        background-color: #eeeeee;
       }
       
       .card-body before:last-child {
         display: flex;
         gap: 15px;
         justify-content: space-around;
+        text-align: center;
           
       }
+
       .address {
           font-size: .8rem;
           display: inline-flex;
           align-items: baseline;
-          
-          
           
           
       }
@@ -114,45 +123,64 @@
     
       .date-updated {
          
+          display: flex;
+          margin: auto;
+          padding-top: 20px;
+          padding-bottom: 10px;
+          font-size: .7rem;
+          justify-content: flex-end;
           
-          position: relative;
-          right:0;
-          bottom: 0;
-          padding:20px;
-          font-size: .7rem; 
-          text-justify:left;
+          
           
       }
       
       .unit-details {
           display:flex;
+          flex-direction: row;
+          align-items: center;
+          margin: auto;
           
       }
       .unit-details p img {
           
           display: inline-flex;
           justify-content: space-between;
+          
   
         
       }
        
       .CTA-apply {
-        
+        display: flex;
         align-items: center;
         justify-content: center;
-        
-        
-      }
+        padding: .6rem;
+        font-size: 1rem;
+        font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+        margin: auto;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 1px 2px 2px 1px #cfcfcf;
+        cursor: pointer;
+        background-color: rgb(193, 113, 56);
+        color: #ffffff;
 
-      .CTA-apply img {
-          position: relative;
-          left: -10px;
+       
 
-          
-      }
-     
-      
-      
+       }
+
+       .CTA-apply:hover {
+            background-color: rgb(162, 225, 169);
+            
+           
+        }
+    
+       
+
+
+  
+  
+
       </style>
   </head>
   <body>
@@ -199,7 +227,7 @@
                                
 
                                 <div class="card-body">
-                                    <div> 
+                                     
                                         <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/location-dot-solid.svg">
                                         <h4 class="address">[Address or city]</h4>
                                         <div class="unit-details">
@@ -213,7 +241,7 @@
                                         
                                         
                                         <p class="date-updated">updated:[date].See website for pricing details.</p>
-                                    </div>
+                                    
                                     
                                         
 
