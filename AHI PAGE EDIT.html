@@ -9,20 +9,136 @@
       
       body { 
           font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-             
+          margin: 0;
+          background-color: #ffffff;
           
-            
+      }
 
+      .page-header{
+        
+        margin: 0;
+        padding: 30px;
+        width: 100%;
+        color: #ffffff;
+        background-color: rgb(12, 12, 12);
+        text-align: center;
+        font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+        font-weight: .02rem;
+        font-size: 1.7rem;
+        letter-spacing: .07rem;
+        box-shadow:  1px 2px 5px 1px #b3b2b2;
 
       }
+
+      #intro {
+        padding: 40px;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        text-align: center;
+        
+        
+      }
+
+      .nav-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;   
+      }
+
+      #page-nav-h4 {
+        text-align: center;
+        font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+        font-weight: .02rem;
+        font-size: 1.3rem;
+        letter-spacing: .01rem;
+      }
+
+      #page-nav {
+       
+        padding: .8rem;
+        
+      }
+
+      #page-nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      #page-nav a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bolder;
+        background-color: rgb(118, 87, 40);
+        padding: .6rem;
+        border-radius: 7px;
+        margin-right: 20px;
+      }
+
+    #page-nav a:hover {
+        background-color: #a85e14;
+      }
+
+
+    #bed-count-nav h4 {
+        margin-left: 40px;
+        align-items: flex-start;
+        font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+        font-weight: .02rem;
+        font-size: 1.3rem;
+        letter-spacing: .01rem;
+    }
+
+    #bed-count-nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin-left: 35px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+
+
+
+        
+        
+    }
+    #bed-count-nav a {
+        color: #ffffff;
+        text-decoration: none;
+        background-color: rgb(118, 87, 40);
+        font-size: 1rem;
+        font-weight:bolder;
+        padding: .5rem;
+        border-radius: 7px;
+        margin-right: 20px;
+      }
+
+    #bed-count-nav a:hover {
+        background-color: #a85e14;
+        cursor: pointer;
+      }
+
+
+
+     
       
       h1 {
           font-size: 1.5rem;
           text-transform: uppercase;
+          margin-left: 20px;
+          margin-top: 30px;
+
       }
     
       .main-container {
-          margin: 30px;  
+        flex-wrap: wrap;
+          align-items: flex-start;
+          margin-left: 20px;
       }
      
       .card-container {
@@ -30,8 +146,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-auto-rows: auto;
-            grid-gap: 1rem;
-            
+            gap: .7rem;      
       }
       
       @media(max-width:700px){
@@ -74,11 +189,13 @@
             box-shadow:  1px 5px 5px 1px #b3b2b2;
             background-color: #ffffff;
             padding: .7rem;
+            margin-right: 15px;
       }
 
       .card:hover, 
       .card:focus {
         background-color: #eeeeee;
+        cursor: pointer;
       }
       
       .card-body before:last-child {
@@ -137,7 +254,7 @@
       .unit-details {
           display:flex;
           flex-direction: row;
-          align-items: center;
+          align-items: flex-start;
           margin: auto;
           
       }
@@ -145,6 +262,7 @@
           
           display: inline-flex;
           justify-content: space-between;
+          align-items: flex-start;
           
   
         
@@ -209,81 +327,130 @@
 
 
 
-      <!--insert nav here for the 3 pages, for East, Central, West FL Pages-->
+     
+    <main>
+
+       
+
+
+        <h1 class="page-header">Affordable Housing Inventory - Central Florida</h1>
+        <p id="intro">ConcordRENTS is a national leader in providing high-quality, affordable, multifamily housing and understands the importance of a strong community and the value of giving back.<br>
+            Our company culture believes in going the extra mile for our team members and residents by volunteering in the communities we serve.<br>
+            We give back at a professional and personal level making the best of our company and ourselves. With the affordable housing crisis in Orlando, FL and the rest of Central Florida,<br> we understand the struggle in finding quality affordable housing.
+            Below is a list of our CURRENT Available Affordable Housing Inventory around Central Florida.<br> 
+            Apartment homes are income restricted and are subject to Maximum Allowable Household Incomes listed for each community location.<br>
+            As part of the application process, applicants must submit the verification documentation in a timely manner, as the first approved and full deposit paid applicant <br>will have priority of the available apartment home. 
+            <br><br>This housing inventory will move quickly so please APPLY TODAY and turn this opportunity into a HOME.</p>
+
+
+         <!--insert nav here for the 3 pages, for East, Central, West FL Pages-->
+         <h4 id="page-nav-h4">Choose a Region:</h4>
+         <div class="nav-container">
+            
+            <nav id="page-nav"> 
+               <ul>
+                 <li><a href="#">East Florida</a>
+                 </li>
+                 <li><a href="#">Central Florida</a>
+                 </li>
+                 <li><a href="#">West Florida</a>
+                 </li>
+               </ul>
+             </nav>
+         </div>
+         
       
       <!--insert nav bar here w/ bedroom count, to jump to relevant section--> 
-    <main>
+    <nav id="bed-count-nav">
+        <h4>Filter By:</h4>
+        <ul>
+          <li><a>1 Bedroom</a>
+          </li>
+          <li><a>2 Bedroom</a>
+          </li>
+          <li><a>3 Bedroom</a>
+          </li>
+          <li><a>4 Bedroom</a></li>
+        </ul>
+      </nav>
+      
+
+
         <section>
           <div class="main-container" >
               <h1>1 Bedroom Units</h1>
                 <div class="card-container">
                         <!--card starts here-->
                         <div class="card" >
-                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"</div>
-                            <!-- <img class="property-image" alt="property image" src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg" > -->          
+                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"</div>                               
                         </div>
                             <h3 class="property-name">Property Name</h3>
-                              
-                               
-
                                 <div class="card-body">
-                                     
                                         <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/location-dot-solid.svg">
                                         <h4 class="address">[Address or city]</h4>
                                         <div class="unit-details">
                                             <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bed-solid.svg"><p>[#]Bed</p>
                                             <img class="bed-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bath-solid.svg"><p>[#]Bath</p>
-                                            <img class="rent-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/money-check-dollar-solid.svg"><p>$[#]Rent</p>
-                                            
+                                            <img class="rent-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/money-check-dollar-solid.svg"><p>$[#]Rent</p>   
                                         </div>
                                         <button class="CTA-apply">Get Started</button>
                                         
                                         
                                         
                                         <p class="date-updated">updated:[date].See website for pricing details.</p>
-                                    
-                                    
-                                        
-
-                                    
+                                  
                                 </div>
                          
                          </div>
                         <!--card ends-->
                         <!--card starts-->
-                        <div class="card" >
-                            <div class="image-container" style="background-image: url(https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/Types%20Of%20Homes/Stock-Gray-Ranch-Style-Home-AdobeStock_279953994-copy.jpeg);"</div>
+                        <div class="card-container">
+                            <!--card starts here-->
+                            <div class="card" >
+                                <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"</div>                               
                             </div>
-                                <!-- <img class="property-image" alt="property image" src="https://www.thehousedesigners.com/images/uploads/SiteImage-Landing-contemporary-house-plans-1.webp" > -->      
-                              <h3 class="property-name">Property Name</h3>
-                              <h4 class="address">[Address or city]</h4>
-
-                                <div class="card-body">
-                                    <!-- <ul >
-                                        <li>Item</li>
-                                        <li>Item</li>
-                                        <li>Item</li>
-                                    </ul> -->
-                                </div>
-                                <p class="date-updated" >updated:[date]</p>
-                         
-                        </div>
+                                <h3 class="property-name">Property Name</h3>
+                                    <div class="card-body">
+                                            <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/location-dot-solid.svg">
+                                            <h4 class="address">[Address or city]</h4>
+                                            <div class="unit-details">
+                                                <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bed-solid.svg"><p>[#]Bed</p>
+                                                <img class="bed-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bath-solid.svg"><p>[#]Bath</p>
+                                                <img class="rent-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/money-check-dollar-solid.svg"><p>$[#]Rent</p>   
+                                            </div>
+                                            <button class="CTA-apply">Get Started</button>
+                                            
+                                            
+                                            
+                                            <p class="date-updated">updated:[date].See website for pricing details.</p>
+                                      
+                                    </div>
+                             
+                             </div>
                         <!--card ends-->
                         <!--card starts-->
+                        <div class="card-container">
+                            <!--card starts here-->
                             <div class="card" >
-                                <img class="property-image" alt="property image" src="https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/Types%20Of%20Homes/Stock-Gray-Ranch-Style-Home-AdobeStock_279953994-copy.jpeg" >      
-                                  <h3 class="property-name">Property Name</h3>
-                                  <h4 class="address">[Address or city]</h4>
-
+                                <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"</div>                               
+                            </div>
+                                <h3 class="property-name">Property Name</h3>
                                     <div class="card-body">
-                                        <!-- <ul >
-                                            <li>Item</li>
-                                            <li>Item</li>
-                                            <li>Item</li>
-                                        </ul> -->
-
-                                        <p class="date-updated" >updated:[date]</p>
+                                            <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/location-dot-solid.svg">
+                                            <h4 class="address">[Address or city]</h4>
+                                            <div class="unit-details">
+                                                <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bed-solid.svg"><p>[#]Bed</p>
+                                                <img class="bed-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bath-solid.svg"><p>[#]Bath</p>
+                                                <img class="rent-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/money-check-dollar-solid.svg"><p>$[#]Rent</p>   
+                                            </div>
+                                            <button class="CTA-apply">Get Started</button>
+                                            
+                                            
+                                            
+                                            <p class="date-updated">updated:[date].See website for pricing details.</p>
+                                      
                                     </div>
+                             
                              </div>
                             <!--card ends-->
 
