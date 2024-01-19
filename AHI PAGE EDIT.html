@@ -4,13 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
    
     <style>
+
       
       body { 
-          font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-          margin: 0;
-          background-color: #ffffff;
+        font-family: 'Open Sans', sans-serif;
+        margin:auto;
+
+          
           
       }
 
@@ -22,7 +27,7 @@
         color: #ffffff;
         background-color: rgb(12, 12, 12);
         text-align: center;
-        font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+        font-family: 'Open Sans', sans-serif;
         font-weight: .02rem;
         font-size: 1.7rem;
         letter-spacing: .07rem;
@@ -47,7 +52,7 @@
 
       #page-nav-h4 {
         text-align: center;
-        font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+        font-family: 'Open Sans', sans-serif;
         font-weight: .02rem;
         font-size: 1.3rem;
         letter-spacing: .01rem;
@@ -64,7 +69,10 @@
         padding: 0;
         margin: 0;
         display: flex;
-        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        justify-content: space-evenly;
       }
 
       #page-nav a {
@@ -83,77 +91,72 @@
       }
 
 
-    #bed-count-nav h4 {
-        margin-left: 40px;
-        align-items: flex-start;
-        font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    .bed-count-dropdown-container {
+        
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        font-family: 'Open Sans', sans-serif;
         font-weight: .02rem;
         font-size: 1.3rem;
         letter-spacing: .01rem;
-    }
-
-    #bed-count-nav ul {
-        list-style-type: none;
-        padding: 0;
-        margin-left: 35px;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        flex-wrap: wrap;
-
-
-
-
-        
-        
-    }
-    #bed-count-nav a {
-        color: #ffffff;
-        text-decoration: none;
-        background-color: rgb(118, 87, 40);
-        font-size: 1rem;
-        font-weight:bolder;
         padding: .5rem;
-        border-radius: 7px;
-        margin-right: 20px;
-      }
+        margin: 30px;
+        
+        
+    
+        
+    }
 
-    #bed-count-nav a:hover {
-        background-color: #a85e14;
-        cursor: pointer;
-      }
+   /*  .bed-count-dropdown label {
+       
+    } */
 
+    .bed-count-dropdown {
+        padding: .5rem;
+        background-color: rgb(232, 232, 232);
+    }
 
-
-     
+    .bed-count-dropdown option {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: .02rem;
+        font-size: 1rem;
+        letter-spacing: .01rem;
+        padding: .8rem;
+        justify-content: center;
+         background-color: rgb(232, 232, 232);
+    }
+    
+    
       
-      h1 {
+    .bedcount-h1{
           font-size: 1.5rem;
           text-transform: uppercase;
-          margin-left: 20px;
-          margin-top: 30px;
+          margin: 30px;
+          
+          
 
       }
     
       .main-container {
+        display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-          align-items: flex-start;
-          margin-left: 20px;
+        align-items: center;
+        margin: 30px;
+        
+          
       }
      
       .card-container {
             max-width: 1200px;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 400px);
             grid-auto-rows: auto;
-            gap: .7rem;      
+            gap: 1.5rem;      
       }
       
-      @media(max-width:700px){
-          .card-container {
-              grid-template-columns: 1fr;
-          }
-      }
+      
       
       
 
@@ -274,13 +277,13 @@
         justify-content: center;
         padding: .6rem;
         font-size: 1rem;
-        font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+        font-family: 'Open Sans', sans-serif;
         margin: auto;
         border-radius: 10px;
         border: none;
         box-shadow: 1px 2px 2px 1px #cfcfcf;
         cursor: pointer;
-        background-color: rgb(193, 113, 56);
+        background-color: rgb(58, 58, 58);
         color: #ffffff;
 
        
@@ -288,15 +291,11 @@
        }
 
        .CTA-apply:hover {
-            background-color: rgb(162, 225, 169);
+            background-color: rgb(246, 156, 0);
             
            
         }
     
-       
-
-
-  
   
 
       </style>
@@ -318,20 +317,8 @@
     
     </script>
 
-
-
-
-
-
-
-
-
-
      
     <main>
-
-       
-
 
         <h1 class="page-header">Affordable Housing Inventory - Central Florida</h1>
         <p id="intro">ConcordRENTS is a national leader in providing high-quality, affordable, multifamily housing and understands the importance of a strong community and the value of giving back.<br>
@@ -344,9 +331,8 @@
 
 
          <!--insert nav here for the 3 pages, for East, Central, West FL Pages-->
-         <h4 id="page-nav-h4">Choose a Region:</h4>
-         <div class="nav-container">
-            
+         <h4 id="page-nav-h4">Choose Your Region:</h4>
+         <div class="nav-container"> 
             <nav id="page-nav"> 
                <ul>
                  <li><a href="#">East Florida</a>
@@ -358,105 +344,107 @@
                </ul>
              </nav>
          </div>
-         
-      
+          
       <!--insert nav bar here w/ bedroom count, to jump to relevant section--> 
-    <nav id="bed-count-nav">
-        <h4>Filter By:</h4>
-        <ul>
-          <li><a>1 Bedroom</a>
-          </li>
-          <li><a>2 Bedroom</a>
-          </li>
-          <li><a>3 Bedroom</a>
-          </li>
-          <li><a>4 Bedroom</a></li>
-        </ul>
-      </nav>
-      
+      <div class="bed-count-dropdown-container">
+      <label for="bed-count-dropdown">How many Bedrooms?</label>
+        <select class="bed-count-dropdown">
+            <option value="Dropdown"></option>
+            <option value="1 bedroom">1 Bedrooms</option>
+            <option value="2 bedroom">2 Bedrooms</option>
+            <option value="3 bedroom">3 Bedrooms</option>
+            <option value="4 bedroom">4 Bedrooms</option>
+        </select>
+        </div>
 
-
-        <section>
-          <div class="main-container" >
-              <h1>1 Bedroom Units</h1>
-                <div class="card-container">
-                        <!--card starts here-->
+<section>
+            <h1 class="bedcount-h1">1 Bedroom Units</h1>
+                <div class="main-container" >
+                <!--card starts here-->
+                    <div class="card-container">    
                         <div class="card" >
                             <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"</div>                               
                         </div>
                             <h3 class="property-name">Property Name</h3>
                                 <div class="card-body">
                                         <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/location-dot-solid.svg">
-                                        <h4 class="address">[Address or city]</h4>
-                                        <div class="unit-details">
-                                            <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bed-solid.svg"><p>[#]Bed</p>
-                                            <img class="bed-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bath-solid.svg"><p>[#]Bath</p>
-                                            <img class="rent-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/money-check-dollar-solid.svg"><p>$[#]Rent</p>   
-                                        </div>
-                                        <button class="CTA-apply">Get Started</button>
-                                        
-                                        
-                                        
-                                        <p class="date-updated">updated:[date].See website for pricing details.</p>
-                                  
+                                            <h4 class="address">[Address or city]</h4>
+                                                <div class="unit-details">
+                                                    <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bed-solid.svg"><p>[#]Bed</p>
+                                                    <img class="bed-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bath-solid.svg"><p>[#]Bath</p>
+                                                    <img class="rent-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/money-check-dollar-solid.svg"><p>$[#]Rent</p>   
+                                                </div>
+                                                <button class="CTA-apply">Get Started</button>
+                                                <p class="date-updated">updated:[date].See website for pricing details.</p>
                                 </div>
                          
-                         </div>
-                        <!--card ends-->
-                        <!--card starts-->
-                        <div class="card-container">
-                            <!--card starts here-->
-                            <div class="card" >
-                                <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"</div>                               
-                            </div>
-                                <h3 class="property-name">Property Name</h3>
-                                    <div class="card-body">
-                                            <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/location-dot-solid.svg">
-                                            <h4 class="address">[Address or city]</h4>
-                                            <div class="unit-details">
-                                                <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bed-solid.svg"><p>[#]Bed</p>
-                                                <img class="bed-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bath-solid.svg"><p>[#]Bath</p>
-                                                <img class="rent-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/money-check-dollar-solid.svg"><p>$[#]Rent</p>   
-                                            </div>
-                                            <button class="CTA-apply">Get Started</button>
-                                            
-                                            
-                                            
-                                            <p class="date-updated">updated:[date].See website for pricing details.</p>
-                                      
-                                    </div>
-                             
-                             </div>
-                        <!--card ends-->
-                        <!--card starts-->
-                        <div class="card-container">
-                            <!--card starts here-->
-                            <div class="card" >
-                                <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"</div>                               
-                            </div>
-                                <h3 class="property-name">Property Name</h3>
-                                    <div class="card-body">
-                                            <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/location-dot-solid.svg">
-                                            <h4 class="address">[Address or city]</h4>
-                                            <div class="unit-details">
-                                                <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bed-solid.svg"><p>[#]Bed</p>
-                                                <img class="bed-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bath-solid.svg"><p>[#]Bath</p>
-                                                <img class="rent-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/money-check-dollar-solid.svg"><p>$[#]Rent</p>   
-                                            </div>
-                                            <button class="CTA-apply">Get Started</button>
-                                            
-                                            
-                                            
-                                            <p class="date-updated">updated:[date].See website for pricing details.</p>
-                                      
-                                    </div>
-                             
-                             </div>
-                            <!--card ends-->
-
                     </div>
+                    <!--card ends-->
+                    <!--card starts here-->
+                    <div class="card-container">    
+                        <div class="card" >
+                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"</div>                               
+                        </div>
+                            <h3 class="property-name">Property Name</h3>
+                                <div class="card-body">
+                                        <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/location-dot-solid.svg">
+                                            <h4 class="address">[Address or city]</h4>
+                                                <div class="unit-details">
+                                                    <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bed-solid.svg"><p>[#]Bed</p>
+                                                    <img class="bed-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bath-solid.svg"><p>[#]Bath</p>
+                                                    <img class="rent-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/money-check-dollar-solid.svg"><p>$[#]Rent</p>   
+                                                </div>
+                                                <button class="CTA-apply">Get Started</button>
+                                                <p class="date-updated">updated:[date].See website for pricing details.</p>
+                                </div>
+                         
+                    </div>
+                    <!--card ends-->
+                    <!--card starts here-->
+                    <div class="card-container">    
+                        <div class="card" >
+                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"</div>                               
+                        </div>
+                            <h3 class="property-name">Property Name</h3>
+                                <div class="card-body">
+                                        <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/location-dot-solid.svg">
+                                            <h4 class="address">[Address or city]</h4>
+                                                <div class="unit-details">
+                                                    <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bed-solid.svg"><p>[#]Bed</p>
+                                                    <img class="bed-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bath-solid.svg"><p>[#]Bath</p>
+                                                    <img class="rent-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/money-check-dollar-solid.svg"><p>$[#]Rent</p>   
+                                                </div>
+                                                <button class="CTA-apply">Get Started</button>
+                                                <p class="date-updated">updated:[date].See website for pricing details.</p>
+                                </div>
+                         
+                    </div>
+                    <!--card ends-->
+                    <!--card starts here-->
+                    <div class="card-container">    
+                        <div class="card" >
+                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"</div>                               
+                        </div>
+                            <h3 class="property-name">Property Name</h3>
+                                <div class="card-body">
+                                        <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/location-dot-solid.svg">
+                                            <h4 class="address">[Address or city]</h4>
+                                                <div class="unit-details">
+                                                    <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bed-solid.svg"><p>[#]Bed</p>
+                                                    <img class="bed-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bath-solid.svg"><p>[#]Bath</p>
+                                                    <img class="rent-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/money-check-dollar-solid.svg"><p>$[#]Rent</p>   
+                                                </div>
+                                                <button class="CTA-apply">Get Started</button>
+                                                <p class="date-updated">updated:[date].See website for pricing details.</p>
+                                </div>
+                         
+                    </div>
+                    <!--card ends-->
+                   
 
-                </div>   
+                </div>
+
+            
             </section>
         </main> 
     </body>
