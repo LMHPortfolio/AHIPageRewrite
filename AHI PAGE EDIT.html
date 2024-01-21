@@ -9,11 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
    
     <style>
-
+    
       
       body { 
         font-family: 'Open Sans', sans-serif;
         margin:auto;
+        height: 100vh;
+       
+        
         
         
         
@@ -22,7 +25,7 @@
           
       }
 
-      .page-header{
+      /*  .page-header{
         
         margin: 0;
         padding: 30px;
@@ -36,38 +39,120 @@
         letter-spacing: .07rem;
         box-shadow:  1px 2px 5px 1px #b3b2b2;
 
-      }
+      } */
 
-      #hero {
-        height: 400px;
+      #hero-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        color: #ffffff;
+        background-color: rgb(28, 28, 28);
+        
+        
+
+
+         width: 100%;
+    padding-top: 12px;
+    padding-bottom: 24px;
+   
+    
+}
+@media (min-width: 768px) {
+      #hero-container {
+        padding-top: 24px;
+      }  
+}
+/* @media (min-width: 480px) {
+      #hero-container {
+        
+
+      }  
+} */
+
+
+
+
+/* Text Styles */
+#hero-title {
+    font-size: 3rem;
+    letter-spacing: .01rem;
+    text-align: center;
+    text-transform: uppercase;
+   
+    
+}
+
+
+/* 
+@media (min-width: 1280px) {
+    #hero-title {
+        
+        line-height: 1.16;
+        
+    }    
+} */
+
+/* @media (min-width: 640px) {
+    #hero-title {
+        font-size: 3rem;
+        text-align: center;
+    }  
+} */
+
+@media screen and (max-width: 480px) {
+   h1 {
+    font-size: 2rem;
        
+   }    
+        
+} 
+
+
+#hero-title p {
+    text-transform: none;
+    font-size: 1.7rem;
+    line-height: 1.5rem;
+    color: #7b7b7b;
+    
+    
+}
+@media screen and (max-width: 480px) {
+   #hero-title p {
+    font-size: 1rem;
+       
+   }    
+        
+} 
+
+
+
+        
+       
+        
+      /* .hero-img {
+        display: flex;
+        flex-direction: column;
+        width: auto; 
+        height: 300px;
+        width: 500px;
+        object-fit: cover; 
+        overflow: hidden;
+        background-repeat: none;
+        background-position: center;
+        justify-content: right; 
+        border-radius: 10px;
+        
+      } */
+        
+     
         
         
       
-        
-       
-        
-        
-      }
 
-     /*  #hero-title{
-
-
-      }
-
-      #hero-body{
-
-      } */
-
-      #intro {
-        padding: 40px;
-        font-size: 1.2rem;
-        line-height: 1.5rem;
-        text-align: center;
-        
-        
-      }
-
+     
       .nav-container {
         display: flex;
         flex-direction: row;
@@ -366,15 +451,18 @@ and assign the accordions inner html to the text of those current values*/
   </head>
   <body>
 
-   
-
-     
+<section>
+    <div id="hero-container">
+        <div id="hero-title"><h1>Affordable Housing Inventory</h1><p>Find your next home!</p></div>
+        
+        <!-- <div class="hero-img" style="background-image: url(./images/spacejoy-IH7wPsjwomc-unsplash.jpg);"></div> -->
+        
+    </div>
+</section>
+    
     <main>
 
-        <div id="hero">
-<div id="hero-title"><h1></h1></div>
-
-        </div>
+        
 
         <!-- <h1 class="page-header">Affordable Housing Inventory - Central Florida</h1>
         <p id="intro">ConcordRENTS is a national leader in providing high-quality, affordable, multifamily housing and understands the importance of a strong community and the value of giving back.<br>
