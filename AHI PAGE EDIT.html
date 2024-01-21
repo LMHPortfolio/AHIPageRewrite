@@ -14,6 +14,9 @@
       body { 
         font-family: 'Open Sans', sans-serif;
         margin:auto;
+        
+        
+        
 
           
           
@@ -47,14 +50,14 @@
         
       }
 
-      #hero-title{
+     /*  #hero-title{
 
 
       }
 
       #hero-body{
 
-      }
+      } */
 
       #intro {
         padding: 40px;
@@ -157,23 +160,21 @@
 
       }
     
+      
       .main-container {
-        position: relative;
-        
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        margin: 30px;
-        
-          
-      }
-     
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px; /* Added padding for better spacing */
+        }
+    
+
       .card-container {
             max-width: 1200px;
-            display: grid;
-            grid-template-columns: repeat(3, 400px);
-            grid-auto-rows: auto;
+            
+            
             gap: 1.5rem;      
       }
       
@@ -213,7 +214,7 @@
             box-shadow:  1px 5px 5px 1px #b3b2b2;
             background-color: #ffffff;
             padding: .7rem;
-            margin-right: 15px;
+            
       }
 
       .card:hover, 
@@ -223,42 +224,27 @@
       }
       
       .card-body before:last-child {
-        display: flex;
+       
         gap: 15px;
         justify-content: space-around;
         text-align: center;
+        
           
       }
 
-      .address {
+      .fa-solid {
+
+        padding: .5rem;
+      }
+
+     .address {
           font-size: .8rem;
-          display: inline-flex;
+         display: inline-flex;
           align-items: baseline;
           
-          
-      }
-      .map-icon {
-          
-          width: 1.5rem;
-          padding-left: .9rem;
-          align-items: baseline;
-          
-      }
-      .bed-icon {
-          
-          width: 1.5rem;
-          padding-left: .9rem;
-          align-items: baseline;
-          
-      }
-      
-      .rent-icon {
-          
-          width: 1.5rem;
-          padding-left: .9rem;
-          align-items: baseline;
-          
-      }
+      } 
+
+    
       
           
     
@@ -269,29 +255,23 @@
           padding-top: 20px;
           padding-bottom: 10px;
           font-size: .7rem;
-          justify-content: flex-end;
+          justify-content: center;
           
           
           
       }
       
       .unit-details {
-          display:flex;
-          flex-direction: row;
-          align-items: flex-start;
-          margin: auto;
-          
+          display:grid;
+          grid-template-columns: repeat(3,  1fr);
+          gap: 1rem;
       }
-      .unit-details p img {
-          
-          display: inline-flex;
-          justify-content: space-between;
-          align-items: flex-start;
-          
-  
-        
+
+
+    .admin-details {
+        padding: .5rem;
       }
-       
+     
       .CTA-apply {
         display: flex;
         align-items: center;
@@ -317,26 +297,29 @@
            
         }
     
-  
 
       </style>
+      <script src="https://kit.fontawesome.com/fa4ad802be.js" crossorigin="anonymous"></script>
+
+
+      <script>/* Insert JS event handlers here
+        need click events for East/Central/West pages
+        need click events for 1 Bedroom/2 Bedroom/3 Bedroom/4 Bedroom
+        need click events for the toggle function on the income info (use a default class that is turned true/false on click/toggle. No unique ID needed)
+        need button event handler for apply now
+
+
+        
+
+*/
+
+
+
+</script>
   </head>
   <body>
 
-    <script>/* Insert JS event handlers here
-            need click events for East/Central/West pages
-            need click events for 1 Bedroom/2 Bedroom/3 Bedroom/4 Bedroom
-            need click events for the toggle function on the income info (use a default class that is turned true/false on click/toggle. No unique ID needed)
-            need button event handler for apply now
-
-
-            
-    
-    */
-    
-    
-    
-    </script>
+   
 
      
     <main>
@@ -389,85 +372,183 @@
                 <!--card starts here-->
                     <div class="card-container">    
                         <div class="card" >
-                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"</div>                               
-                        </div>
+                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
+                        
                             <h3 class="property-name">Property Name</h3>
                                 <div class="card-body">
-                                        <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/location-dot-solid.svg">
-                                            <h4 class="address">[Address or city]</h4>
+                                        <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
                                                 <div class="unit-details">
-                                                    <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bed-solid.svg"><p>[#]Bed</p>
-                                                    <img class="bed-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bath-solid.svg"><p>[#]Bath</p>
-                                                    <img class="rent-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/money-check-dollar-solid.svg"><p>$[#]Rent</p>   
+                                                    <div><i class="fa-solid fa-bed"></i># Beds</div>
+                                                    <div><i class="fa-solid fa-bath"></i># Baths</div>
+                                                    <div><i class="fa-solid fa-dollar-sign"></i>RENT</div>
                                                 </div>
+                                                <div class="admin-details">
+                                                    <p>Deposit Starting at: $</p>
+                                                    <p>Application Fee: $</p>
+                                                </div>
+                                                
+                                                <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
                                                 <button class="CTA-apply">Get Started</button>
                                                 <p class="date-updated">updated:[date].See website for pricing details.</p>
+                                                
+                                                
+                                                
                                 </div>
-                         
+                                
+                            </div>
+                            
                     </div>
                     <!--card ends-->
                     <!--card starts here-->
                     <div class="card-container">    
                         <div class="card" >
-                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"</div>                               
-                        </div>
+                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
+                        
                             <h3 class="property-name">Property Name</h3>
                                 <div class="card-body">
-                                        <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/location-dot-solid.svg">
-                                            <h4 class="address">[Address or city]</h4>
+                                        <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
                                                 <div class="unit-details">
-                                                    <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bed-solid.svg"><p>[#]Bed</p>
-                                                    <img class="bed-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bath-solid.svg"><p>[#]Bath</p>
-                                                    <img class="rent-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/money-check-dollar-solid.svg"><p>$[#]Rent</p>   
+                                                    <div><i class="fa-solid fa-bed"></i># Beds</div>
+                                                    <div><i class="fa-solid fa-bath"></i># Baths</div>
+                                                    <div><i class="fa-solid fa-dollar-sign"></i>RENT</div>
                                                 </div>
+                                                <div class="admin-details">
+                                                    <p>Deposit Starting at: $</p>
+                                                    <p>Application Fee: $</p>
+                                                </div>
+                                                
+                                                <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
                                                 <button class="CTA-apply">Get Started</button>
                                                 <p class="date-updated">updated:[date].See website for pricing details.</p>
+                                                
+                                                
+                                                
                                 </div>
-                         
+                                
+                            </div>
+                            
+                    </div>
+                    <!--card ends-->
+                   <!--card starts here-->
+                   <div class="card-container">    
+                    <div class="card" >
+                        <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
+                    
+                        <h3 class="property-name">Property Name</h3>
+                            <div class="card-body">
+                                    <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
+                                            <div class="unit-details">
+                                                <div><i class="fa-solid fa-bed"></i># Beds</div>
+                                                <div><i class="fa-solid fa-bath"></i># Baths</div>
+                                                <div><i class="fa-solid fa-dollar-sign"></i>RENT</div>
+                                            </div>
+                                            <div class="admin-details">
+                                                <p>Deposit Starting at: $</p>
+                                                <p>Application Fee: $</p>
+                                            </div>
+                                            
+                                            <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+                                            <button class="CTA-apply">Get Started</button>
+                                            <p class="date-updated">updated:[date].See website for pricing details.</p>
+                                            
+                                            
+                                            
+                            </div>
+                            
+                        </div>
+                        
+                </div>
+                <!--card ends-->
+                    <!--card starts here-->
+                    <div class="card-container">    
+                        <div class="card" >
+                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
+                        
+                            <h3 class="property-name">Property Name</h3>
+                                <div class="card-body">
+                                        <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
+                                                <div class="unit-details">
+                                                    <div><i class="fa-solid fa-bed"></i># Beds</div>
+                                                    <div><i class="fa-solid fa-bath"></i># Baths</div>
+                                                    <div><i class="fa-solid fa-dollar-sign"></i>RENT</div>
+                                                </div>
+                                                <div class="admin-details">
+                                                    <p>Deposit Starting at: $</p>
+                                                    <p>Application Fee: $</p>
+                                                </div>
+                                                
+                                                <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+                                                <button class="CTA-apply">Get Started</button>
+                                                <p class="date-updated">updated:[date].See website for pricing details.</p>
+                                                
+                                                
+                                                
+                                </div>
+                                
+                            </div>
+                            
                     </div>
                     <!--card ends-->
                     <!--card starts here-->
                     <div class="card-container">    
                         <div class="card" >
-                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"</div>                               
-                        </div>
+                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
+                        
                             <h3 class="property-name">Property Name</h3>
                                 <div class="card-body">
-                                        <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/location-dot-solid.svg">
-                                            <h4 class="address">[Address or city]</h4>
+                                        <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
                                                 <div class="unit-details">
-                                                    <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bed-solid.svg"><p>[#]Bed</p>
-                                                    <img class="bed-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bath-solid.svg"><p>[#]Bath</p>
-                                                    <img class="rent-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/money-check-dollar-solid.svg"><p>$[#]Rent</p>   
+                                                    <div><i class="fa-solid fa-bed"></i># Beds</div>
+                                                    <div><i class="fa-solid fa-bath"></i># Baths</div>
+                                                    <div><i class="fa-solid fa-dollar-sign"></i>RENT</div>
                                                 </div>
+                                                <div class="admin-details">
+                                                    <p>Deposit Starting at: $</p>
+                                                    <p>Application Fee: $</p>
+                                                </div>
+                                                
+                                                <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
                                                 <button class="CTA-apply">Get Started</button>
                                                 <p class="date-updated">updated:[date].See website for pricing details.</p>
+                                                
+                                                
+                                                
                                 </div>
-                         
+                                
+                            </div>
+                            
                     </div>
                     <!--card ends-->
-                    <!--card starts here-->
+                     <!--card starts here-->
                     <div class="card-container">    
                         <div class="card" >
-                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"</div>                               
-                        </div>
+                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
+                        
                             <h3 class="property-name">Property Name</h3>
                                 <div class="card-body">
-                                        <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/location-dot-solid.svg">
-                                            <h4 class="address">[Address or city]</h4>
+                                        <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
                                                 <div class="unit-details">
-                                                    <img class="map-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bed-solid.svg"><p>[#]Bed</p>
-                                                    <img class="bed-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/bath-solid.svg"><p>[#]Bath</p>
-                                                    <img class="rent-icon" alt="" src="../Documents/Dreamweaver Web Page Files/icons/money-check-dollar-solid.svg"><p>$[#]Rent</p>   
+                                                    <div><i class="fa-solid fa-bed"></i># Beds</div>
+                                                    <div><i class="fa-solid fa-bath"></i># Baths</div>
+                                                    <div><i class="fa-solid fa-dollar-sign"></i>RENT</div>
                                                 </div>
+                                                <div class="admin-details">
+                                                    <p>Deposit Starting at: $</p>
+                                                    <p>Application Fee: $</p>
+                                                </div>
+                                                
+                                                <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
                                                 <button class="CTA-apply">Get Started</button>
                                                 <p class="date-updated">updated:[date].See website for pricing details.</p>
+                                                
+                                                
+                                                
                                 </div>
-                         
+                                
+                            </div>
+                            
                     </div>
                     <!--card ends-->
-                   
-
                 </div>
 
             
