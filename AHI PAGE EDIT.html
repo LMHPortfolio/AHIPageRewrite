@@ -87,7 +87,7 @@
         padding: .8rem;
         
       }
-
+      @media screen and (min-width: 768px) {}
       #page-nav ul {
         list-style-type: none;
         padding: 0;
@@ -98,6 +98,29 @@
         
         justify-content: space-evenly;
       }
+
+      #page-nav li {
+    margin-bottom: 10px; /* Adjust spacing between items */
+}
+
+
+@media screen and (min-width: 768px) {
+    /* Media query for larger screens - revert to the original styles */
+    #page-nav ul {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+/* Media query for mobile devices (e.g., smartphones) */
+@media screen and (max-width: 480px) {
+    #page-nav ul {
+        flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    }
+}
+
 
       #page-nav a {
         color: #ffffff;
@@ -164,8 +187,8 @@
       .main-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            max-width: 1200px;
+            gap: 2rem;
+            max-width: 1250px;
             margin: auto;
             padding: 20px; /* Added padding for better spacing */
         }
