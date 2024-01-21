@@ -39,7 +39,7 @@
       }
 
       #hero {
-        height: 500px;
+        height: 400px;
        
         
         
@@ -170,6 +170,28 @@
             padding: 20px; /* Added padding for better spacing */
         }
     
+
+/* Media query for tablets (e.g., iPad) */
+@media screen and (max-width: 768px) {
+    .main-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+}
+
+/* Media query for mobile devices (e.g., smartphones) */
+@media screen and (max-width: 480px) {
+    .main-container {
+        grid-template-columns: 100%;
+        gap: 1rem;
+    }
+}
+
+
+
+
+
+
 
       .card-container {
             max-width: 1200px;
@@ -306,12 +328,14 @@
         need click events for East/Central/West pages
         need click events for 1 Bedroom/2 Bedroom/3 Bedroom/4 Bedroom
         need click events for the toggle function on the income info (use a default class that is turned true/false on click/toggle. No unique ID needed)
-        need button event handler for apply now
+        need button event handler for apply now*/
 
 
         
 
-*/
+
+/*if class county contains orange, seminole, osceola { then the accordion inner html needs to be set to that tables values } can use switch statement
+and assign the accordions inner html to the text of those current values*/
 
 
 
@@ -519,7 +543,7 @@
                             
                     </div>
                     <!--card ends-->
-                     <!--card starts here-->
+                    <!--card starts here-->
                     <div class="card-container">    
                         <div class="card" >
                             <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
@@ -548,6 +572,8 @@
                             </div>
                             
                     </div>
+                    <!--card ends-->
+                                        
                     <!--card ends-->
                 </div>
 
