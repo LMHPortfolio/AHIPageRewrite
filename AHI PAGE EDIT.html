@@ -11,277 +11,409 @@
     <style>
     
       
-      body { 
+body { 
+
         font-family: 'Open Sans', sans-serif;
         margin:auto;
         height: 100vh;
-       
-        
-        
-        
-        
-
-          
-          
       }
 
-      /*  .page-header{
-        
-        margin: 0;
-        padding: 30px;
-        width: 100%;
-        color: #ffffff;
-        background-color: rgb(12, 12, 12);
-        text-align: center;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: .02rem;
-        font-size: 1.7rem;
-        letter-spacing: .07rem;
-        box-shadow:  1px 2px 5px 1px #b3b2b2;
-
-      } */
-
-      #hero-container {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        
-        color: #ffffff;
-        background-color: rgb(28, 28, 28);
-        
-        
 
 
-         width: 100%;
+#hero-container {
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #000;
+    width: 100%;
     padding-top: 12px;
-    padding-bottom: 24px;
-   
-    
+    padding-bottom: 24px; 
 }
+
 @media (min-width: 768px) {
+
       #hero-container {
         padding-top: 24px;
       }  
 }
-/* @media (min-width: 480px) {
-      #hero-container {
-        
 
-      }  
-} */
+#hero-logo-container {
 
+    background-color: #000;
+}
 
+#hero-logo {
 
+    position:absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    margin: 20px;
+    background-color: #000;
+}
 
-/* Text Styles */
 #hero-title {
-    font-size: 3rem;
-    letter-spacing: .01rem;
+
+    font-size: 2rem;
+    letter-spacing: .07rem;
     text-align: center;
     text-transform: uppercase;
-   
-    
+    padding-top: 40px;
+
+    background-image: linear-gradient(45deg, #d1caad, #f6a000);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    position: relative;
 }
 
-
-/* 
-@media (min-width: 1280px) {
-    #hero-title {
-        
-        line-height: 1.16;
-        
-    }    
-} */
-
-/* @media (min-width: 640px) {
-    #hero-title {
-        font-size: 3rem;
-        text-align: center;
-    }  
-} */
-
 @media screen and (max-width: 480px) {
+
    h1 {
     font-size: 2rem;
-       
-   }    
-        
+    padding: 2px;
+   }          
+} 
+
+#hero-sub {
+
+    text-transform: none;
+    font-size: 1.4rem;
+    font-weight: 100;
+    line-height: .8rem;
+    background-color: #000;
+    color: #ffffff;
+    letter-spacing: .07rem;
+    -webkit-background-clip: none;
+    -moz-background-clip: none;
+    -webkit-text-fill-color:#eeeeee ; 
+    -moz-text-fill-color: #eeeeee;        
+}
+
+@media screen and (max-width: 480px) {
+
+    #hero-sub {
+        font-size: .8rem; 
+   }        
+} 
+
+.page-header {
+
+        text-align: center;
+}
+
+#intro {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: top;
+    padding:30px;
+    gap: 8rem;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(96,95,95,1) 100%);
+
 } 
 
 
-#hero-title p {
-    text-transform: none;
-    font-size: 1.7rem;
-    line-height: 1.5rem;
-    color: #7b7b7b;
+#intro p {
+
+    margin-left: 90px;
+    margin-right: 60px;
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: .02rem;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    letter-spacing: .04rem;
+    padding-bottom: 40px;
+}
+
+
+#intro-pic {
     
+    display: grid;
+    width: 600px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    margin-top: 20px;
     
 }
-@media screen and (max-width: 480px) {
-   #hero-title p {
-    font-size: 1rem;
-       
-   }    
+
+@media screen and (min-width: 640px) {
+
+    #intro {
         
+        font-size: 1rem;
+    }  
+
+    
 } 
 
 
 
-        
-       
-        
-      /* .hero-img {
-        display: flex;
-        flex-direction: column;
-        width: auto; 
-        height: 300px;
-        width: 500px;
-        object-fit: cover; 
-        overflow: hidden;
-        background-repeat: none;
-        background-position: center;
-        justify-content: right; 
-        border-radius: 10px;
-        
-      } */
-        
-     
-        
-        
-      
+@media screen and (max-width: 1366px) {
 
-     
-      .nav-container {
+#intro {
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 15px;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 1rem;
+        line-height: 1.6rem;
+        gap: .8rem;
+        justify-content: center;
+        margin-bottom: 10px;
+}  
+
+
+}
+
+@media screen and (max-width: 640px) {
+
+#intro {
+    padding: 15px;
+    font-size: .8rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    gap: 1.7rem;
+    justify-content: center;
+    
+    
+}  
+
+
+}
+
+@media screen and (max-width: 480px) {
+
+    #intro {
+        padding: 5px;
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 1rem;
+        line-height: 1.6rem;
+        gap: 1.7rem;
+           
+    }
+    #intro-pic {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+
+        
+
+    }
+    
+} 
+
+
+
+.nav-container {
+
         display: flex;
         flex-direction: row;
         justify-content: center;   
-      }
+}
 
-      #page-nav-h4 {
+#page-nav-h4 {
+
         text-align: center;
         font-family: 'Open Sans', sans-serif;
         font-weight: .02rem;
         font-size: 1.3rem;
         letter-spacing: .01rem;
-      }
+}
 
-      #page-nav {
-       
+#page-nav {
+
         padding: .8rem;
-        
-      }
-      @media screen and (min-width: 768px) {}
-      #page-nav ul {
+}
+
+@media screen and (min-width: 768px) {
+
+    #page-nav ul {
         list-style-type: none;
         padding: 0;
         margin: 0;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        
         justify-content: space-evenly;
       }
 
-      #page-nav li {
+    #page-nav li {
+    
     margin-bottom: 10px; /* Adjust spacing between items */
+    }
 }
+      
+@media screen and (max-width: 768px) {
 
-
-@media screen and (min-width: 768px) {
     /* Media query for larger screens - revert to the original styles */
     #page-nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
         flex-direction: row;
         justify-content: space-evenly;
+    }
+
+    #page-nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    #page-nav li {
+        text-align: center;
+        margin-bottom: 30px;
+        
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #page-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        
+    }
+
+    #page-nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    #page-nav li {
+        text-align: center;
+        margin-bottom: 30px;
+        
     }
 }
 
 /* Media query for mobile devices (e.g., smartphones) */
+
 @media screen and (max-width: 480px) {
-    #page-nav ul {
+    #page-nav {
+        display: flex;
         flex-direction: column;
-    gap: 20px;
-    align-items: center;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    #page-nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    #page-nav li {
+        text-align: center;
+        margin-bottom: 30px;
+        
     }
 }
 
 
-      #page-nav a {
-        color: #ffffff;
-        text-decoration: none;
-        font-size: 1rem;
-        font-weight: bolder;
-        background-color: rgb(118, 87, 40);
-        padding: .6rem;
-        border-radius: 7px;
-        margin-right: 20px;
-      }
-
-    #page-nav a:hover {
-        background-color: #a85e14;
-      }
 
 
-    .bed-count-dropdown-container {
-        
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: .02rem;
-        font-size: 1.3rem;
-        letter-spacing: .01rem;
-        padding: .5rem;
-        margin: 30px;
-        
-        
+#page-nav a {
     
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bolder;
+    background-color: rgb(118, 87, 40);
+    padding: .6rem;
+    border-radius: 7px;
+    margin-right: 20px;
+}
+
+#page-nav a:hover {
+
+    background-color: #a85e14;
+}
+
+
+.bed-count-dropdown-container {
         
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: .02rem;
+    font-size: 1.3rem;
+    letter-spacing: .01rem;
+    padding: .5rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 60px;   
     }
 
-   
+.bed-count-dropdown {
+        
+    padding: .5rem;
+    background-color: rgb(232, 232, 232);
 
-    .bed-count-dropdown {
-        padding: .5rem;
-        background-color: rgb(232, 232, 232);
-    }
+}
 
-    .bed-count-dropdown option {
-        font-family: 'Open Sans', sans-serif;
-        font-weight: .02rem;
-        font-size: 1rem;
-        letter-spacing: .01rem;
-        padding: .8rem;
-        justify-content: center;
-         background-color: rgb(232, 232, 232);
-    }
-    
+.bed-count-dropdown option {
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: .02rem;
+    font-size: 1rem;
+    letter-spacing: .01rem;
+    padding: .8rem;
+    justify-content: center;
+    background-color: rgb(232, 232, 232);
+
+}
+     
+.bedcount-h1{
+
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-left: 65px;
+}
     
       
-    .bedcount-h1{
-          font-size: 1.5rem;
-          text-transform: uppercase;
-          margin: 30px;
-          
-          
+.main-container {
 
-      }
-    
-      
-      .main-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1250px;
-            margin: auto;
-            padding: 20px; /* Added padding for better spacing */
-        }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1250px;
+    margin: auto;
+    padding: 20px; /* Added padding for better spacing */
+}
     
 
 /* Media query for tablets (e.g., iPad) */
 @media screen and (max-width: 768px) {
+
     .main-container {
+
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 1rem;
     }
@@ -289,143 +421,127 @@
 
 /* Media query for mobile devices (e.g., smartphones) */
 @media screen and (max-width: 480px) {
+
     .main-container {
+
         grid-template-columns: 100%;
         gap: 1rem;
     }
 }
 
+.currently-viewing {
+    text-align: center;
+}
 
+.card-container {
 
-
-
-
-
-      .card-container {
-            max-width: 1200px;
-            
-            
-            gap: 1.5rem;      
-      }
+    max-width: 1200px;
+    gap: 1.5rem;      
+}
       
-      
-      
-      
+.property-image {
 
-      .property-image {
-            width: 100%;
-            border-radius: 10px;
-            object-fit: cover;
-            overflow: hidden;
-      }
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+     overflow: hidden;
+ }
 
-      .image-container {
+.image-container {
         
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        height: 250px;
-        border-radius: 10px;
-        
-      }
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;       
+}
 
+.property-name {
+
+    font-size: 1.2rem;
+    text-align: start;
+    margin-top: 15px;
+    margin-left: 15px;
+}
       
-      .property-name {
-          font-size: 1.2rem;
-          text-align: start;
-          margin-top: 15px;
-          margin-left: 15px;
-      }
-      
-      
-      
-      .card {
-            border-radius: 10px;
-            box-shadow:  1px 5px 5px 1px #b3b2b2;
-            background-color: #ffffff;
-            padding: .7rem;
+.card {
+
+    border-radius: 10px;
+    box-shadow:  1px 5px 5px 1px #b3b2b2;
+    background-color: #ffffff;
+    padding: .7rem;
             
-      }
+}
 
-      .card:hover, 
-      .card:focus {
-        background-color: #eeeeee;
-        cursor: pointer;
-      }
+.card:hover, 
+.card:focus {
+
+    background-color: #eeeeee;
+    cursor: pointer;
+}
       
-      .card-body before:last-child {
+.card-body before:last-child {
        
-        gap: 15px;
-        justify-content: space-around;
-        text-align: center;
-        
-          
-      }
+    gap: 15px;
+    justify-content: space-around;
+    text-align: center;
+}
 
-      .fa-solid {
+.fa-solid {
 
-        padding: .5rem;
-      }
+    padding: .5rem;
+}
 
-     .address {
-          font-size: .8rem;
-         display: inline-flex;
-          align-items: baseline;
-          
-      } 
+.address {
 
-    
-      
-          
-    
-      .date-updated {
+    font-size: .8rem;
+    display: inline-flex;
+    align-items: baseline;
+} 
+
+.date-updated {
          
-          display: flex;
-          margin: auto;
-          padding-top: 20px;
-          padding-bottom: 10px;
-          font-size: .7rem;
-          justify-content: center;
-          
-          
-          
-      }
+    display: flex;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: .7rem;
+    justify-content: center;       
+}
       
-      .unit-details {
-          display:grid;
-          grid-template-columns: repeat(3,  1fr);
-          gap: 1rem;
-      }
+.unit-details {
+
+    display:grid;
+    grid-template-columns: repeat(3,  1fr);
+    gap: 1rem;
+}
 
 
-    .admin-details {
-        padding: .5rem;
-      }
+.admin-details {
+
+    padding: .5rem;
+}
      
-      .CTA-apply {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: .6rem;
-        font-size: 1rem;
-        font-family: 'Open Sans', sans-serif;
-        margin: auto;
-        border-radius: 10px;
-        border: none;
-        box-shadow: 1px 2px 2px 1px #cfcfcf;
-        cursor: pointer;
-        background-color: rgb(58, 58, 58);
-        color: #ffffff;
+.CTA-apply {
 
-       
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .6rem;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 2px 2px 1px #cfcfcf;
+    cursor: pointer;
+    background-color: rgb(58, 58, 58);
+    color: #ffffff;
+ }
 
-       }
-
-       .CTA-apply:hover {
-            background-color: rgb(246, 156, 0);
-            
-           
-        }
+ .CTA-apply:hover {
+        background-color: rgb(246, 156, 0);
+}
     
 
       </style>
@@ -452,27 +568,39 @@ and assign the accordions inner html to the text of those current values*/
   <body>
 
 <section>
+    <div id="hero-logo-container"><img id="hero-logo" src="https://resource.rentcafe.com/image/upload/f_auto,q_auto/s3/2/82930/concordrents_logo_color.png"/></div>
     <div id="hero-container">
-        <div id="hero-title"><h1>Affordable Housing Inventory</h1><p>Find your next home!</p></div>
-        
-        <!-- <div class="hero-img" style="background-image: url(./images/spacejoy-IH7wPsjwomc-unsplash.jpg);"></div> -->
+        <div id="hero-title">
+            <h1>Affordable Housing Inventory</h1>
+            
+            <p id="hero-sub">Find your next home!</p></div>
+           
+      
         
     </div>
+
+        <div id="intro"><p>ConcordRENTS is a national leader in providing high-quality, affordable, multifamily housing and understands the importance of a strong community and the value of giving back.
+         With the affordable housing crisis in Orlando, FL and the rest of Central Florida, we understand the struggle in finding quality affordable housing.<br>
+        Below is a list of our CURRENT Available Affordable Housing Inventory around Central Florida. 
+        Apartment homes are income restricted and are subject to Maximum Allowable Household Incomes listed for each community location.
+        As part of the application process, applicants must submit the verification documentation in a timely manner, as the first approved and full deposit paid applicant will have priority of the available apartment home. 
+        This housing inventory will move quickly so please APPLY TODAY and turn this opportunity into a HOME.</p><div id="intro-pic" style="background-image:url(./images/spacejoy-IH7wPsjwomc-unsplash.jpg)"></div></div> 
+        
+        
 </section>
     
     <main>
 
         
 
-        <!-- <h1 class="page-header">Affordable Housing Inventory - Central Florida</h1>
-        <p id="intro">ConcordRENTS is a national leader in providing high-quality, affordable, multifamily housing and understands the importance of a strong community and the value of giving back.<br>
-            Our company culture believes in going the extra mile for our team members and residents by volunteering in the communities we serve.<br>
-            We give back at a professional and personal level making the best of our company and ourselves. With the affordable housing crisis in Orlando, FL and the rest of Central Florida,<br> we understand the struggle in finding quality affordable housing.
-            Below is a list of our CURRENT Available Affordable Housing Inventory around Central Florida.<br> 
-            Apartment homes are income restricted and are subject to Maximum Allowable Household Incomes listed for each community location.<br>
-            As part of the application process, applicants must submit the verification documentation in a timely manner, as the first approved and full deposit paid applicant <br>will have priority of the available apartment home. 
-            <br><br>This housing inventory will move quickly so please APPLY TODAY and turn this opportunity into a HOME.</p> -->
-
+       <!-- <h1 class="page-header"></h1>
+         <p id="intro">ConcordRENTS is a national leader in providing high-quality, affordable, multifamily housing and understands the importance of a strong community and the value of giving back.
+          With the affordable housing crisis in Orlando, FL and the rest of Central Florida, we understand the struggle in finding quality affordable housing.<br>
+         Below is a list of our CURRENT Available Affordable Housing Inventory around Central Florida. 
+         Apartment homes are income restricted and are subject to Maximum Allowable Household Incomes listed for each community location.
+         As part of the application process, applicants must submit the verification documentation in a timely manner, as the first approved and full deposit paid applicant will have priority of the available apartment home. 
+         This housing inventory will move quickly so please APPLY TODAY and turn this opportunity into a HOME.</p>
+ -->
 
          <!--insert nav here for the 3 pages, for East, Central, West FL Pages-->
          <h4 id="page-nav-h4">Choose Your Region:</h4>
@@ -488,7 +616,15 @@ and assign the accordions inner html to the text of those current values*/
                </ul>
              </nav>
          </div>
-          
+
+        
+
+
+
+
+
+
+         
       <!--insert nav bar here w/ bedroom count, to jump to relevant section--> 
       <div class="bed-count-dropdown-container">
       <label for="bed-count-dropdown">How many Bedrooms?</label>
@@ -502,8 +638,10 @@ and assign the accordions inner html to the text of those current values*/
         </div>
 
 <section>
+            
             <h1 class="bedcount-h1">1 Bedroom Units</h1>
-                <div class="main-container" >
+            <h2 class="currently-viewing"></h2>
+                <div class="main-container" > 
                 <!--card starts here-->
                     <div class="card-container">    
                         <div class="card" >
@@ -522,7 +660,7 @@ and assign the accordions inner html to the text of those current values*/
                                                     <p>Application Fee: $</p>
                                                 </div>
                                                 
-                                                <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+                                                <div class="eligibility">***eligibility modal point***</div>
                                                 <button class="CTA-apply">Get Started</button>
                                                 <p class="date-updated">updated:[date].See website for pricing details.</p>
                                                 
