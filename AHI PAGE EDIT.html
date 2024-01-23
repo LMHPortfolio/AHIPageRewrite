@@ -537,7 +537,7 @@ margin-left: 65px!important;
 .card:focus {
 
     background-color: #eeeeee!important;
-    cursor: pointer!important;
+    
 }
       
 .card-body before:last-child {
@@ -607,6 +607,78 @@ margin-left: 65px!important;
         background-color: rgb(246, 156, 0)!important;
 }
     
+/*modal styles*/
+  /* Style for the overlay */
+  .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Style for the modal */
+    .modal-container {
+        display: flex;
+            justify-content: center;
+            align-items: center;
+           
+            margin: 0;
+    }
+
+    .modal-button {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 50px;
+        padding-right: 50px;
+        border-radius: 10px;
+        margin: 10px;
+        background-color: #868686;
+        color: #ffffff;
+        font-size: 1rem!important;
+        border: none;
+        box-shadow: 1px 2px 2px 1px #cfcfcf!important; 
+        cursor: pointer!important;   
+    }
+
+    .modal-button:hover {
+        background-color: rgb(246, 156, 0)!important;
+}
+
+
+    .modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+
+    }
+
+     .modal-content {
+        position: relative;
+        display: flex;
+        align-content: center;
+        
+    } 
+
+    /* Style for the close button */
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+
+
 
       </style>
       <script src="https://kit.fontawesome.com/fa4ad802be.js" crossorigin="anonymous"></script>
@@ -629,7 +701,17 @@ margin-left: 65px!important;
 /*if class county contains orange, seminole, osceola { then the accordion inner html needs to be set to that tables values } can use switch statement
 and assign the accordions inner html to the text of those current values*/
 
+    // Function to open the modal
+function openModal() {
+    document.getElementById('overlay').style.display = 'block';
+    document.getElementById('modal').style.display = 'block';
+}
 
+// Function to close the modal
+function closeModal() {
+    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('modal').style.display = 'none';
+}
 
 </script>
 
@@ -712,7 +794,18 @@ and assign the accordions inner html to the text of those current values*/
                                                     <p>Application Fee: $</p>
                                                 </div>
                                                 
-                                                <div class="eligibility">***eligibility modal point***</div>
+                                                <div class="modal-container">
+                                                <!-- Button to trigger the modal -->
+                                                    <button class="modal-button" onclick="openModal()">View Income Restricions</button>
+                                                    <!-- The overlay and modal -->
+                                                    <div class="overlay" id="overlay" onclick="closeModal()"></div>
+                                                    <div class="modal" id="modal">
+                                                        <span class="close-btn" onclick="closeModal()">&times;</span>
+                                                        <h2>Modal Content</h2>
+                                                        <p class="modal-content">This is the content of the modal.</p>
+                                                    </div>
+                                                </div>
+                                                
                                                 <button class="CTA-apply">Get Started</button>
                                                 <p class="date-updated">updated:[date].See website for pricing details.</p>
          
