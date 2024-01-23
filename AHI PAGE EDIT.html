@@ -426,13 +426,25 @@ body {
 
 }
      
-#bedcount-title {
+.bedcount-title {
 
     color: #000000!important;
+   /*  background-color: #5b5b5b!important; */
     font-family: 'Open Sans', sans-serif!important;
     font-size: 1.5rem!important;
     text-transform: uppercase!important;
     margin-left: 65px!important;
+    margin-right: 65px!important;
+    padding: 15px;
+}
+
+.bedcount-title-p {
+
+color: #000000!important;
+font-family: 'Open Sans', sans-serif!important;
+font-size: 1rem!important;
+text-transform: none!important;
+margin-left: 65px!important;
 }
     
       
@@ -445,9 +457,15 @@ body {
     margin: auto!important;
     padding: 20px!important; 
 }
-    
 
-/* Media query for tablets */
+/* .bedroom-section {
+    background-color: #ededed;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+} */
+
+
 @media screen and (max-width: 768px) {
 
     .main-container {
@@ -457,7 +475,7 @@ body {
     }
 }
 
-/* Media query for mobile devices (e.g., smartphones) */
+
 @media screen and (max-width: 480px) {
 
     .main-container {
@@ -600,7 +618,11 @@ body {
         need click events for the toggle function on the income info (use a default class that is turned true/false on click/toggle. No unique ID needed)
         need button event handler for apply now*/
 
-
+        function handleBedCountSelect () {
+            const selection = document.getElementById('bed-select');
+            location = selection.value;  
+        }
+       
         
 
 
@@ -610,6 +632,10 @@ and assign the accordions inner html to the text of those current values*/
 
 
 </script>
+
+
+
+
   </head>
   <body>
 
@@ -630,7 +656,7 @@ and assign the accordions inner html to the text of those current values*/
         Below is a list of our CURRENT Available Affordable Housing Inventory around Central Florida. 
         Apartment homes are income restricted and are subject to Maximum Allowable Household Incomes listed for each community location.
         As part of the application process, applicants must submit the verification documentation in a timely manner, as the first approved and full deposit paid applicant will have priority of the available apartment home. 
-        This housing inventory will move quickly so please APPLY TODAY and turn this opportunity into a HOME.</p></div> 
+        <br>This housing inventory will move quickly so please APPLY TODAY and turn this opportunity into a HOME.</p></div> 
         
         
 </section>
@@ -653,36 +679,26 @@ and assign the accordions inner html to the text of those current values*/
              </nav>
          </div>
 
-        
-
-
-
-
-
-
-         
       <!--insert nav bar here w/ bedroom count, to jump to relevant section--> 
       <div class="bed-count-dropdown-container">
       <label for="bed-count-dropdown">How many Bedrooms?</label>
-        <select class="bed-count-dropdown">
+        <select id="bed-select" onchange="handleBedCountSelect()">
             <option value="Dropdown"></option>
-            <option value="1 bedroom">1 Bedrooms</option>
-            <option value="2 bedroom">2 Bedrooms</option>
-            <option value="3 bedroom">3 Bedrooms</option>
-            <option value="4 bedroom">4 Bedrooms</option>
+            <option value="#one-bed-section">1 Bedrooms</option>
+            <option value="#two-bed-section">2 Bedrooms</option>
+            <option value="#three-bed-section">3 Bedrooms</option>
+            <option value="#four-bed-section">4 Bedrooms</option>
         </select>
         </div>
 
-<section>
-            
-            <h1 id="bedcount-title">1 Bedroom Units</h1>
+<section class="bedroom-section" id="one-bed-section">
+            <h1 class="bedcount-title">1 Bedroom Units</h1>
             <!--<h2 class="currently-viewing"></h2>-->
                 <div class="main-container" > 
                 <!--card starts here-->
                     <div class="card-container">    
                         <div class="card" >
                             <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
-                        
                             <h3 class="property-name">Property Name</h3>
                                 <div class="card-body">
                                         <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
@@ -699,13 +715,85 @@ and assign the accordions inner html to the text of those current values*/
                                                 <div class="eligibility">***eligibility modal point***</div>
                                                 <button class="CTA-apply">Get Started</button>
                                                 <p class="date-updated">updated:[date].See website for pricing details.</p>
-                                                
-                                                
-                                                
+         
+                                </div>
+ 
+                            </div>
+                    </div>
+                    <!--card ends-->
+                    <!--card starts here-->
+                    <div class="card-container">    
+                        <div class="card" >
+                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
+                            <h3 class="property-name">Property Name</h3>
+                                <div class="card-body">
+                                        <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
+                                                <div class="unit-details">
+                                                    <div><i class="fa-solid fa-bed"></i># Beds</div>
+                                                    <div><i class="fa-solid fa-bath"></i># Baths</div>
+                                                    <div><i class="fa-solid fa-dollar-sign"></i>RENT</div>
+                                                </div>
+                                                <div class="admin-details">
+                                                    <p>Deposit Starting at: $</p>
+                                                    <p>Application Fee: $</p>
+                                                </div>
+                                                <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+                                                <button class="CTA-apply">Get Started</button>
+                                                <p class="date-updated">updated:[date].See website for pricing details.</p>
                                 </div>
                                 
                             </div>
+                    </div>
+                    <!--card ends-->
+                   <!--card starts here-->
+                   <div class="card-container">    
+                    <div class="card" >
+                        <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
+                        <h3 class="property-name">Property Name</h3>
+                            <div class="card-body">
+                                    <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
+                                            <div class="unit-details">
+                                                <div><i class="fa-solid fa-bed"></i># Beds</div>
+                                                <div><i class="fa-solid fa-bath"></i># Baths</div>
+                                                <div><i class="fa-solid fa-dollar-sign"></i>RENT</div>
+                                            </div>
+                                            <div class="admin-details">
+                                                <p>Deposit Starting at: $</p>
+                                                <p>Application Fee: $</p>
+                                            </div>
+                                            
+                                            <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+                                            <button class="CTA-apply">Get Started</button>
+                                            <p class="date-updated">updated:[date].See website for pricing details.</p> 
+                            </div>
                             
+                        </div>
+                        
+                </div>
+                <!--card ends-->
+                    <!--card starts here-->
+                    <div class="card-container">    
+                        <div class="card" >
+                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
+                            <h3 class="property-name">Property Name</h3>
+                                <div class="card-body">
+                                        <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
+                                                <div class="unit-details">
+                                                    <div><i class="fa-solid fa-bed"></i># Beds</div>
+                                                    <div><i class="fa-solid fa-bath"></i># Baths</div>
+                                                    <div><i class="fa-solid fa-dollar-sign"></i>RENT</div>
+                                                </div>
+                                                <div class="admin-details">
+                                                    <p>Deposit Starting at: $</p>
+                                                    <p>Application Fee: $</p>
+                                                </div>
+                                                
+                                                <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+                                                <button class="CTA-apply">Get Started</button>
+                                                <p class="date-updated">updated:[date].See website for pricing details.</p>      
+                                </div>
+
+                            </div>
                     </div>
                     <!--card ends-->
                     <!--card starts here-->
@@ -725,17 +813,93 @@ and assign the accordions inner html to the text of those current values*/
                                                     <p>Deposit Starting at: $</p>
                                                     <p>Application Fee: $</p>
                                                 </div>
+                                                <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+                                                <button class="CTA-apply">Get Started</button>
+                                                <p class="date-updated">updated:[date].See website for pricing details.</p>                                            
+                                </div>
+                            </div>
+                    </div>
+                    <!--card ends-->
+                    <!--card starts here-->
+                    <div class="card-container">    
+                        <div class="card" >
+                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
+                            <h3 class="property-name">Property Name</h3>
+                                <div class="card-body">
+                                        <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
+                                                <div class="unit-details">
+                                                    <div><i class="fa-solid fa-bed"></i># Beds</div>
+                                                    <div><i class="fa-solid fa-bath"></i># Baths</div>
+                                                    <div><i class="fa-solid fa-dollar-sign"></i>RENT</div>
+                                                </div>
+                                                <div class="admin-details">
+                                                    <p>Deposit Starting at: $</p>
+                                                    <p>Application Fee: $</p>
+                                                </div>
                                                 
                                                 <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
                                                 <button class="CTA-apply">Get Started</button>
                                                 <p class="date-updated">updated:[date].See website for pricing details.</p>
-                                                
-                                                
-                                                
                                 </div>
                                 
                             </div>
                             
+                    </div>
+                    <!--card ends-->   
+                </div>
+</section>
+
+
+<section class="bedroom-section" id="two-bed-section">
+<h1 class="bedcount-title">2 Bedroom Units</h1>
+            <!--<h2 class="currently-viewing"></h2>-->
+                <div class="main-container" > 
+                <!--card starts here-->
+                    <div class="card-container">    
+                        <div class="card" >
+                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
+                            <h3 class="property-name">Property Name</h3>
+                                <div class="card-body">
+                                        <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
+                                                <div class="unit-details">
+                                                    <div><i class="fa-solid fa-bed"></i># Beds</div>
+                                                    <div><i class="fa-solid fa-bath"></i># Baths</div>
+                                                    <div><i class="fa-solid fa-dollar-sign"></i>RENT</div>
+                                                </div>
+                                                <div class="admin-details">
+                                                    <p>Deposit Starting at: $</p>
+                                                    <p>Application Fee: $</p>
+                                                </div>
+                                                <div class="eligibility">***eligibility modal point***</div>
+                                                <button class="CTA-apply">Get Started</button>
+                                                <p class="date-updated">updated:[date].See website for pricing details.</p>
+
+                                </div>
+                            </div>
+                    </div>
+                    <!--card ends-->
+                    <!--card starts here-->
+                    <div class="card-container">    
+                        <div class="card" >
+                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
+                            <h3 class="property-name">Property Name</h3>
+                                <div class="card-body">
+                                        <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
+                                                <div class="unit-details">
+                                                    <div><i class="fa-solid fa-bed"></i># Beds</div>
+                                                    <div><i class="fa-solid fa-bath"></i># Baths</div>
+                                                    <div><i class="fa-solid fa-dollar-sign"></i>RENT</div>
+                                                </div>
+                                                <div class="admin-details">
+                                                    <p>Deposit Starting at: $</p>
+                                                    <p>Application Fee: $</p>
+                                                </div>  
+                                                <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+                                                <button class="CTA-apply">Get Started</button>
+                                                <p class="date-updated">updated:[date].See website for pricing details.</p>
+                                                
+                                </div>
+                            </div>
                     </div>
                     <!--card ends-->
                    <!--card starts here-->
@@ -755,17 +919,11 @@ and assign the accordions inner html to the text of those current values*/
                                                 <p>Deposit Starting at: $</p>
                                                 <p>Application Fee: $</p>
                                             </div>
-                                            
                                             <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
                                             <button class="CTA-apply">Get Started</button>
                                             <p class="date-updated">updated:[date].See website for pricing details.</p>
-                                            
-                                            
-                                            
                             </div>
-                            
                         </div>
-                        
                 </div>
                 <!--card ends-->
                     <!--card starts here-->
@@ -788,14 +946,9 @@ and assign the accordions inner html to the text of those current values*/
                                                 
                                                 <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
                                                 <button class="CTA-apply">Get Started</button>
-                                                <p class="date-updated">updated:[date].See website for pricing details.</p>
-                                                
-                                                
-                                                
+                                                <p class="date-updated">updated:[date].See website for pricing details.</p>                      
                                 </div>
-                                
                             </div>
-                            
                     </div>
                     <!--card ends-->
                     <!--card starts here-->
@@ -818,14 +971,9 @@ and assign the accordions inner html to the text of those current values*/
                                                 
                                                 <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
                                                 <button class="CTA-apply">Get Started</button>
-                                                <p class="date-updated">updated:[date].See website for pricing details.</p>
-                                                
-                                                
-                                                
+                                                <p class="date-updated">updated:[date].See website for pricing details.</p>                           
                                 </div>
-                                
                             </div>
-                            
                     </div>
                     <!--card ends-->
                     <!--card starts here-->
@@ -845,25 +993,28 @@ and assign the accordions inner html to the text of those current values*/
                                                     <p>Deposit Starting at: $</p>
                                                     <p>Application Fee: $</p>
                                                 </div>
-                                                
                                                 <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
                                                 <button class="CTA-apply">Get Started</button>
-                                                <p class="date-updated">updated:[date].See website for pricing details.</p>
-                                                
-                                                
-                                                
+                                                <p class="date-updated">updated:[date].See website for pricing details.</p>                 
                                 </div>
-                                
                             </div>
                             
                     </div>
-                    <!--card ends-->
-                                        
                     <!--card ends-->
                 </div>
 
-            
-            </section>
-        </main> 
-    </body>
+</section>
+
+<section class="bedroom-section" id="three-bed-section">
+    <h1 class="bedcount-title">3 Bedroom Units</h1>
+    <p class="bedcount-title-p">None Available At This Time</p>
+</section>
+<br>
+<br>
+<section class="bedroom-section" id="four-bed-section">
+    <h1 class="bedcount-title">4 Bedroom Units</h1>
+    <p class="bedcount-title-p">None Available At This Time</p>
+</section>
+</main> 
+</body>
 </html>
