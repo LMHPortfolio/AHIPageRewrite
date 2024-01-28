@@ -13,252 +13,134 @@
       
 body { 
 
-        font-family: 'Open Sans', sans-serif!important;
-        margin:auto!important;
-        height: 100vh!important;
-      }
+    font-family: 'Open Sans', sans-serif!important;
+    margin:auto!important;
+    height: 100vh!important;
+}
 
+#intro-container {
 
-
-#hero-container {
-    
-    width: 100%!important;
-    display: flex!important;
-    flex-direction: row!important;
-    flex-wrap: wrap!important;
-    justify-content: center!important;
-   /*  background: rgb(60, 60, 60); */
-
-    width: 100%!important;
-    padding-top: 12px!important;
-    padding-bottom: 24px!important; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px; /* Adjust the maximum width as needed */
+    margin: auto;
+    padding: 20px; /* Add padding for better spacing */
+    gap: 1.9rem;
     
 }
 
-@media (min-width: 768px) {
+#intro-title {
 
-      #hero-container {
-        padding-top: 24px!important;
-      }  
+    flex: 1; /* Take remaining space in the flex container */
+    padding-right: 20px; /* Adjust spacing between text and image */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem!important;
+    letter-spacing: .04rem!important;
+    color: #515151;
 }
 
-#hero-logo-container {
+#intro-sub {
 
-    background-color: #000!important;
-}
-
-/*      
-#hero-logo {
-
-    position:absolute!important;
-    top: 0!important;
-    right: 0!important;
-    width: 150px!important;
-    margin: 20px!important;
-    background-color: #000!important;
-}
-*/
-
-#hero-title h1 {
-
-    
-    font-family: 'Poppins', sans-serif!important;
-    font-size: 4rem!important;
-    letter-spacing: .07rem!important;
-    text-align: center!important;
-    /* text-transform: uppercase!important; */
-    padding-top: 40px!important;
-    padding-left: 2rem;
-    /* color:#feea99; */
-    background-image: linear-gradient(45deg, #c19a01, #ffea98)!important;
-    background-size: 100%!important;
-    -webkit-background-clip: text!important;
-    -moz-background-clip: text!important;
-    -webkit-text-fill-color: transparent!important; 
-    -moz-text-fill-color: transparent!important;
-    position: relative!important; 
-}
-
-@media screen and (max-width: 480px) {
-
-   #hero-title h1 {
-    font-size: 2rem!important;
-    padding: 2px!important;
-   }          
-} 
-
-#hero-sub {
-
-    font-family: 'Poppins', sans-serif!important;
-    text-transform: none!important;
-    text-align: center!important;
-    font-size: 1.4rem!important;
-    font-weight: 200!important;
-    line-height: .8rem!important;
-   
+    margin-top: 2.5rem;
+    font-size: 1rem!important;
+    font-weight: 300!important;
+    line-height: 1.4rem!important;
     color: #444444!important;
-    letter-spacing: .09rem!important;
-        
+    letter-spacing: .05rem!important;
 }
 
-@media screen and (max-width: 480px) {
+#intro-pic {
 
-    #hero-sub {
-        font-family: 'Poppins', sans-serif!important;
-        font-size: .8rem!important; 
-   }        
-} 
-
-.page-header {
-  
-        font-family: 'Poppins', sans-serif!important;
-        text-align: center!important;
+    flex-shrink: 0; /* Don't shrink the image */
+    width: 450px; /* Set a fixed width for the image */
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left 60% bottom 30%;
+    background-image:url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1920/s3/2/82930/fountains%20at%20millenia_pool%20(17)_rev.jpg');
+    border-radius: 10px;
+    margin-top: 4rem;
 }
 
- #intro {
-  /* changed grid col to 1*/
-   
-      font-family: 'Poppins', sans-serif!important;
-      /* display: grid!important;
-      grid-template-columns: repeat(1, 1fr)!important;
-      align-items: top!important; */
-      padding:30px!important;
-   /* changed gap to 0*/
-      gap: 0rem!important;
-      
-     
-  
-  } 
- 
-  #intro p {
+/* Media query for tablets (landscape) and desktop screens */
+@media screen and (min-width: 900px) {
 
-    font-family: 'Poppins', sans-serif!important;
-    text-transform: none!important;
-    font-size: 1rem!important;
-    font-weight: 300!important;
-    line-height: 1.8rem!important;
-    letter-spacing: .07rem!important;
-    padding: .2rem;
-    text-align: justify;
-    text-align-last: left;
-    color: #000000!important;
-
-  }
-
-
-@media screen and (min-width: 640px) {
-
-    #intro {
-        
-        font-size: 1rem!important;
-    }  
-
-    
-} 
-
-
-@media screen and (max-width: 1140px) {
-
- 
- 
-  #intro {
-  
-          display: flex!important;
-          flex-direction: row!important;
-         
-          flex-wrap: wrap!important;
-          font-size: 1rem!important;
-          line-height: 1.6rem!important;
-          margin-left: 1.5rem;
-          margin-right: 1.5rem;
-         
-          margin-bottom: 10px!important;
-          font-family: 'Poppins', sans-serif!important;
-    text-transform: none!important;
-    font-size: 1rem!important;
-    font-weight: 300!important;
-    line-height: 1.8rem!important;
-    letter-spacing: .07rem!important;
-    padding: .2rem;
-    text-align: justify;
-    text-align-last: left;
-    color: #000000!important;
-
-  }  
-  
-}
-
-@media screen and (max-width: 640px) {
-
-#intro {
-    
-    font-size: .8rem!important;
-    display: flex!important;
-    flex-direction: row!important;
-    flex-wrap: wrap!important;
-    font-size: 1rem!important;
-    line-height: 1.6rem!important;
-  
-    
-    
-    
-}  
-
-
-}
-
-@media screen and (max-width: 480px) {
-
-    #intro {
-        
-        padding: 5px!important;
-        padding-bottom: 10px!important;
-        display: flex!important;
-        flex-direction: row!important;
-        flex-wrap: wrap!important;
-        font-size: 1rem!important;
-        line-height: 1.6rem!important;
-     
-           
+    #intro-container {
+        flex-direction: row; /* Change flex direction to row on larger screens */
     }
 
-    
-} 
+#intro-text {
+
+        padding-right: 40px; /* Increase padding between text and image on larger screens */
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    #intro-container {
+        flex-direction: column; /* Change flex direction to row on larger screens */
+    }
+
+    #intro-pic {
+        
+        width: 80%;
+        margin-top: 0%;
+    }
+
+}   
+/* Media query for smaller screens (e.g., mobile phones) */
+@media screen and (max-width: 480px) {
+
+    #intro-container {
+
+        flex-direction: column; /* Change flex direction to column on smaller screens */
+        text-align: center; /* Center text in the column layout */
+    }
+
+    #intro-text {
+
+        padding-right: 0; /* Remove padding on smaller screens */
+        margin-bottom: 20px; /* Add margin at the bottom for better spacing */
+    }
+
+    #intro-pic {
+        
+        width: 100%; /* Make the image take full width on smaller screens */
+        height: 200px; /* Adjust height as needed */
+        border-radius: 10px; /* Remove border-radius on smaller screens */
+    }
+}
+
 
 #nav-section-background {
+
     background-color: #ffffff;
 }
 
 .nav-container {
 
-        display: flex!important;
-        flex-direction: row!important;
-        justify-content: center!important;   
+    display: flex!important;
+    flex-direction: row!important;
+    justify-content: center!important;   
 }
 
 #page-nav-h2 {
 
-        text-align: center!important;
-        font-family: 'Poppins', sans-serif!important;
-      
-        font-size: 1.4rem!important;
-    font-weight: 200!important;
+    text-align: center!important;
+    font-family: 'Poppins', sans-serif!important;
+    font-size: 1.3rem!important;
+    font-weight: 300!important;
     line-height: .8rem!important;
-        letter-spacing: .03rem!important;
-        margin-top: 30px;
-        
+    letter-spacing: .03rem!important;
+    margin-top: 30px;
     text-transform: none!important;
-   
-    
-   
     color: #444444!important;
-   
-  
 }
 
 #page-nav {
 
-        padding: .8rem!important;
+    padding: .8rem!important;
 }
 
 @media screen and (min-width: 768px) {
@@ -273,19 +155,48 @@ body {
         flex-direction: row!important;
         flex-wrap: wrap!important;
         justify-content: space-evenly!important;
-      }
+    }
 
     #page-nav li {
       
-      font-family: 'Poppins', sans-serif!important;
-      margin-bottom: 10px!important;
+        font-family: 'Poppins', sans-serif!important;
+        margin-bottom: 10px!important;
     }
 }
       
+@media screen and (min-width: 768px) and (max-width: 965px) {
+
+#page-nav ul {
+
+    list-style-type: none!important;
+    padding: 0!important;
+    margin: 0!important;
+    flex-direction: column!important;
+    justify-content: space-evenly!important;
+}
+
+#page-nav ul {
+
+    list-style-type: none!important;
+    padding: 0!important;
+    margin: 0!important;
+}
+
+#page-nav li {
+
+    text-align: center!important;
+    margin-bottom: 30px!important;
+    
+}
+}
+
+
+
+
 @media screen and (max-width: 768px) {
 
-    /* Media query for larger screens - revert to the original styles */
     #page-nav ul {
+
         list-style-type: none!important;
         padding: 0!important;
         margin: 0!important;
@@ -294,12 +205,14 @@ body {
     }
 
     #page-nav ul {
+
         list-style-type: none!important;
         padding: 0!important;
         margin: 0!important;
     }
     
     #page-nav li {
+
         text-align: center!important;
         margin-bottom: 30px!important;
         
@@ -307,51 +220,53 @@ body {
 }
 
 @media screen and (max-width: 640px) {
+
     #page-nav {
+
         display: flex!important;
         flex-direction: column!important;
         align-items: center!important;
         justify-content: center!important;
-        
-        
     }
 
     #page-nav ul {
+
         list-style-type: none!important;
         padding: 0!important;
         margin: 0!important;
     }
     #page-nav li {
+
         text-align: center!important;
-        margin-bottom: 30px!important;
-        
+        margin-bottom: 30px!important;  
     }
 }
 
-/* Media query for mobile devices (e.g., smartphones) */
 
 @media screen and (max-width: 480px) {
+
     #page-nav {
+
         display: flex!important;
         flex-direction: column!important;
         align-items: center!important;
         justify-content: center!important;
-        
+        margin-left: 15px;
     }
 
     #page-nav ul {
+
         list-style-type: none!important;
         padding: 0!important;
         margin: 0!important;
     }
+
     #page-nav li {
+
         text-align: center!important;
         margin-bottom: 30px!important;
-        
     }
 }
-
-
 
 
 #page-nav a {
@@ -359,11 +274,11 @@ body {
     font-family: 'Poppins', sans-serif!important;
     color: #ffffff!important;
     text-decoration: none!important;
-    font-size: 1rem!important;
+    font-size: .8rem!important;
     font-weight: 600!important;
     letter-spacing: .09rem;
     background-color: rgb(118, 87, 40)!important;
-    padding: .6rem!important;
+    padding: .5rem!important;
     border-radius: 7px!important;
     margin-right: 20px!important;
 }
@@ -387,44 +302,39 @@ body {
     margin-top: 30px!important;
     margin-bottom: 30px!important;
     margin-left: 60px!important;   
-    }
+}
 
 
- .bed-count-dropdown-container label {
+.bed-count-dropdown-container label {
 
-  font-size: 1.3rem!important;
-  font-size: 1.4rem!important;
+    font-size: 1.3rem!important;
+    font-size: 1.4rem!important;
     font-weight: 200!important;
-   
-        letter-spacing: .03rem!important;
-   
- }
+    letter-spacing: .03rem!important;
+}
 
 .bed-count-dropdown {
 
-    font-family: 'Open Sans', sans-serif!important;
+    font-family: 'Poppins', sans-serif!important;
     padding: .5rem!important;
     background-color: rgb(232, 232, 232)!important;
-
 }
 
 .bed-count-dropdown option {
 
-    font-family: 'Open Sans', sans-serif!important;
+    font-family: 'Poppins', sans-serif!important;
     font-weight: .02rem!important;
     font-size: 1rem!important;
     letter-spacing: .01rem!important;
     padding: .8rem!important;
     justify-content: center!important;
     background-color: rgb(232, 232, 232)!important;
-
 }
      
 .bedcount-title {
 
     color: #000000!important;
-   /*  background-color: #5b5b5b!important; */
-    font-family: 'Open Sans', sans-serif!important;
+    font-family: 'Poppins', sans-serif!important;
     font-size: 1.5rem!important;
     text-transform: uppercase!important;
     margin-left: 65px!important;
@@ -432,16 +342,28 @@ body {
     padding: 15px;
 }
 
+@media screen and (max-width: 480px) {
+
+    .bedcount-title {
+        font-size: 1rem;
+        padding: 0;
+        
+    }
+}
+
+
+
+
 .bedcount-title-p {
 
-color: #000000!important;
-font-family: 'Open Sans', sans-serif!important;
-font-size: 1rem!important;
-text-transform: none!important;
-margin-left: 65px!important;
+    color: #000000!important;
+    font-family: 'Poppins', sans-serif!important;
+    font-size: 1rem!important;
+    text-transform: none!important;
+    margin-left: 65px!important;
+
 }
     
-      
 .main-container {
 
     display: grid!important;
@@ -451,14 +373,6 @@ margin-left: 65px!important;
     margin: auto!important;
     padding: 20px!important; 
 }
-
-/* .bedroom-section {
-    background-color: #ededed;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-} */
-
 
 @media screen and (max-width: 768px) {
 
@@ -481,7 +395,7 @@ margin-left: 65px!important;
 
 .currently-viewing {
 
-    font-family: 'Open Sans', sans-serif!important;
+    font-family: 'Poppins', sans-serif!important;
     text-align: center!important;
 }
 
@@ -524,6 +438,7 @@ margin-left: 65px!important;
     box-shadow:  1px 5px 5px 1px #b3b2b2!important;
     background-color: #ffffff!important;
     padding: .7rem!important;
+    max-width: 335px;
             
 }
 
@@ -597,89 +512,96 @@ margin-left: 65px!important;
     color: #ffffff!important;
  }
 
- .CTA-apply:hover {
+.CTA-apply:hover {
+
         background-color: rgb(246, 156, 0)!important;
 }
     
 /*modal styles*/
   /* Style for the overlay */
-  .overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-    }
+
+.overlay {
+
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
 
     /* Style for the modal */
-    .modal-container {
-        display: flex;
-            justify-content: center;
-            align-items: center;
-           
-            margin: 0;
-    }
+.modal-container {
 
-    .modal-button {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 50px;
-        padding-right: 50px;
-        border-radius: 10px;
-        margin: 10px;
-        background-color: #868686;
-        color: #ffffff;
-        font-size: 1rem!important;
-        border: none;
-        box-shadow: 1px 2px 2px 1px #cfcfcf!important; 
-        cursor: pointer!important;   
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 
-    .modal-button:hover {
-        background-color: rgb(246, 156, 0)!important;
+}
+
+.modal-button {
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #868686;
+    color: #ffffff;
+    font-size: 1rem!important;
+    border: none;
+    box-shadow: 1px 2px 2px 1px #cfcfcf!important; 
+    cursor: pointer!important;   
+}
+
+.modal-button:hover {
+
+    background-color: rgb(246, 156, 0)!important;
 }
 
 
-    .modal {
-        display: none;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 20px;
-        background: #fff;
-        border: 1px solid #ccc;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        z-index: 1;
-        border-radius: 10px;
+.modal {
 
-    }
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 10px;
 
-     .modal-content {
-        position: relative;
-        display: flex;
-        align-content: center;
-        
-    } 
+}
+
+.modal-content {
+
+    position: relative;
+    display: flex;
+    align-content: center;
+} 
 
     /* Style for the close button */
-    .close-btn {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
-    }
+.close-btn {
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
 
 
+</style>
+
+<script src="https://kit.fontawesome.com/fa4ad802be.js" crossorigin="anonymous"></script>
 
 
-      </style>
-      <script src="https://kit.fontawesome.com/fa4ad802be.js" crossorigin="anonymous"></script>
-
-
-      <script>/* Insert JS event handlers here
+<script>/* Insert JS event handlers here
         need click events for East/Central/West pages
         need click events for 1 Bedroom/2 Bedroom/3 Bedroom/4 Bedroom
         need click events for the toggle function on the income info (use a default class that is turned true/false on click/toggle. No unique ID needed)
@@ -690,11 +612,8 @@ margin-left: 65px!important;
             location = selection.value;  
         }
        
-        
 
 
-/*if class county contains orange, seminole, osceola { then the accordion inner html needs to be set to that tables values } can use switch statement
-and assign the accordions inner html to the text of those current values*/
 
     // Function to open the modal
 function openModal() {
@@ -713,57 +632,48 @@ function closeModal() {
 
 
 
-  </head>
-  <body>
+</head>
+<body>
 
-<section>
-    <!--<div id="hero-logo-container"></div>-->
-    <div id="hero-container">
-        <div id="hero-title">
-            <h1>Affordable Housing Inventory</h1>
-            
-            <p id="hero-sub">Find your next home!</p></div>
-           
-      
-        
-    </div>
 
-        <div id="intro"><p>ConcordRENTS is a national leader in providing high-quality, affordable, multifamily housing and understands the importance of a strong community and the value of giving back.
-         With the affordable housing crisis in Orlando, FL and the rest of Central Florida, we understand the struggle in finding quality affordable housing.<br>
-        Below is a list of our CURRENT Available Affordable Housing Inventory around Central Florida. 
-        Apartment homes are income restricted and are subject to Maximum Allowable Household Incomes listed for each community location.
+  <div id="intro-container">
+    <div id="intro-title">
+        <h1>Affordable Housing Inventory</h1>
+        <p id="intro-sub">
+            <b>ConcordRENTS</b> is a national leader in providing high-quality, affordable, multifamily housing and understands the importance of a strong community and the value of giving back.
+         With the affordable housing crisis in Orlando, FL and the rest of Central Florida, we understand the struggle in finding quality affordable housing.<br><br>
+        Below is a list of our <b>current</b> Available Affordable Housing Inventory around Central Florida. 
         As part of the application process, applicants must submit the verification documentation in a timely manner, as the first approved and full deposit paid applicant will have priority of the available apartment home. 
-        <br>This housing inventory will move quickly so please APPLY TODAY and turn this opportunity into a HOME.</p></div>
-        
-        
-</section>
-    
-    <main>
+        <br><br>This housing inventory will move quickly. <b>Apply today</b> and turn this opportunity into a <b>home!</b>
+        </p>
+
+        <div id="nav-section-background">
+            <h2 id="page-nav-h2">Choose Your Region:</h2>
+            <div class="nav-container"> 
+               <nav id="page-nav"> 
+                  <ul>
+                    <li><a href="#">East Florida</a>
+                    </li>
+                    <li><a href="#">Central Florida</a>
+                    </li>
+                    <li><a href="#">West Florida</a>
+                    </li>
+                  </ul>
+                </nav>
+            </div>
+           </div>
+    </div>
+    <div id="intro-pic"></div>
+</div>
 
 
-         <!--insert nav here for the 3 pages, for East, Central, West FL Pages-->
+<main>
 
-          <!--chang this h2 to nav or label? for semantics--> 
-          <div id="nav-section-background">
-         <h2 id="page-nav-h2">Choose Your Region:</h2>
-         <div class="nav-container"> 
-            <nav id="page-nav"> 
-               <ul>
-                 <li><a href="#">East Florida</a>
-                 </li>
-                 <li><a href="#">Central Florida</a>
-                 </li>
-                 <li><a href="#">West Florida</a>
-                 </li>
-               </ul>
-             </nav>
-         </div>
-        </div>
       <!--insert nav bar here w/ bedroom count, to jump to relevant section--> 
       <div class="bed-count-dropdown-container">
       <label for="bed-count-dropdown">How many Bedrooms?</label>
         <select id="bed-select" onchange="handleBedCountSelect()">
-            <option value="Dropdown"></option>
+            
             <option value="#one-bed-section">1 Bedrooms</option>
             <option value="#two-bed-section">2 Bedrooms</option>
             <option value="#three-bed-section">3 Bedrooms</option>
@@ -800,7 +710,7 @@ function closeModal() {
                                                     <div class="modal" id="modal">
                                                         <span class="close-btn" onclick="closeModal()">&times;</span>
                                                         <h2>Modal Content</h2>
-                                                        <p class="modal-content">This is the content of the modal.</p>
+                                                        <p class="modal-content">I am info chart 1</p>
                                                     </div>
                                                 </div>
                                                 
@@ -813,138 +723,7 @@ function closeModal() {
                     </div>
                     <!--card ends-->
 
-
-
-
-
-
-
-
-                  
-                    <!--card starts here-->
-                    <div class="card-container">    
-                        <div class="card" >
-                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
-                            <h3 class="property-name">Property Name</h3>
-                                <div class="card-body">
-                                        <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
-                                                <div class="unit-details">
-                                                    <div><i class="fa-solid fa-bed"></i># Beds</div>
-                                                    <div><i class="fa-solid fa-bath"></i># Baths</div>
-                                                    <div><i class="fa-solid fa-dollar-sign"></i>RENT</div>
-                                                </div>
-                                                <div class="admin-details">
-                                                    <p>Deposit Starting at: $</p>
-                                                    <p>Application Fee: $</p>
-                                                </div>
-                                                <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-                                                <button class="CTA-apply">Get Started</button>
-                                                <p class="date-updated">updated:[date].See website for pricing details.</p>
-                                </div>
-                                
-                            </div>
-                    </div>
-                    <!--card ends-->
-                   <!--card starts here-->
-                   <div class="card-container">    
-                    <div class="card" >
-                        <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
-                        <h3 class="property-name">Property Name</h3>
-                            <div class="card-body">
-                                    <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
-                                            <div class="unit-details">
-                                                <div><i class="fa-solid fa-bed"></i># Beds</div>
-                                                <div><i class="fa-solid fa-bath"></i># Baths</div>
-                                                <div><i class="fa-solid fa-dollar-sign"></i>RENT</div>
-                                            </div>
-                                            <div class="admin-details">
-                                                <p>Deposit Starting at: $</p>
-                                                <p>Application Fee: $</p>
-                                            </div>
-                                            
-                                            <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-                                            <button class="CTA-apply">Get Started</button>
-                                            <p class="date-updated">updated:[date].See website for pricing details.</p> 
-                            </div>
-                            
-                        </div>
-                        
-                </div>
-                <!--card ends-->
-                    <!--card starts here-->
-                    <div class="card-container">    
-                        <div class="card" >
-                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
-                            <h3 class="property-name">Property Name</h3>
-                                <div class="card-body">
-                                        <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
-                                                <div class="unit-details">
-                                                    <div><i class="fa-solid fa-bed"></i># Beds</div>
-                                                    <div><i class="fa-solid fa-bath"></i># Baths</div>
-                                                    <div><i class="fa-solid fa-dollar-sign"></i>RENT</div>
-                                                </div>
-                                                <div class="admin-details">
-                                                    <p>Deposit Starting at: $</p>
-                                                    <p>Application Fee: $</p>
-                                                </div>
-                                                
-                                                <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-                                                <button class="CTA-apply">Get Started</button>
-                                                <p class="date-updated">updated:[date].See website for pricing details.</p>      
-                                </div>
-
-                            </div>
-                    </div>
-                    <!--card ends-->
-                    <!--card starts here-->
-                    <div class="card-container">    
-                        <div class="card" >
-                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
-                        
-                            <h3 class="property-name">Property Name</h3>
-                                <div class="card-body">
-                                        <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
-                                                <div class="unit-details">
-                                                    <div><i class="fa-solid fa-bed"></i># Beds</div>
-                                                    <div><i class="fa-solid fa-bath"></i># Baths</div>
-                                                    <div><i class="fa-solid fa-dollar-sign"></i>RENT</div>
-                                                </div>
-                                                <div class="admin-details">
-                                                    <p>Deposit Starting at: $</p>
-                                                    <p>Application Fee: $</p>
-                                                </div>
-                                                <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-                                                <button class="CTA-apply">Get Started</button>
-                                                <p class="date-updated">updated:[date].See website for pricing details.</p>                                            
-                                </div>
-                            </div>
-                    </div>
-                    <!--card ends-->
-                    <!--card starts here-->
-                    <div class="card-container">    
-                        <div class="card" >
-                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
-                            <h3 class="property-name">Property Name</h3>
-                                <div class="card-body">
-                                        <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
-                                                <div class="unit-details">
-                                                    <div><i class="fa-solid fa-bed"></i># Beds</div>
-                                                    <div><i class="fa-solid fa-bath"></i># Baths</div>
-                                                    <div><i class="fa-solid fa-dollar-sign"></i>RENT</div>
-                                                </div>
-                                                <div class="admin-details">
-                                                    <p>Deposit Starting at: $</p>
-                                                    <p>Application Fee: $</p>
-                                                </div>
-                                                
-                                                <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-                                                <button class="CTA-apply">Get Started</button>
-                                                <p class="date-updated">updated:[date].See website for pricing details.</p>
-                                </div>
-                                
-                            </div>
-                            
-                    </div>
+                    
                     <!--card ends-->   
                 </div>
 </section>
