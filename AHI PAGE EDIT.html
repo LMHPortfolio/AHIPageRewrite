@@ -27,10 +27,12 @@ body {
     flex-direction: row!important;
     flex-wrap: wrap!important;
     justify-content: center!important;
-    background-color: #000!important;
+   /*  background: rgb(60, 60, 60); */
+
     width: 100%!important;
     padding-top: 12px!important;
     padding-bottom: 24px!important; 
+    
 }
 
 @media (min-width: 768px) {
@@ -59,20 +61,22 @@ body {
 
 #hero-title h1 {
 
-    font-family: 'Open Sans', sans-serif!important;
-    font-size: 3rem!important;
+    
+    font-family: 'Poppins', sans-serif!important;
+    font-size: 4rem!important;
     letter-spacing: .07rem!important;
     text-align: center!important;
-    text-transform: uppercase!important;
+    /* text-transform: uppercase!important; */
     padding-top: 40px!important;
-
-    background-image: linear-gradient(45deg, #d1caad, #f6a000)!important;
+    padding-left: 2rem;
+    /* color:#feea99; */
+    background-image: linear-gradient(45deg, #c19a01, #ffea98)!important;
     background-size: 100%!important;
     -webkit-background-clip: text!important;
     -moz-background-clip: text!important;
     -webkit-text-fill-color: transparent!important; 
     -moz-text-fill-color: transparent!important;
-    position: relative!important;
+    position: relative!important; 
 }
 
 @media screen and (max-width: 480px) {
@@ -85,92 +89,61 @@ body {
 
 #hero-sub {
 
-    font-family: 'Open Sans', sans-serif!important;
+    font-family: 'Poppins', sans-serif!important;
     text-transform: none!important;
     text-align: center!important;
     font-size: 1.4rem!important;
-    font-weight: 100!important;
+    font-weight: 200!important;
     line-height: .8rem!important;
-    background-color: #000!important;
-    color: #ffffff!important;
-    letter-spacing: .07rem!important;
-    -webkit-background-clip: none!important;
-    -moz-background-clip: none!important;
-    -webkit-text-fill-color:#ffffff!important ; 
-    -moz-text-fill-color: #ffffff!important;        
+   
+    color: #444444!important;
+    letter-spacing: .09rem!important;
+        
 }
 
 @media screen and (max-width: 480px) {
 
     #hero-sub {
-        font-family: 'Open Sans', sans-serif!important;
+        font-family: 'Poppins', sans-serif!important;
         font-size: .8rem!important; 
    }        
 } 
 
 .page-header {
   
-        font-family: 'Open Sans', sans-serif!important;
+        font-family: 'Poppins', sans-serif!important;
         text-align: center!important;
 }
 
  #intro {
   /* changed grid col to 1*/
    
-      font-family: 'Open Sans', sans-serif!important;
-      display: grid!important;
+      font-family: 'Poppins', sans-serif!important;
+      /* display: grid!important;
       grid-template-columns: repeat(1, 1fr)!important;
-      align-items: top!important;
+      align-items: top!important; */
       padding:30px!important;
    /* changed gap to 0*/
       gap: 0rem!important;
-      background: rgb(0,0,0)!important;
-      background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(96,95,95,1) 100%)!important;
+      
+     
   
   } 
  
   #intro p {
 
-    font-family: 'Open Sans', sans-serif!important;
+    font-family: 'Poppins', sans-serif!important;
     text-transform: none!important;
-    text-align: left!important;
-    margin-left: 30px;
-    margin-right: 30px;
-    
-    color: #ffffff!important;
+    font-size: 1rem!important;
+    font-weight: 300!important;
+    line-height: 1.8rem!important;
     letter-spacing: .07rem!important;
-    -webkit-background-clip: none!important;
-    -moz-background-clip: none!important;
-    -webkit-text-fill-color:#ffffff!important ; 
-    -moz-text-fill-color: #ffffff!important;        
-      font-size: 1rem!important;
-      font-weight: 100!important;
-    
-     /* font-family: 'Open Sans', sans-serif!important;
-      margin-left: 60px!important;
-      margin-right: 60px!important;
-      color: #ffffff!important;
-      font-family: 'Open Sans', sans-serif!important;
-      font-weight: .02rem!important; */
-     
-      line-height: 1.8rem!important;
-      letter-spacing: .06rem!important;
-     
+    padding: .2rem;
+    text-align: justify;
+    text-align-last: left;
+    color: #000000!important;
+
   }
-   /*
-  #intro-pic {
-      
-      display: grid!important;
-      width: 400px!important;
-      height: 200px!important;
-      background-repeat: no-repeat!important;
-      background-position: center!importantr;
-      background-size: cover!important;
-      border-radius: 10px!important;
-      margin-top: 20px!important;
-      
-  }    
-*/
 
 
 @media screen and (min-width: 640px) {
@@ -192,13 +165,25 @@ body {
   
           display: flex!important;
           flex-direction: row!important;
-          padding: 15px!important;
+         
           flex-wrap: wrap!important;
           font-size: 1rem!important;
           line-height: 1.6rem!important;
-          gap: .8rem!important;
-          justify-content: center!important;
+          margin-left: 1.5rem;
+          margin-right: 1.5rem;
+         
           margin-bottom: 10px!important;
+          font-family: 'Poppins', sans-serif!important;
+    text-transform: none!important;
+    font-size: 1rem!important;
+    font-weight: 300!important;
+    line-height: 1.8rem!important;
+    letter-spacing: .07rem!important;
+    padding: .2rem;
+    text-align: justify;
+    text-align-last: left;
+    color: #000000!important;
+
   }  
   
 }
@@ -206,16 +191,15 @@ body {
 @media screen and (max-width: 640px) {
 
 #intro {
-    padding: 15px!important;
+    
     font-size: .8rem!important;
     display: flex!important;
     flex-direction: row!important;
     flex-wrap: wrap!important;
     font-size: 1rem!important;
     line-height: 1.6rem!important;
-  /*changed gap to 0 */
-    gap: 0rem!important;
-    justify-content: center!important;
+  
+    
     
     
 }  
@@ -226,6 +210,7 @@ body {
 @media screen and (max-width: 480px) {
 
     #intro {
+        
         padding: 5px!important;
         padding-bottom: 10px!important;
         display: flex!important;
@@ -233,20 +218,16 @@ body {
         flex-wrap: wrap!important;
         font-size: 1rem!important;
         line-height: 1.6rem!important;
-      /* changed gap to 0*/
-        gap: 1.7rem!important;
+     
            
     }
-    /*#intro-pic {
-        display: flex!important;
-        flex-direction: row!important;
-        flex-wrap: wrap!important; 
 
-    } */
     
 } 
 
-
+#nav-section-background {
+    background-color: #ffffff;
+}
 
 .nav-container {
 
@@ -255,14 +236,23 @@ body {
         justify-content: center!important;   
 }
 
-#page-nav-h4 {
+#page-nav-h2 {
 
         text-align: center!important;
-        font-family: 'Open Sans', sans-serif!important;
-        font-weight: .02rem!important;
-        font-size: 1.3rem!important;
-        letter-spacing: .01rem!important;
+        font-family: 'Poppins', sans-serif!important;
+      
+        font-size: 1.4rem!important;
+    font-weight: 200!important;
+    line-height: .8rem!important;
+        letter-spacing: .03rem!important;
         margin-top: 30px;
+        
+    text-transform: none!important;
+   
+    
+   
+    color: #444444!important;
+   
   
 }
 
@@ -275,7 +265,7 @@ body {
 
     #page-nav ul {
       
-        font-family: 'Open Sans', sans-serif!important;
+        font-family: 'Poppins', sans-serif!important;
         list-style-type: none!important;
         padding: 0!important;
         margin: 0!important;
@@ -287,7 +277,7 @@ body {
 
     #page-nav li {
       
-      font-family: 'Open Sans', sans-serif!important;
+      font-family: 'Poppins', sans-serif!important;
       margin-bottom: 10px!important;
     }
 }
@@ -366,11 +356,12 @@ body {
 
 #page-nav a {
   
-    font-family: 'Open Sans', sans-serif!important;
+    font-family: 'Poppins', sans-serif!important;
     color: #ffffff!important;
     text-decoration: none!important;
     font-size: 1rem!important;
-    font-weight: bolder!important;
+    font-weight: 600!important;
+    letter-spacing: .09rem;
     background-color: rgb(118, 87, 40)!important;
     padding: .6rem!important;
     border-radius: 7px!important;
@@ -388,7 +379,7 @@ body {
     display: flex!important;
     flex-direction: row!important;
     gap: 10px;
-    font-family: 'Open Sans', sans-serif!important;
+    font-family: 'Poppins', sans-serif!important;
     font-weight: .02rem!important;
     font-size: 1.3rem!important;
     letter-spacing: .01rem!important;
@@ -402,7 +393,10 @@ body {
  .bed-count-dropdown-container label {
 
   font-size: 1.3rem!important;
-
+  font-size: 1.4rem!important;
+    font-weight: 200!important;
+   
+        letter-spacing: .03rem!important;
    
  }
 
@@ -659,6 +653,7 @@ margin-left: 65px!important;
         border: 1px solid #ccc;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         z-index: 1;
+        border-radius: 10px;
 
     }
 
@@ -738,7 +733,7 @@ function closeModal() {
         Below is a list of our CURRENT Available Affordable Housing Inventory around Central Florida. 
         Apartment homes are income restricted and are subject to Maximum Allowable Household Incomes listed for each community location.
         As part of the application process, applicants must submit the verification documentation in a timely manner, as the first approved and full deposit paid applicant will have priority of the available apartment home. 
-        <br>This housing inventory will move quickly so please APPLY TODAY and turn this opportunity into a HOME.</p></div> 
+        <br>This housing inventory will move quickly so please APPLY TODAY and turn this opportunity into a HOME.</p></div>
         
         
 </section>
@@ -748,8 +743,9 @@ function closeModal() {
 
          <!--insert nav here for the 3 pages, for East, Central, West FL Pages-->
 
-          /* change to <nav> or <label>*/
-         <h2 id="page-nav-h4">Choose Your Region:</h2>
+          <!--chang this h2 to nav or label? for semantics--> 
+          <div id="nav-section-background">
+         <h2 id="page-nav-h2">Choose Your Region:</h2>
          <div class="nav-container"> 
             <nav id="page-nav"> 
                <ul>
@@ -762,7 +758,7 @@ function closeModal() {
                </ul>
              </nav>
          </div>
-
+        </div>
       <!--insert nav bar here w/ bedroom count, to jump to relevant section--> 
       <div class="bed-count-dropdown-container">
       <label for="bed-count-dropdown">How many Bedrooms?</label>
