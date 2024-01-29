@@ -30,7 +30,7 @@ body {
     
 }
 
-#intro-title {
+#intro-h1 {
 
     flex: 1!important; /* Take remaining space in the flex container */
     padding-right: 20px!important; /* Adjust spacing between text and image */
@@ -814,8 +814,6 @@ border-radius: 10px!important;
 
 <script>/* Insert JS event handlers here
         need click events for East/Central/West pages
-        need click events for 1 Bedroom/2 Bedroom/3 Bedroom/4 Bedroom
-        need click events for the toggle function on the income info (use a default class that is turned true/false on click/toggle. No unique ID needed)
         need button event handler for apply now*/
 
         function handleBedCountSelect () {
@@ -823,21 +821,6 @@ border-radius: 10px!important;
             location = selection.value;  
         }
        
-
-/* 
-
-    // Function to open the modal
-function openModal() {
-    document.getElementById('overlay').style.display = 'block';
-    document.getElementById('modal').style.display = 'block';
-}
-
-// Function to close the modal
-function closeModal() {
-    document.getElementById('overlay').style.display = 'none';
-    document.getElementById('modal').style.display = 'none';
-} */
-
 
 
 function openModal() {
@@ -852,7 +835,7 @@ function openModal() {
 }
 
 // Function to close the modal
-function closeModal() {
+/*function closeModal() {
     const overlays = document.querySelectorAll('.overlay');
     const modals = document.querySelectorAll('.modal');
 
@@ -861,23 +844,8 @@ function closeModal() {
         overlay.style.display = 'none';
         modals[index].style.display = 'none';
     }); 
-}
-
-/* function toggle() {
-
-    const element = element.currentTarget(); */
-    
-    
-
-
- /*    if (element.style.display = 'none' ) {
-        element.style.display = 'block';
-    } else {
-        element.style.display = 'none';
-    } 
- 
-
 }*/
+
 
 function toggleAccordion(accordionId) {
     const accordionContent = document.getElementById(accordionId);
@@ -892,17 +860,7 @@ function toggleAccordion(accordionId) {
 }
 
 
-
-
-
-
-
-
-
-
 </script>
-
-
 
 
 </head>
@@ -911,7 +869,7 @@ function toggleAccordion(accordionId) {
 
   <div id="intro-container">
     <div id="intro-title">
-        <h1>Affordable Housing Inventory</h1>
+        <h1 id="intro-h1">Affordable Housing Inventory</h1>
         <p id="intro-sub">
             <b>ConcordRENTS</b> is a national leader in providing high-quality, affordable, multifamily housing and understands the importance of a strong community and the value of giving back.
          With the affordable housing crisis in Orlando, FL and the rest of Central Florida, we understand the struggle in finding quality affordable housing.<br><br>
