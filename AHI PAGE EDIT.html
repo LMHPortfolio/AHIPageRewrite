@@ -468,7 +468,7 @@ body {
 .address {
   
     font-family: 'Open Sans', sans-serif!important;
-    font-size: .8rem!important;
+    font-size: .9rem!important;
     display: inline-flex!important;
     align-items: baseline!important;
 } 
@@ -490,6 +490,7 @@ body {
     display:grid!important;
     grid-template-columns: repeat(3,  1fr)!important;
     gap: 1rem!important;
+    font-size: .9rem;
 }
 
 
@@ -934,14 +935,16 @@ function toggleAccordion(accordionId) {
                 <div class="card-container">    
                     <div class="card" >
                         <div class="image-container" style="background-image: url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1920/s3/2/82930/lake%20sumter_012624.jpg');" 
-                          <a href="https://www.lakesumterapartments.com/"></a> </div>                               
+                          <a href="https://www.lakesumterapartments.com/"></a></div>                               
                         <h2 class="property-name">Lake Sumter Apartments</h2>
                             <div class="card-body">
-                                    <div><i class="fa-solid fa-location-dot fa-xl"><a href="https://maps.app.goo.gl/CVvctWVaVFsim6mJ7"></a></i><h3 class="address">10816 NE 87th Loop</h3><br>Lady Lake, FL 32162</div>
+                                    <div><i class="fa-solid fa-location-dot fa-xl"></i>
+                                      <h4 class="address">10816 NE 87th Loop 
+                                      <br>Lady Lake, FL 32162</h4></div>
                                             <div class="unit-details">
                                                 <div><i class="fa-solid fa-bed"></i>3 Beds</div>
                                                 <div><i class="fa-solid fa-bath"></i>2 Baths</div>
-                                                <div><i class="fa-solid fa-dollar-sign"></i>999</div>
+                                                <div><i class="fa-solid fa-dollar-sign"></i>$999</div>
                                             </div>
                                             <div class="admin-details">
                                                 <p>Deposit Starting at: $1,200</p>
@@ -952,7 +955,7 @@ function toggleAccordion(accordionId) {
                                                 <button class="accordion-button" onclick="toggleAccordion('modal1')">View Income Restrictions</button>
                                                 <div class="accordion-content" id="modal1">
                                                     <span class="close-btn-x"  onclick="toggleAccordion('modal1')">x</span>
-                                                    <h2 class= "eligibility-title">Income Eligibility Requirements Sumter County</h2>
+                                                    <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
                                                     <table class="table">
                                                         <thead class="thead">
                                                           <tr class="tr">
@@ -963,7 +966,7 @@ function toggleAccordion(accordionId) {
                                                         </thead>
                                                         <tbody class="tbody">
                                                           <tr class="tr">
-                                                                <td class="td-not-bootstrap">1</td><td class="td-not-bootstrap">$33,480</td><td class="td-not-bootstrap">$43,360</td>
+                                                                <td class="td-not-bootstrap">1</td><td class="td-not-bootstrap">$32,520</td><td class="td-not-bootstrap">$43,360</td>
                                                             </tr>
                                                             <tr class="tr">
                                                                 <td class="td-not-bootstrap">2</td><td class="td-not-bootstrap">$37,200</td><td class="td-not-bootstrap">$49,600</td>
@@ -993,7 +996,7 @@ function toggleAccordion(accordionId) {
                                                 </div>
                                             </div>
                                             
-                                            <button class="CTA-apply">Get Started</button>
+                                            <button class="CTA-apply"><a href="https://www.lakesumterapartments.com/letsgetstarted"></a>Get Started</button>
                                             <p class="date-updated">updated:[date].See website for pricing details.</p>
      
                             </div>
