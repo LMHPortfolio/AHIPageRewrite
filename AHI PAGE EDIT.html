@@ -358,7 +358,7 @@ body {
 .bedcount-title-p {
 
     color: #000000!important;
-    font-family: 'Poppins', sans-serif!important;
+    font-family: 'Open Sans', sans-serif!important;
     font-size: 1rem!important;
     text-transform: none!important;
     margin-left: 65px!important;
@@ -548,62 +548,6 @@ body {
     background: rgba(0, 0, 0, 0.5)!important;
 }
 
-    /* Style for the modal */
-.modal-container {
-
-    display: flex!important;
-    justify-content: center!important;
-    align-items: center!important;
-    margin: 0!important;
-
-}
-
-.modal-button {
-
-    padding-top: 10px!important;
-    padding-bottom: 10px!important;
-    padding-left: 50px!important;
-    padding-right: 50px!important;
-    border-radius: 10px!important;
-    margin: 10px!important;
-    background-color: #868686!important;
-    color: #ffffff!important;
-    font-size: 1rem!important;
-    border: none!important;
-    box-shadow: 1px 2px 2px 1px #cfcfcf!important; 
-    cursor: pointer!important;   
-}
-
-.modal-button:hover {
-
-    background-color: rgb(246, 156, 0)!important;
-}
-
-
-.modal {
-
-    display: none;
-    position: fixed!important;
-    top: 50%!important;
-    left: 50%!important;
-    transform: translate(-50%, -50%)!important;
-    padding: 20px!important;
-    background: #fff!important;
-    border: 1px solid #ccc!important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)!important;
-    z-index: 1!important;
-    border-radius: 10px!important;
-
-}
-
-.modal-content {
-
-    position: relative!important;
-    display: flex!important;
-    align-content: center!important;
-} 
-
-    /* Style for the close button */
 .close-btn-x {
 
     position: absolute!important;
@@ -626,6 +570,8 @@ body {
 .table th {
 
     text-align: center;
+    padding-right: .6rem;
+    padding-left: .6rem;
 }
 
 
@@ -650,6 +596,7 @@ body {
         .th {
             color: #646464;
             text-align: center;
+            padding-right: .6rem;
            
         .td-not-bootstrap {
 
@@ -731,40 +678,26 @@ cursor: pointer;
 }
 
 
-/* .accordion-content {
-    display: none;
-    padding: 20px;
-    background: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin-top: 10px;
-} */
-
 .accordion-content {
 
-display: none;
-position: fixed;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%)!important;
-padding: 20px!important;
-background: #fff!important;
-border: 1px solid #ccc!important;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)!important;
-z-index: 1!important;
-border-radius: 10px!important;
-
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)!important;
+    padding: 20px!important;
+    background: #fff!important;
+    border: 1px solid #ccc!important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)!important;
+    z-index: 1!important;
+    border-radius: 10px!important;
 
 
 }
 
-
-
-
-
 .accordion-content.active {
     display: block;
+    text-align: center;
   
     
 }
@@ -774,7 +707,6 @@ border-radius: 10px!important;
 
     .accordion-content {
 
-        .accordion-content {
         position: relative;
         top: auto;
         left: 50%!important;
@@ -783,11 +715,8 @@ border-radius: 10px!important;
         max-height: 75vh!important;
         min-width: 50vh!important;
         min-height: 50vh!important;
-
-       
-     }   
+        
     }
-
 }
 
 
@@ -808,15 +737,9 @@ border-radius: 10px!important;
     font-weight: 700;
     color: #646464;
 
-}    
-
- 
-
+    }    
    
 }
-
-
-
 
 
 @media screen and (max-width: 820px) {
@@ -827,8 +750,6 @@ border-radius: 10px!important;
         left: 50%!important;
         transform: translate(-50%, -50%)!important;
        
-       
-
        
      }   
 
@@ -1100,39 +1021,39 @@ function toggleAccordion(accordionId) {
                                                         <button class="accordion-button" onclick="toggleAccordion('modal2')">View Income Restrictions</button>
                                                         <div class="accordion-content" id="modal2">
                                                             <span class="close-btn-x"  onclick="toggleAccordion('modal2')">x</span>
-                                                            <h2 class="eligibility-title">Income Eligibility Requirements I'm 2!</h2>
-                                                            <table>
-                                                                <thead>
-                                                                  <tr>
-                                                                      <th scope="col">Household Size</th>
-                                                                      <th scope="col">Max Allowable Household Income for 60%</th>
-                                                                      <th scope="col">Max Allowable Household Income for 80%</th>
+                                                            <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
+                                                            <table class="table">
+                                                                <thead class="thead">
+                                                                  <tr class="tr">
+                                                                      <th scope="col" class="th">Household Size</th>
+                                                                      <th scope="col" class="th">Max Allowable Household Income for 60%</th>
+                                                                      <th scope="col" class="th">Max Allowable Household Income for 80%</th>
                                                                   </tr>
                                                                 </thead>
-                                                                <tbody>
-                                                                  <tr>
-                                                                        <td>1</td><td>$32,520</td><td>$43,360</td>
+                                                                <tbody class="tbody">
+                                                                  <tr class="tr">
+                                                                        <td class="td-not-bootstrap">1</td><td class="td-not-bootstrap">$32,520</td><td class="td-not-bootstrap">$43,360</td>
                                                                     </tr>
-                                                                    <tr>
-                                                                        <td>2</td><td>$37,200</td><td>$49,600</td>
+                                                                    <tr class="tr">
+                                                                        <td class="td-not-bootstrap">2</td><td class="td-not-bootstrap">$37,200</td><td class="td-not-bootstrap">$49,600</td>
                                                                     </tr>
-                                                                    <tr>
-                                                                        <td>3</td><td>$41,820</td><td>$55,760</td>
+                                                                    <tr class="tr">
+                                                                        <td class="td-not-bootstrap">3</td><td class="td-not-bootstrap">$41,820</td><td class="td-not-bootstrap">$55,760</td>
                                                                     </tr>
-                                                                    <tr>
-                                                                        <td>4</td><td>$46,440</td><td>$61,920</td>
+                                                                    <tr class="tr">
+                                                                        <td class="td-not-bootstrap">4</td><td class="td-not-bootstrap">$46,440</td><td class="td-not-bootstrap">$61,920</td>
                                                                     </tr>
-                                                                    <tr>
-                                                                        <td>5</td><td>$50,160</td><td>$66,880</td>
+                                                                    <tr class="tr">
+                                                                        <td class="td-not-bootstrap">5</td><td class="td-not-bootstrap">$50,160</td><td class="td-not-bootstrap">$66,880</td>
                                                                     </tr>
-                                                                    <tr>
-                                                                        <td>6</td><td>$53,880</td><td>$71,840</td>
+                                                                    <tr class="tr">
+                                                                        <td class="td-not-bootstrap">6</td><td class="td-not-bootstrap">$53,880</td><td class="td-not-bootstrap">$71,840</td>
                                                                     </tr>
-                                                                    <tr>
-                                                                        <td>7</td><td>$57,600</td><td>$76,800</td>
+                                                                    <tr class="tr">
+                                                                        <td class="td-not-bootstrap">7</td><td class="td-not-bootstrap">$57,600</td><td class="td-not-bootstrap">$76,800</td>
                                                                     </tr>
-                                                                    <tr>
-                                                                        <td>8</td><td>$61,320</td><td>$81,760</td>
+                                                                    <tr class="tr">
+                                                                        <td class="td-not-bootstrap">8</td><td class="td-not-bootstrap">$61,320</td><td class="td-not-bootstrap">$81,760</td>
                                                                     </tr>
                                                                   
                                                                   </tbody>    
@@ -1145,7 +1066,7 @@ function toggleAccordion(accordionId) {
                                                     <p class="date-updated">updated:[date].See website for pricing details.</p>
              
                                     </div>
-     
+        
                                 </div>
                         </div>
                         <!--card ends-->
@@ -1162,59 +1083,10 @@ function toggleAccordion(accordionId) {
             <!--<h2 class="currently-viewing"></h2>-->
                 <div class="main-container" > 
                 <!--card starts here-->
-                    <div class="card-container">    
-                        <div class="card" >
-                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
-                            <h3 class="property-name">Property Name</h3>
-                                <div class="card-body">
-                                        <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
-                                                <div class="unit-details">
-                                                    <div><i class="fa-solid fa-bed"></i># Beds</div>
-                                                    <div><i class="fa-solid fa-bath"></i># Baths</div>
-                                                    <div><i class="fa-solid fa-dollar-sign"></i>RENT</div>
-                                                </div>
-                                                <div class="admin-details">
-                                                    <p>Deposit Starting at: $</p>
-                                                    <p>Application Fee: $</p>
-                                                </div>
-                                                <div class="eligibility">***eligibility modal point***</div>
-                                                <button class="CTA-apply">Get Started</button>
-                                                <p class="date-updated">updated:[date].See website for pricing details.</p>
-
-                                </div>
-                            </div>
-                    </div>
-                    <!--card ends-->
-                    <!--card starts here-->
-                    <div class="card-container">    
-                        <div class="card" >
-                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
-                            <h3 class="property-name">Property Name</h3>
-                                <div class="card-body">
-                                        <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
-                                                <div class="unit-details">
-                                                    <div><i class="fa-solid fa-bed"></i># Beds</div>
-                                                    <div><i class="fa-solid fa-bath"></i># Baths</div>
-                                                    <div><i class="fa-solid fa-dollar-sign"></i>RENT</div>
-                                                </div>
-                                                <div class="admin-details">
-                                                    <p>Deposit Starting at: $</p>
-                                                    <p>Application Fee: $</p>
-                                                </div>  
-                                                <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-                                                <button class="CTA-apply">Get Started</button>
-                                                <p class="date-updated">updated:[date].See website for pricing details.</p>
-                                                
-                                </div>
-                            </div>
-                    </div>
-                    <!--card ends-->
-                   <!--card starts here-->
-                   <div class="card-container">    
+                <div class="card-container">    
                     <div class="card" >
                         <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
-                    
-                        <h3 class="property-name">Property Name</h3>
+                        <h2 class="property-name">Property Name</h2>
                             <div class="card-body">
                                     <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
                                             <div class="unit-details">
@@ -1226,10 +1098,197 @@ function toggleAccordion(accordionId) {
                                                 <p>Deposit Starting at: $</p>
                                                 <p>Application Fee: $</p>
                                             </div>
-                                            <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+                                            
+                                            <div class="accordion-container">
+                                                <button class="accordion-button" onclick="toggleAccordion('modal3')">View Income Restrictions</button>
+                                                <div class="accordion-content" id="modal3">
+                                                    <span class="close-btn-x"  onclick="toggleAccordion('modal3')">x</span>
+                                                    <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
+                                                    <table class="table">
+                                                        <thead class="thead">
+                                                          <tr class="tr">
+                                                              <th scope="col" class="th">Household Size</th>
+                                                              <th scope="col" class="th">Max Allowable Household Income for 60%</th>
+                                                              <th scope="col" class="th">Max Allowable Household Income for 80%</th>
+                                                          </tr>
+                                                        </thead>
+                                                        <tbody class="tbody">
+                                                          <tr class="tr">
+                                                                <td class="td-not-bootstrap">1</td><td class="td-not-bootstrap">$32,520</td><td class="td-not-bootstrap">$43,360</td>
+                                                            </tr>
+                                                            <tr class="tr">
+                                                                <td class="td-not-bootstrap">2</td><td class="td-not-bootstrap">$37,200</td><td class="td-not-bootstrap">$49,600</td>
+                                                            </tr>
+                                                            <tr class="tr">
+                                                                <td class="td-not-bootstrap">3</td><td class="td-not-bootstrap">$41,820</td><td class="td-not-bootstrap">$55,760</td>
+                                                            </tr>
+                                                            <tr class="tr">
+                                                                <td class="td-not-bootstrap">4</td><td class="td-not-bootstrap">$46,440</td><td class="td-not-bootstrap">$61,920</td>
+                                                            </tr>
+                                                            <tr class="tr">
+                                                                <td class="td-not-bootstrap">5</td><td class="td-not-bootstrap">$50,160</td><td class="td-not-bootstrap">$66,880</td>
+                                                            </tr>
+                                                            <tr class="tr">
+                                                                <td class="td-not-bootstrap">6</td><td class="td-not-bootstrap">$53,880</td><td class="td-not-bootstrap">$71,840</td>
+                                                            </tr>
+                                                            <tr class="tr">
+                                                                <td class="td-not-bootstrap">7</td><td class="td-not-bootstrap">$57,600</td><td class="td-not-bootstrap">$76,800</td>
+                                                            </tr>
+                                                            <tr class="tr">
+                                                                <td class="td-not-bootstrap">8</td><td class="td-not-bootstrap">$61,320</td><td class="td-not-bootstrap">$81,760</td>
+                                                            </tr>
+                                                          
+                                                          </tbody>    
+                                                            
+                                                      </table>
+                                                </div>
+                                            </div>
+                                            
                                             <button class="CTA-apply">Get Started</button>
                                             <p class="date-updated">updated:[date].See website for pricing details.</p>
+     
                             </div>
+
+                        </div>
+                </div>
+                    <!--card ends-->
+                    <!--card starts here-->
+                    <div class="card-container">    
+                        <div class="card" >
+                            <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
+                            <h2 class="property-name">Property Name</h2>
+                                <div class="card-body">
+                                        <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
+                                                <div class="unit-details">
+                                                    <div><i class="fa-solid fa-bed"></i># Beds</div>
+                                                    <div><i class="fa-solid fa-bath"></i># Baths</div>
+                                                    <div><i class="fa-solid fa-dollar-sign"></i>RENT</div>
+                                                </div>
+                                                <div class="admin-details">
+                                                    <p>Deposit Starting at: $</p>
+                                                    <p>Application Fee: $</p>
+                                                </div>
+                                                
+                                                <div class="accordion-container">
+                                                    <button class="accordion-button" onclick="toggleAccordion('modal4')">View Income Restrictions</button>
+                                                    <div class="accordion-content" id="modal4">
+                                                        <span class="close-btn-x"  onclick="toggleAccordion('modal4')">x</span>
+                                                        <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
+                                                        <table class="table">
+                                                            <thead class="thead">
+                                                              <tr class="tr">
+                                                                  <th scope="col" class="th">Household Size</th>
+                                                                  <th scope="col" class="th">Max Allowable Household Income for 60%</th>
+                                                                  <th scope="col" class="th">Max Allowable Household Income for 80%</th>
+                                                              </tr>
+                                                            </thead>
+                                                            <tbody class="tbody">
+                                                              <tr class="tr">
+                                                                    <td class="td-not-bootstrap">1</td><td class="td-not-bootstrap">$32,520</td><td class="td-not-bootstrap">$43,360</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">2</td><td class="td-not-bootstrap">$37,200</td><td class="td-not-bootstrap">$49,600</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">3</td><td class="td-not-bootstrap">$41,820</td><td class="td-not-bootstrap">$55,760</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">4</td><td class="td-not-bootstrap">$46,440</td><td class="td-not-bootstrap">$61,920</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">5</td><td class="td-not-bootstrap">$50,160</td><td class="td-not-bootstrap">$66,880</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">6</td><td class="td-not-bootstrap">$53,880</td><td class="td-not-bootstrap">$71,840</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">7</td><td class="td-not-bootstrap">$57,600</td><td class="td-not-bootstrap">$76,800</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">8</td><td class="td-not-bootstrap">$61,320</td><td class="td-not-bootstrap">$81,760</td>
+                                                                </tr>
+                                                              
+                                                              </tbody>    
+                                                                
+                                                          </table>
+                                                    </div>
+                                                </div>
+                                                
+                                                <button class="CTA-apply">Get Started</button>
+                                                <p class="date-updated">updated:[date].See website for pricing details.</p>
+         
+                                </div>
+    
+                            </div>
+                    </div>
+                    <!--card ends-->
+                   <!--card starts here-->
+                   <div class="card-container">    
+                    <div class="card" >
+                        <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
+                        <h2 class="property-name">Property Name</h2>
+                            <div class="card-body">
+                                    <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
+                                            <div class="unit-details">
+                                                <div><i class="fa-solid fa-bed"></i># Beds</div>
+                                                <div><i class="fa-solid fa-bath"></i># Baths</div>
+                                                <div><i class="fa-solid fa-dollar-sign"></i>RENT</div>
+                                            </div>
+                                            <div class="admin-details">
+                                                <p>Deposit Starting at: $</p>
+                                                <p>Application Fee: $</p>
+                                            </div>
+                                            
+                                            <div class="accordion-container">
+                                                <button class="accordion-button" onclick="toggleAccordion('modal5')">View Income Restrictions</button>
+                                                <div class="accordion-content" id="modal5">
+                                                    <span class="close-btn-x"  onclick="toggleAccordion('modal5')">x</span>
+                                                    <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
+                                                    <table class="table">
+                                                        <thead class="thead">
+                                                          <tr class="tr">
+                                                              <th scope="col" class="th">Household Size</th>
+                                                              <th scope="col" class="th">Max Allowable Household Income for 60%</th>
+                                                              <th scope="col" class="th">Max Allowable Household Income for 80%</th>
+                                                          </tr>
+                                                        </thead>
+                                                        <tbody class="tbody">
+                                                          <tr class="tr">
+                                                                <td class="td-not-bootstrap">1</td><td class="td-not-bootstrap">$32,520</td><td class="td-not-bootstrap">$43,360</td>
+                                                            </tr>
+                                                            <tr class="tr">
+                                                                <td class="td-not-bootstrap">2</td><td class="td-not-bootstrap">$37,200</td><td class="td-not-bootstrap">$49,600</td>
+                                                            </tr>
+                                                            <tr class="tr">
+                                                                <td class="td-not-bootstrap">3</td><td class="td-not-bootstrap">$41,820</td><td class="td-not-bootstrap">$55,760</td>
+                                                            </tr>
+                                                            <tr class="tr">
+                                                                <td class="td-not-bootstrap">4</td><td class="td-not-bootstrap">$46,440</td><td class="td-not-bootstrap">$61,920</td>
+                                                            </tr>
+                                                            <tr class="tr">
+                                                                <td class="td-not-bootstrap">5</td><td class="td-not-bootstrap">$50,160</td><td class="td-not-bootstrap">$66,880</td>
+                                                            </tr>
+                                                            <tr class="tr">
+                                                                <td class="td-not-bootstrap">6</td><td class="td-not-bootstrap">$53,880</td><td class="td-not-bootstrap">$71,840</td>
+                                                            </tr>
+                                                            <tr class="tr">
+                                                                <td class="td-not-bootstrap">7</td><td class="td-not-bootstrap">$57,600</td><td class="td-not-bootstrap">$76,800</td>
+                                                            </tr>
+                                                            <tr class="tr">
+                                                                <td class="td-not-bootstrap">8</td><td class="td-not-bootstrap">$61,320</td><td class="td-not-bootstrap">$81,760</td>
+                                                            </tr>
+                                                          
+                                                          </tbody>    
+                                                            
+                                                      </table>
+                                                </div>
+                                            </div>
+                                            
+                                            <button class="CTA-apply">Get Started</button>
+                                            <p class="date-updated">updated:[date].See website for pricing details.</p>
+     
+                            </div>
+
                         </div>
                 </div>
                 <!--card ends-->
@@ -1237,8 +1296,7 @@ function toggleAccordion(accordionId) {
                     <div class="card-container">    
                         <div class="card" >
                             <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
-                        
-                            <h3 class="property-name">Property Name</h3>
+                            <h2 class="property-name">Property Name</h2>
                                 <div class="card-body">
                                         <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
                                                 <div class="unit-details">
@@ -1251,10 +1309,56 @@ function toggleAccordion(accordionId) {
                                                     <p>Application Fee: $</p>
                                                 </div>
                                                 
-                                                <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+                                                <div class="accordion-container">
+                                                    <button class="accordion-button" onclick="toggleAccordion('modal6')">View Income Restrictions</button>
+                                                    <div class="accordion-content" id="modal6">
+                                                        <span class="close-btn-x"  onclick="toggleAccordion('modal6')">x</span>
+                                                        <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
+                                                        <table class="table">
+                                                            <thead class="thead">
+                                                              <tr class="tr">
+                                                                  <th scope="col" class="th">Household Size</th>
+                                                                  <th scope="col" class="th">Max Allowable Household Income for 60%</th>
+                                                                  <th scope="col" class="th">Max Allowable Household Income for 80%</th>
+                                                              </tr>
+                                                            </thead>
+                                                            <tbody class="tbody">
+                                                              <tr class="tr">
+                                                                    <td class="td-not-bootstrap">1</td><td class="td-not-bootstrap">$32,520</td><td class="td-not-bootstrap">$43,360</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">2</td><td class="td-not-bootstrap">$37,200</td><td class="td-not-bootstrap">$49,600</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">3</td><td class="td-not-bootstrap">$41,820</td><td class="td-not-bootstrap">$55,760</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">4</td><td class="td-not-bootstrap">$46,440</td><td class="td-not-bootstrap">$61,920</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">5</td><td class="td-not-bootstrap">$50,160</td><td class="td-not-bootstrap">$66,880</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">6</td><td class="td-not-bootstrap">$53,880</td><td class="td-not-bootstrap">$71,840</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">7</td><td class="td-not-bootstrap">$57,600</td><td class="td-not-bootstrap">$76,800</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">8</td><td class="td-not-bootstrap">$61,320</td><td class="td-not-bootstrap">$81,760</td>
+                                                                </tr>
+                                                              
+                                                              </tbody>    
+                                                                
+                                                          </table>
+                                                    </div>
+                                                </div>
+                                                
                                                 <button class="CTA-apply">Get Started</button>
-                                                <p class="date-updated">updated:[date].See website for pricing details.</p>                      
+                                                <p class="date-updated">updated:[date].See website for pricing details.</p>
+         
                                 </div>
+    
                             </div>
                     </div>
                     <!--card ends-->
@@ -1262,8 +1366,7 @@ function toggleAccordion(accordionId) {
                     <div class="card-container">    
                         <div class="card" >
                             <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
-                        
-                            <h3 class="property-name">Property Name</h3>
+                            <h2 class="property-name">Property Name</h2>
                                 <div class="card-body">
                                         <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
                                                 <div class="unit-details">
@@ -1276,10 +1379,56 @@ function toggleAccordion(accordionId) {
                                                     <p>Application Fee: $</p>
                                                 </div>
                                                 
-                                                <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+                                                <div class="accordion-container">
+                                                    <button class="accordion-button" onclick="toggleAccordion('modal7')">View Income Restrictions</button>
+                                                    <div class="accordion-content" id="modal7">
+                                                        <span class="close-btn-x"  onclick="toggleAccordion('modal7')">x</span>
+                                                        <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
+                                                        <table class="table">
+                                                            <thead class="thead">
+                                                              <tr class="tr">
+                                                                  <th scope="col" class="th">Household Size</th>
+                                                                  <th scope="col" class="th">Max Allowable Household Income for 60%</th>
+                                                                  <th scope="col" class="th">Max Allowable Household Income for 80%</th>
+                                                              </tr>
+                                                            </thead>
+                                                            <tbody class="tbody">
+                                                              <tr class="tr">
+                                                                    <td class="td-not-bootstrap">1</td><td class="td-not-bootstrap">$32,520</td><td class="td-not-bootstrap">$43,360</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">2</td><td class="td-not-bootstrap">$37,200</td><td class="td-not-bootstrap">$49,600</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">3</td><td class="td-not-bootstrap">$41,820</td><td class="td-not-bootstrap">$55,760</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">4</td><td class="td-not-bootstrap">$46,440</td><td class="td-not-bootstrap">$61,920</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">5</td><td class="td-not-bootstrap">$50,160</td><td class="td-not-bootstrap">$66,880</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">6</td><td class="td-not-bootstrap">$53,880</td><td class="td-not-bootstrap">$71,840</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">7</td><td class="td-not-bootstrap">$57,600</td><td class="td-not-bootstrap">$76,800</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">8</td><td class="td-not-bootstrap">$61,320</td><td class="td-not-bootstrap">$81,760</td>
+                                                                </tr>
+                                                              
+                                                              </tbody>    
+                                                                
+                                                          </table>
+                                                    </div>
+                                                </div>
+                                                
                                                 <button class="CTA-apply">Get Started</button>
-                                                <p class="date-updated">updated:[date].See website for pricing details.</p>                           
+                                                <p class="date-updated">updated:[date].See website for pricing details.</p>
+         
                                 </div>
+    
                             </div>
                     </div>
                     <!--card ends-->
@@ -1287,8 +1436,7 @@ function toggleAccordion(accordionId) {
                     <div class="card-container">    
                         <div class="card" >
                             <div class="image-container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg');"></div>                               
-                        
-                            <h3 class="property-name">Property Name</h3>
+                            <h2 class="property-name">Property Name</h2>
                                 <div class="card-body">
                                         <div><i class="fa-solid fa-location-dot fa-xl"></i><h4 class="address">[Address or city]</h4></div>
                                                 <div class="unit-details">
@@ -1300,12 +1448,58 @@ function toggleAccordion(accordionId) {
                                                     <p>Deposit Starting at: $</p>
                                                     <p>Application Fee: $</p>
                                                 </div>
-                                                <div class="eligibility">eligibilityxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+                                                
+                                                <div class="accordion-container">
+                                                    <button class="accordion-button" onclick="toggleAccordion('modal8')">View Income Restrictions</button>
+                                                    <div class="accordion-content" id="modal8">
+                                                        <span class="close-btn-x"  onclick="toggleAccordion('modal8')">x</span>
+                                                        <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
+                                                        <table class="table">
+                                                            <thead class="thead">
+                                                              <tr class="tr">
+                                                                  <th scope="col" class="th">Household Size</th>
+                                                                  <th scope="col" class="th">Max Allowable Household Income for 60%</th>
+                                                                  <th scope="col" class="th">Max Allowable Household Income for 80%</th>
+                                                              </tr>
+                                                            </thead>
+                                                            <tbody class="tbody">
+                                                              <tr class="tr">
+                                                                    <td class="td-not-bootstrap">1</td><td class="td-not-bootstrap">$32,520</td><td class="td-not-bootstrap">$43,360</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">2</td><td class="td-not-bootstrap">$37,200</td><td class="td-not-bootstrap">$49,600</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">3</td><td class="td-not-bootstrap">$41,820</td><td class="td-not-bootstrap">$55,760</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">4</td><td class="td-not-bootstrap">$46,440</td><td class="td-not-bootstrap">$61,920</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">5</td><td class="td-not-bootstrap">$50,160</td><td class="td-not-bootstrap">$66,880</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">6</td><td class="td-not-bootstrap">$53,880</td><td class="td-not-bootstrap">$71,840</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">7</td><td class="td-not-bootstrap">$57,600</td><td class="td-not-bootstrap">$76,800</td>
+                                                                </tr>
+                                                                <tr class="tr">
+                                                                    <td class="td-not-bootstrap">8</td><td class="td-not-bootstrap">$61,320</td><td class="td-not-bootstrap">$81,760</td>
+                                                                </tr>
+                                                              
+                                                              </tbody>    
+                                                                
+                                                          </table>
+                                                    </div>
+                                                </div>
+                                                
                                                 <button class="CTA-apply">Get Started</button>
-                                                <p class="date-updated">updated:[date].See website for pricing details.</p>                 
+                                                <p class="date-updated">updated:[date].See website for pricing details.</p>
+         
                                 </div>
+    
                             </div>
-                            
                     </div>
                     <!--card ends-->
                 </div>
