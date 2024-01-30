@@ -16,6 +16,7 @@ body {
     font-family: 'Open Sans', sans-serif!important;
     margin:auto!important;
     height: 100vh!important;
+    
 }
 
 #intro-container {
@@ -428,6 +429,7 @@ body {
   
     color: #000000!important;
     font-family: 'Open Sans', sans-serif!important;
+    text-transform: none!important;
     font-size: 1.2rem!important;
     text-align: start!important;
     margin-top: 15px!important;
@@ -503,7 +505,7 @@ body {
     align-items: center!important;
     justify-content: center!important;
     padding: .6rem!important;
-    font-size: 1rem!important;
+    font-size: .9rem!important;
     font-family: 'Open Sans', sans-serif!important;
     margin: auto!important;
     border-radius: 10px!important;
@@ -514,11 +516,24 @@ body {
     color: #ffffff!important;
  }
 
+
+
+
 .CTA-apply:hover {
 
         background-color: rgb(246, 156, 0)!important;
 }
     
+@media screen and (max-width: 480px) {
+
+    .CTA-apply {
+
+        font-size: .9rem;
+
+    }
+}
+
+
 /*modal styles*/
   /* Style for the overlay */
 
@@ -589,7 +604,7 @@ body {
 } 
 
     /* Style for the close button */
-.close-btn {
+.close-btn-x {
 
     position: absolute!important;
     top: 10px!important;
@@ -608,11 +623,15 @@ body {
 }
 
 
+.table th {
+
+    text-align: center;
+}
 
 
-
-table {
-            text-align: center;
+.table {
+            
+            text-align: center!important;
             background-color: #ffffff;
             padding: 20px;
             border-radius: 10px;
@@ -622,36 +641,55 @@ table {
            
         }
         
-        thead {
+        .thead {
             font-size: 1rem;        
-            
+            text-align: center!important;
         }
         
         
-        th {
+        .th {
             color: #646464;
+            text-align: center;
            
+        .td-not-bootstrap {
+
+            padding-left: 1.6rem!important;
+            padding-right: 1.6rem!important;
+            text-align: center!important;
+
+        }    
             
         
         }
         
-        tbody {
+        .tbody {
             font-size: 1rem;
             
             /*background-color: #DFDFDF;*/
            
             
         }
-        
-       
-        
-        
-        .grid {
-            display: grid;
-            grid-template-columns: repreat(3, 1fr);
-            grid-auto-rows: auto;
-            gap: 20px;
+
+        .td-not-bootstrap {
+
+            padding-left: 1.6rem!important;
+            padding-right: 1.6rem!important;
+            text-align: center!important;
         }
+        
+      
+
+
+ .eligibility-title {
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: none;
+    font-weight: 600;
+    color: #646464;
+    
+ }       
 
 
 .accordion-container {
@@ -661,15 +699,15 @@ table {
 
 .accordion-button {
 
-padding-top: 10px!important;
-padding-bottom: 10px!important;
-padding-left: 50px!important;
-padding-right: 50px!important;
-border-radius: 10px!important;
-margin: 10px!important;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 50px;
+padding-right: 50px;
+border-radius: 10px;
+margin: 10px;
 background-color: #868686!important;
-color: #ffffff!important;
-font-size: 1rem!important;
+color: #ffffff;
+font-size: .9rem;
 border: none!important;
 box-shadow: 1px 2px 2px 1px #cfcfcf!important; 
 cursor: pointer;   
@@ -677,11 +715,20 @@ cursor: pointer;
 
 .accordion-button:hover {
     background-color: rgb(246, 156, 0)!important;
-
+    
 }
 
 
+@media screen and (max-width: 480px)  {
 
+    .accordion-button {
+
+        padding-left: 10px;
+        padding-right: 10px;
+
+
+    }
+}
 
 
 /* .accordion-content {
@@ -697,9 +744,9 @@ cursor: pointer;
 .accordion-content {
 
 display: none;
-position: fixed!important;
-top: 50%!important;
-left: 50%!important;
+position: fixed;
+top: 50%;
+left: 50%;
 transform: translate(-50%, -50%)!important;
 padding: 20px!important;
 background: #fff!important;
@@ -709,7 +756,11 @@ z-index: 1!important;
 border-radius: 10px!important;
 
 
+
 }
+
+
+
 
 
 .accordion-content.active {
@@ -719,82 +770,134 @@ border-radius: 10px!important;
 }
 
 
+@media screen and (min-width: 481px) and (max-width: 768px ){
 
-
-@media screen and (max-width: 768px) {
     .accordion-content {
+
+        .accordion-content {
         position: relative;
         top: auto;
-        left: auto;
-        transform: translate(-50%, -50%);
+        left: 50%!important;
+        transform: translate(-50%, -50%)!important;
+        max-width: 75vh!important;
+        max-height: 75vh!important;
+        min-width: 50vh!important;
+        min-height: 50vh!important;
+
+       
+     }   
+    }
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+    .accordion-content {
+
+        padding: 10px;
+        max-width: 47vh;
+    }
+
+    .eligibility-title {
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: none;
+    font-weight: 700;
+    color: #646464;
+
+}    
+
+ 
+
+   
+}
+
+
+
+
+
+@media screen and (max-width: 820px) {
+    .accordion-content {
+       
+        position: absolute;
+        top: auto;
+        left: 50%!important;
+        transform: translate(-50%, -50%)!important;
+       
+       
+
        
      }   
 
 
-    table {
+    .table {
            
            max-height: 75vh;
            max-width: 75vh;
-            display: flex;
-            flex-wrap: wrap;
-            flex-flow: row-wrap;
-            place-content: center;
-            text-align: center;
+            text-align: center!important;
             background-color: #ffffff;
             padding: 5px;
             border-radius: 10px;
             font-family: 'Open Sans', sans-serif;
             border-spacing: 0.5rem;
+           
             
     }
 
     .eligibility-title {
-            font-size: 1rem;
-            text-align: center;
-            
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.2rem;
+            text-align: center!important;
+            text-transform: none;
+            font-weight: 600;
+            color: #646464;
         }
         
-    thead {
+    .thead {
             font-size: 1rem;       
-            
+            text-align: center!important;
         }
         
         
-    th {
+    .th {
 
             padding-right: .6rem;
             color: #646464;
+            text-align: center;
         
         }
 
-    tr {
+    .tr {
 
-            place-content: center;
-            text-align: center;
+            place-content: center!important;
+            text-align: center!important;
             font-size: 1rem;
    
         }
         
-     tbody {
+     .tbody {
 
            
-           place-content: center;
-            text-align: center;
+           place-content: center!important;
+            text-align: center!important;
             font-size: .9rem;
             width: 100%;
-            justify-content: center;
-            align-items: center;
+            justify-content: center!important;
+            align-items: center!important;
             /*background-color: #DFDFDF;*/
            
             
         }
         
-        td {
+        .td-not-bootstrap {
             
             
-            padding-left: 1.6rem;
-            padding-right: 1.6rem;
-           
+            padding-left: 1.6rem!important;
+            padding-right: 1.6rem!important;
+            text-align: center!important;
             
              
         }
@@ -823,7 +926,7 @@ border-radius: 10px!important;
        
 
 
-function openModal() {
+/* function openModal() {
     const overlays = document.querySelectorAll('.overlay');
     const modals = document.querySelectorAll('.modal');
 
@@ -832,19 +935,9 @@ function openModal() {
         overlay.style.display = 'block';
         modals[index].style.display = 'block';
     }); 
-}
-
-// Function to close the modal
-/*function closeModal() {
-    const overlays = document.querySelectorAll('.overlay');
-    const modals = document.querySelectorAll('.modal');
+} */
 
 
- overlays.forEach((overlay, index) => {
-        overlay.style.display = 'none';
-        modals[index].style.display = 'none';
-    }); 
-}*/
 
 
 function toggleAccordion(accordionId) {
@@ -936,40 +1029,40 @@ function toggleAccordion(accordionId) {
                                             <div class="accordion-container">
                                                 <button class="accordion-button" onclick="toggleAccordion('modal1')">View Income Restrictions</button>
                                                 <div class="accordion-content" id="modal1">
-                                                    <span class="close-btn"  onclick="toggleAccordion('modal1')"></span>
+                                                    <span class="close-btn-x"  onclick="toggleAccordion('modal1')">x</span>
                                                     <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
-                                                    <table>
-                                                        <thead>
-                                                          <tr>
-                                                              <th scope="col">Household Size</th>
-                                                              <th scope="col">Max Allowable Household Income for 60%</th>
-                                                              <th scope="col">Max Allowable Household Income for 80%</th>
+                                                    <table class="table">
+                                                        <thead class="thead">
+                                                          <tr class="tr">
+                                                              <th scope="col" class="th">Household Size</th>
+                                                              <th scope="col" class="th">Max Allowable Household Income for 60%</th>
+                                                              <th scope="col" class="th">Max Allowable Household Income for 80%</th>
                                                           </tr>
                                                         </thead>
-                                                        <tbody>
-                                                          <tr>
-                                                                <td>1</td><td>$32,520</td><td>$43,360</td>
+                                                        <tbody class="tbody">
+                                                          <tr class="tr">
+                                                                <td class="td-not-bootstrap">1</td><td class="td-not-bootstrap">$32,520</td><td class="td-not-bootstrap">$43,360</td>
                                                             </tr>
-                                                            <tr>
-                                                                <td>2</td><td>$37,200</td><td>$49,600</td>
+                                                            <tr class="tr">
+                                                                <td class="td-not-bootstrap">2</td><td class="td-not-bootstrap">$37,200</td><td class="td-not-bootstrap">$49,600</td>
                                                             </tr>
-                                                            <tr>
-                                                                <td>3</td><td>$41,820</td><td>$55,760</td>
+                                                            <tr class="tr">
+                                                                <td class="td-not-bootstrap">3</td><td class="td-not-bootstrap">$41,820</td><td class="td-not-bootstrap">$55,760</td>
                                                             </tr>
-                                                            <tr>
-                                                                <td>4</td><td>$46,440</td><td>$61,920</td>
+                                                            <tr class="tr">
+                                                                <td class="td-not-bootstrap">4</td><td class="td-not-bootstrap">$46,440</td><td class="td-not-bootstrap">$61,920</td>
                                                             </tr>
-                                                            <tr>
-                                                                <td>5</td><td>$50,160</td><td>$66,880</td>
+                                                            <tr class="tr">
+                                                                <td class="td-not-bootstrap">5</td><td class="td-not-bootstrap">$50,160</td><td class="td-not-bootstrap">$66,880</td>
                                                             </tr>
-                                                            <tr>
-                                                                <td>6</td><td>$53,880</td><td>$71,840</td>
+                                                            <tr class="tr">
+                                                                <td class="td-not-bootstrap">6</td><td class="td-not-bootstrap">$53,880</td><td class="td-not-bootstrap">$71,840</td>
                                                             </tr>
-                                                            <tr>
-                                                                <td>7</td><td>$57,600</td><td>$76,800</td>
+                                                            <tr class="tr">
+                                                                <td class="td-not-bootstrap">7</td><td class="td-not-bootstrap">$57,600</td><td class="td-not-bootstrap">$76,800</td>
                                                             </tr>
-                                                            <tr>
-                                                                <td>8</td><td>$61,320</td><td>$81,760</td>
+                                                            <tr class="tr">
+                                                                <td class="td-not-bootstrap">8</td><td class="td-not-bootstrap">$61,320</td><td class="td-not-bootstrap">$81,760</td>
                                                             </tr>
                                                           
                                                           </tbody>    
@@ -1006,7 +1099,7 @@ function toggleAccordion(accordionId) {
                                                     <div class="accordion-container">
                                                         <button class="accordion-button" onclick="toggleAccordion('modal2')">View Income Restrictions</button>
                                                         <div class="accordion-content" id="modal2">
-                                                            <span class="close-btn"  onclick="toggleAccordion('modal2')">x</span>
+                                                            <span class="close-btn-x"  onclick="toggleAccordion('modal2')">x</span>
                                                             <h2 class="eligibility-title">Income Eligibility Requirements I'm 2!</h2>
                                                             <table>
                                                                 <thead>
