@@ -868,7 +868,7 @@ cursor: pointer;
 <script src="https://kit.fontawesome.com/fa4ad802be.js" crossorigin="anonymous"></script>
 
 
-<script>
+<script >
 
 /*
         -need click events for East/Central/West pages
@@ -884,11 +884,6 @@ cursor: pointer;
         }
        
 
-
-
-
-
-
 function toggleAccordion(accordionId) {
     const accordionContent = document.getElementById(accordionId);
     accordionContent.classList.toggle('active');
@@ -900,9 +895,27 @@ function toggleAccordion(accordionId) {
         }
     });
 }
+</script>
 
+
+<script type="module">
+
+    
+/*UPDATE THE DATE ON ALL CARDS BY UPDATING THE VALUE OF CONST DATE = "" BELOW. BE SURE TO LEAVE QUOTATION MARKS  */
+
+const date = "2/3/24";
+
+
+/*NO NEED TO ALTER THE BELOW FUNCTION*/
+
+const updatedDates = document.querySelectorAll('.date-updated');
+
+updatedDates.forEach((item, index) => 
+    item.innerHTML = `Updated:${date}. See website for pricing details.`);
+    
 
 </script>
+
 
 
 </head>
@@ -1021,7 +1034,7 @@ function toggleAccordion(accordionId) {
                                             </div>
                                             
                                             <button class="CTA-apply"><a href="https://www.lakesumterapartments.com/letsgetstarted"></a>Get Started</button>
-                                            <p class="date-updated">updated:[date].See website for pricing details.</p>
+                                            <p class="date-updated"></p>
                             </div>
                         </div>
                 </div>
