@@ -414,7 +414,9 @@ body {
     border-radius: 10px!important;
     object-fit: cover!important;
     overflow: hidden!important;
+
  }
+
 
 .image-container {
         
@@ -423,6 +425,13 @@ body {
     width: 100%!important;
     height: 250px!important;
     border-radius: 10px!important;       
+}
+
+
+.image-container:hover {
+
+cursor: pointer;
+
 }
 
 .property-name {
@@ -905,6 +914,12 @@ function toggleAccordion(accordionId) {
         }
     });
 }
+
+
+
+
+
+
 </script>
 
 
@@ -984,8 +999,11 @@ updatedDates.forEach((item, index) =>
                 <!--card starts here-->
                 <div class="card-container">    
                     <div class="card" >
-                        <div class="image-container" style="background-image: url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1920/s3/2/82930/lake%20sumter_012624.jpg');" 
-                          <a href="https://www.lakesumterapartments.com/"></a></div>                               
+                        <div class="image-container-wrapper"><a href="https://www.lakesumterapartments.com/" target="_blank">
+                        <div class="image-container" style="background-image: url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1920/s3/2/82930/lake%20sumter_012624.jpg');">
+                    </div> 
+                     </a>
+                    </div>                              
                         <h2 class="property-name"><a href="https://www.lakesumterapartments.com/">Lake Sumter Apartments</a></h2>
                         <div class="countyName">Sumter County</div>
                             <div class="card-body">
@@ -1044,7 +1062,7 @@ updatedDates.forEach((item, index) =>
                                                 </div>
                                             </div>
                                             
-                                            <button class="CTA-apply"><a href="https://www.lakesumterapartments.com/letsgetstarted">Get Started</a></button>
+                                            <button class="CTA-apply"><a href="https://www.lakesumterapartments.com/letsgetstarted" target="_blank">Get Started</a></button>
                                             <p class="date-updated"></p>
                             </div>
                         </div>
