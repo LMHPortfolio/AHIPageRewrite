@@ -642,6 +642,7 @@ a {
             color: #646464;
             text-align: center;
             padding-right: .6rem;
+        }    
            
         .td-not-bootstrap {
 
@@ -652,9 +653,9 @@ a {
         }    
             
         
-        }
         
-        .tbody {
+        
+        .tbody-container {
             font-size: 1rem;
           
            
@@ -916,11 +917,149 @@ function toggleAccordion(accordionId) {
 }
 
 
+</script>
 
+
+
+<script type="module" >
+
+
+
+const centralTable = [
+
+    { 'householdSize': '1', 'income': '$32,520' },
+    { 'householdSize': '2', 'income': '$37,200' },
+    { 'householdSize': '3', 'income': '$41,820' },
+    { 'householdSize': '4', 'income': '$46,440' },
+    { 'householdSize': '5', 'income': '$50,160' },
+    { 'householdSize': '6', 'income': '$53,880' },
+    { 'householdSize': '7', 'income': '$57,600' },
+    { 'householdSize': '8', 'income': '$61,320' },
+];
+
+
+const eastTable = [
+
+    { 'householdSize': '1', 'income': '$' },
+    { 'householdSize': '2', 'income': '$' },
+    { 'householdSize': '3', 'income': '$' },
+    { 'householdSize': '4', 'income': '$' },
+    { 'householdSize': '5', 'income': '$' },
+    { 'householdSize': '6', 'income': '$' },
+    { 'householdSize': '7', 'income': '$' },
+    { 'householdSize': '8', 'income': '$' },
+];
+
+/* console.log(centralTable[0].householdSize);
+console.log(centralTable[0].income); */
+
+function generateTable(tableData) {
+    const tbody = document.createElement('tbody');
+
+    const tableRows = tableData.map(({ householdSize, income }) => {
+        const row = document.createElement('tr');
+
+        const cell1 = document.createElement('td');
+        cell1.innerHTML = householdSize;
+        row.appendChild(cell1);
+
+        const cell2 = document.createElement('td');
+        cell2.innerHTML = income;
+        row.appendChild(cell2);
+
+        return row;
+    });
+
+    tableRows.forEach((tableRow) => {
+        tbody.appendChild(tableRow);
+    });
+
+    return tbody;
+}
+
+
+/* const counties = document.querySelectorAll('.countyName');
+
+
+let tableContainers = document.querySelectorAll('.tbody-container');
+
+counties.forEach((item) => {
+
+    const tableContainer = item.nextElementSibling;
+
+    switch (item.innerHTML) {
+        case 'Sumter County':
+        case 'Lake County':
+        case 'Orange County':
+        case 'Osceola County':
+            const generatedTableCentral = generateTable(centralTable);
+            
+            tableContainers.forEach((container) => {
+                container.appendChild(generatedTableCentral.cloneNode(false));
+            });
+            break;
+
+        case 'Volusia County':
+            const generatedTableEast = generateTable(eastTable);
+            
+            tableContainers.forEach((container) => {
+                container.appendChild(generatedTableEast.cloneNode(false));
+            });
+            break;
+
+        default:
+            console.log('no table match found');
+            break;
+    }
+}); */
+
+const counties = document.querySelectorAll('.countyName');
+
+
+
+counties.forEach((item) => {
+    const tableContainer = item.parentElement.querySelector('.tbody-container');
+
+
+    if (tableContainer) {
+
+        switch (item.innerHTML) {
+        case 'Sumter County':
+        case 'Lake County':
+        case 'Orange County':
+        case 'Osceola County':
+            const generatedTableCentral = generateTable(centralTable);
+            tableContainer.appendChild(generatedTableCentral);
+            break;
+
+        case 'Volusia County':
+            const generatedTableEast = generateTable(eastTable);
+            tableContainer.appendChild(generatedTableEast);
+            break;
+
+        default:
+            console.log('no table match found');
+            break;
+    }
+
+
+    } else {
+        console.log('no .tbody-container found for', item.innerHTML);
+    }
+
+    
+});
 
 
 
 </script>
+
+
+
+
+
+
+
 
 
 <script type="module">
@@ -1031,8 +1170,10 @@ updatedDates.forEach((item, index) =>
                                                               <th scope="col" class="th">Max Allowable Household Income for 60%</th>
                                                           </tr>
                                                         </thead>
-                                                        <tbody class="tbody">
-                                                          <tr class="tr">
+                                                        <tbody class="tbody-container">
+                                                            
+                                                            
+                                                          <!-- <tr class="tr">
                                                                 <td class="td-not-bootstrap">1</td><td class="td-not-bootstrap">$32,520</td>
                                                             </tr>
                                                             <tr class="tr">
@@ -1055,7 +1196,7 @@ updatedDates.forEach((item, index) =>
                                                             </tr>
                                                             <tr class="tr">
                                                                 <td class="td-not-bootstrap">8</td><td class="td-not-bootstrap">$61,320</td>
-                                                            </tr>
+                                                            </tr> -->
                                                           </tbody>    
                                                       </table>
                                                 </div>
@@ -1075,7 +1216,7 @@ updatedDates.forEach((item, index) =>
                              </a>
                             </div>                              
                                 <h2 class="property-name"><a href="https://www.lakesumterapartments.com/" target="_blank">Lake Sumter Apartments</a></h2>
-                                <div class="countyName">Sumter County</div>
+                                <div class="countyName">Volusia County</div>
                                     <div class="card-body">
                                             <div><i class="fa-solid fa-location-dot fa-xl"></i>
                                               <h4 class="address"><a href="https://maps.app.goo.gl/Q6UkghWb2DwFuEpt5" target="_blank">10816 NE 87th Loop 
@@ -1101,9 +1242,11 @@ updatedDates.forEach((item, index) =>
                                                                       <th scope="col" class="th">Max Allowable Household Income for 60%</th>
                                                                   </tr>
                                                                 </thead>
-                                                                <tbody class="tbody">
+
+                                                                <tbody class="tbody-container"></tbody>
+                                                                <!-- <tbody class="tbody">
                                                                   <tr class="tr">
-                                                                        <td class="td-not-bootstrap">1</td><td class="td-not-bootstrap">$32,520</td>
+                                                                        <td class="td-not-bootstrap"></td><td class="td-not-bootstrap">$32,520</td>
                                                                     </tr>
                                                                     <tr class="tr">
                                                                         <td class="td-not-bootstrap">2</td><td class="td-not-bootstrap">$37,200</td>
@@ -1126,7 +1269,7 @@ updatedDates.forEach((item, index) =>
                                                                     <tr class="tr">
                                                                         <td class="td-not-bootstrap">8</td><td class="td-not-bootstrap">$61,320</td>
                                                                     </tr>
-                                                                  </tbody>    
+                                                                  </tbody>     -->
                                                               </table>
                                                         </div>
                                                     </div>
