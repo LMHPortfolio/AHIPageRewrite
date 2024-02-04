@@ -629,6 +629,7 @@ a {
             font-family: 'Open Sans', sans-serif;
             border-spacing: 0.8rem;
             
+            
            
         }
         
@@ -651,13 +652,20 @@ a {
             text-align: center!important;
 
         }    
+
+        
             
         
         
         
         .tbody-container {
             font-size: 1rem;
-          
+            place-content: center!important;
+            text-align: center!important;
+            font-size: .9rem;
+            width: 100%;
+            justify-content: center!important;
+            align-items: center!important;
            
             
         }
@@ -832,14 +840,12 @@ cursor: pointer;
 
             padding-right: .6rem;
             color: #646464;
-            text-align: center;
+           text-align: center;
         
         }
 
     .tr {
-
-            place-content: center!important;
-            text-align: center!important;
+          
             font-size: 1rem;
    
         }
@@ -852,10 +858,19 @@ cursor: pointer;
             font-size: .9rem;
             width: 100%;
             justify-content: center!important;
-            align-items: center!important;
-           
-           
+            align-items: center!important; 
             
+        }
+
+        .tbody-container {
+
+            place-content: center!important;
+            text-align: center!important;
+            font-size: .9rem;
+            width: 100%;
+            justify-content: center!important;
+            align-items: center!important;
+
         }
         
         .td-not-bootstrap {
@@ -921,7 +936,7 @@ function toggleAccordion(accordionId) {
 
 
 
-<script type="module" >
+<script type="module" defer>
 
 
 
@@ -950,20 +965,25 @@ const eastTable = [
     { 'householdSize': '8', 'income': '$' },
 ];
 
-/* console.log(centralTable[0].householdSize);
-console.log(centralTable[0].income); */
 
-function generateTable(tableData) {
+
+/* function generateTable(tableData) {
+
     const tbody = document.createElement('tbody');
-
+    tbody.classList.add('tbody');
+    
+    
     const tableRows = tableData.map(({ householdSize, income }) => {
         const row = document.createElement('tr');
-
+         row.classList.add('tr');
+        
         const cell1 = document.createElement('td');
+         cell1.classList.add('td-not-bootstrap'); 
         cell1.innerHTML = householdSize;
         row.appendChild(cell1);
 
         const cell2 = document.createElement('td');
+       cell2.classList.add('td-not-bootstrap');
         cell2.innerHTML = income;
         row.appendChild(cell2);
 
@@ -978,40 +998,6 @@ function generateTable(tableData) {
 }
 
 
-/* const counties = document.querySelectorAll('.countyName');
-
-
-let tableContainers = document.querySelectorAll('.tbody-container');
-
-counties.forEach((item) => {
-
-    const tableContainer = item.nextElementSibling;
-
-    switch (item.innerHTML) {
-        case 'Sumter County':
-        case 'Lake County':
-        case 'Orange County':
-        case 'Osceola County':
-            const generatedTableCentral = generateTable(centralTable);
-            
-            tableContainers.forEach((container) => {
-                container.appendChild(generatedTableCentral.cloneNode(false));
-            });
-            break;
-
-        case 'Volusia County':
-            const generatedTableEast = generateTable(eastTable);
-            
-            tableContainers.forEach((container) => {
-                container.appendChild(generatedTableEast.cloneNode(false));
-            });
-            break;
-
-        default:
-            console.log('no table match found');
-            break;
-    }
-}); */
 
 const counties = document.querySelectorAll('.countyName');
 
@@ -1049,13 +1035,10 @@ counties.forEach((item) => {
 
     
 });
-
+ */
 
 
 </script>
-
-
-
 
 
 
@@ -1090,11 +1073,11 @@ updatedDates.forEach((item, index) =>
     <div id="intro-title">
         <h1 id="intro-h1">Affordable Housing Inventory</h1>
         <p id="intro-sub">
-            <b>ConcordRENTS</b> is a national leader in providing high-quality, affordable, multifamily housing and understands the importance of a strong community and the value of giving back.
+            <strong>ConcordRENTS</strong> is a national leader in providing high-quality, affordable, multifamily housing and understands the importance of a strong community and the value of giving back.
          With the affordable housing crisis in Orlando, FL and the rest of Central Florida, we understand the struggle in finding quality affordable housing.<br><br>
-        Below is a list of our <b>current</b> Available Affordable Housing Inventory around Central Florida. 
-        <b>As part of the application process, applicants must submit the verification documentation in a timely manner, as the first approved and full deposit paid applicant will have priority of the available apartment home.</b> 
-        <br><br>This housing inventory will move quickly. <b>Apply today</b> and turn this opportunity into a <b>home!</b>
+        Below is a list of our <strong>current</strong> Available Affordable Housing Inventory around Central Florida. 
+        <strong>As part of the application process, applicants must submit the verification documentation in a timely manner, as the first approved and full deposit paid applicant will have priority of the available apartment home.</strong> 
+        <br><br>This housing inventory will move quickly. <strong>Apply today</strong> and turn this opportunity into a <strong>home!</strong>
         </p>
 
         <div id="nav-section-background">
@@ -1170,34 +1153,35 @@ updatedDates.forEach((item, index) =>
                                                               <th scope="col" class="th">Max Allowable Household Income for 60%</th>
                                                           </tr>
                                                         </thead>
-                                                        <tbody class="tbody-container">
-                                                            
-                                                            
-                                                          <!-- <tr class="tr">
-                                                                <td class="td-not-bootstrap">1</td><td class="td-not-bootstrap">$32,520</td>
-                                                            </tr>
-                                                            <tr class="tr">
-                                                                <td class="td-not-bootstrap">2</td><td class="td-not-bootstrap">$37,200</td>
-                                                            </tr>
-                                                            <tr class="tr">
-                                                                <td class="td-not-bootstrap">3</td><td class="td-not-bootstrap">$41,820</td>
-                                                            </tr>
-                                                            <tr class="tr">
-                                                                <td class="td-not-bootstrap">4</td><td class="td-not-bootstrap">$46,440</td>
-                                                            </tr>
-                                                            <tr class="tr">
-                                                                <td class="td-not-bootstrap">5</td><td class="td-not-bootstrap">$50,160</td>
-                                                            </tr>
-                                                            <tr class="tr">
-                                                                <td class="td-not-bootstrap">6</td><td class="td-not-bootstrap">$53,880</td>
-                                                            </tr>
-                                                            <tr class="tr">
-                                                                <td class="td-not-bootstrap">7</td><td class="td-not-bootstrap">$57,600</td>
-                                                            </tr>
-                                                            <tr class="tr">
-                                                                <td class="td-not-bootstrap">8</td><td class="td-not-bootstrap">$61,320</td>
-                                                            </tr> -->
-                                                          </tbody>    
+                                                        
+                                                            <!-- <tbody class="tbody-container"> -->
+                                                         
+                                                                <tbody class="tbody">
+                                                                    <tr class="tr">
+                                                                          <td class="td-not-bootstrap">1</td><td class="td-not-bootstrap">$32,520</td>
+                                                                      </tr>
+                                                                      <tr class="tr">
+                                                                          <td class="td-not-bootstrap">2</td><td class="td-not-bootstrap">$37,200</td>
+                                                                      </tr>
+                                                                      <tr class="tr">
+                                                                          <td class="td-not-bootstrap">3</td><td class="td-not-bootstrap">$41,820</td>
+                                                                      </tr>
+                                                                      <tr class="tr">
+                                                                          <td class="td-not-bootstrap">4</td><td class="td-not-bootstrap">$46,440</td>
+                                                                      </tr>
+                                                                      <tr class="tr">
+                                                                          <td class="td-not-bootstrap">5</td><td class="td-not-bootstrap">$50,160</td>
+                                                                      </tr>
+                                                                      <tr class="tr">
+                                                                          <td class="td-not-bootstrap">6</td><td class="td-not-bootstrap">$53,880</td>
+                                                                      </tr>
+                                                                      <tr class="tr">
+                                                                          <td class="td-not-bootstrap">7</td><td class="td-not-bootstrap">$57,600</td>
+                                                                      </tr>
+                                                                      <tr class="tr">
+                                                                          <td class="td-not-bootstrap">8</td><td class="td-not-bootstrap">$61,320</td>
+                                                                      </tr>
+                                                                    </tbody>
                                                       </table>
                                                 </div>
                                             </div>
@@ -1243,10 +1227,10 @@ updatedDates.forEach((item, index) =>
                                                                   </tr>
                                                                 </thead>
 
-                                                                <tbody class="tbody-container"></tbody>
-                                                                <!-- <tbody class="tbody">
+                                                                <!-- <tbody class="tbody-container"></tbody> -->
+                                                                <tbody class="tbody">
                                                                   <tr class="tr">
-                                                                        <td class="td-not-bootstrap"></td><td class="td-not-bootstrap">$32,520</td>
+                                                                        <td class="td-not-bootstrap">1</td><td class="td-not-bootstrap">$32,520</td>
                                                                     </tr>
                                                                     <tr class="tr">
                                                                         <td class="td-not-bootstrap">2</td><td class="td-not-bootstrap">$37,200</td>
@@ -1269,7 +1253,7 @@ updatedDates.forEach((item, index) =>
                                                                     <tr class="tr">
                                                                         <td class="td-not-bootstrap">8</td><td class="td-not-bootstrap">$61,320</td>
                                                                     </tr>
-                                                                  </tbody>     -->
+                                                                  </tbody>
                                                               </table>
                                                         </div>
                                                     </div>
