@@ -948,14 +948,26 @@ const centralTable = [
 
 const eastTable = [
 
-    { 'householdSize': '1', 'income': '$' },
-    { 'householdSize': '2', 'income': '$' },
-    { 'householdSize': '3', 'income': '$' },
-    { 'householdSize': '4', 'income': '$' },
-    { 'householdSize': '5', 'income': '$' },
-    { 'householdSize': '6', 'income': '$' },
-    { 'householdSize': '7', 'income': '$' },
-    { 'householdSize': '8', 'income': '$' },
+    { 'householdSize': '1', 'income': '$east' },
+    { 'householdSize': '2', 'income': '$east' },
+    { 'householdSize': '3', 'income': '$east' },
+    { 'householdSize': '4', 'income': '$east' },
+    { 'householdSize': '5', 'income': '$east' },
+    { 'householdSize': '6', 'income': '$east' },
+    { 'householdSize': '7', 'income': '$east' },
+    { 'householdSize': '8', 'income': '$east' },
+];
+
+  const westTable = [
+
+    { 'householdSize': '1', 'income': '$west' },
+    { 'householdSize': '2', 'income': '$west' },
+    { 'householdSize': '3', 'income': '$west' },
+    { 'householdSize': '4', 'income': '$west' },
+    { 'householdSize': '5', 'income': '$west' },
+    { 'householdSize': '6', 'income': '$west' },
+    { 'householdSize': '7', 'income': '$west' },
+    { 'householdSize': '8', 'income': '$west' },
 ];
 
 
@@ -1012,9 +1024,22 @@ counties.forEach((item) => {
             break;
 
         case 'Volusia County':
+        case 'Brevard County':  
+        case 'Flagler County':
+        case 'Martin County':  
+        case 'St Lucie County':    
             const generatedTableEast = generateTable(eastTable);
             tableContainer.appendChild(generatedTableEast);
             break;
+
+        case 'Hernando County':
+        case 'Hillsborough County':  
+        case 'Pasco County':
+        case 'Pinellas County':  
+        case 'Sarasota':    
+            const generatedTableEast = generateTable(westTable);
+            tableContainer.appendChild(generatedTableWest);
+            break;    
 
         default:
             console.log('no table match found');
