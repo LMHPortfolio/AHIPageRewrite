@@ -11,7 +11,6 @@
     <style>
     
    
-   
 body { 
 
     font-family: 'Open Sans', sans-serif!important;
@@ -897,7 +896,7 @@ cursor: pointer;
 <script src="https://kit.fontawesome.com/fa4ad802be.js" crossorigin="anonymous"></script>
 
 
-<script >
+<script>
 
 
 
@@ -1009,17 +1008,16 @@ counties.forEach((item) => {
     if (tableContainer) {
 
         switch (item.innerHTML) {
-            case 'Sumter County':
+            
             case 'Lake County':
             case 'Orange County':
             case 'Osceola County':
+            case 'Seminole County':
                 const generatedTableCentral = generateTable(centralTable);
                 tableContainer.appendChild(generatedTableCentral);
                 break;
 
-            case 'Volusia County':
-            case 'Brevard County':  
-            case 'Flagler County':
+            
             case 'Martin County':  
             case 'St Lucie County':    
                 const generatedTableEast = generateTable(eastTable);
@@ -1029,8 +1027,7 @@ counties.forEach((item) => {
             case 'Hernando County':
             case 'Hillsborough County':  
             case 'Pasco County':
-            case 'Pinellas County':  
-            case 'Sarasota County':    
+            case 'Pinellas County':     
                 const generatedTableWest = generateTable(westTable);
                 tableContainer.appendChild(generatedTableWest);
                 break;    
@@ -1038,7 +1035,12 @@ counties.forEach((item) => {
             default:
                 console.log('no table match found');
                 break;
+
+                //Adding additional cases: Sumter, Volusia, Brevard, Flagler, Sarasota after making tables to feed in
     }
+
+
+
 
 
     } else {
