@@ -37,8 +37,9 @@ body {
     padding-right: 20px!important; 
     font-family: 'Poppins', sans-serif!important;
     font-size: 2rem!important;
+    text-transform: uppercase;
     letter-spacing: .04rem!important;
-    color: #383838!important;
+    color: #883720!important;
 }
 
 #intro-sub {
@@ -167,31 +168,29 @@ body {
       
 @media screen and (min-width: 768px) and (max-width: 965px) {
 
-#page-nav ul {
+    #page-nav ul {
 
-    list-style-type: none!important;
-    padding: 0!important;
-    margin: 0!important;
-    flex-direction: column!important;
-    justify-content: space-evenly!important;
+        list-style-type: none!important;
+        padding: 0!important;
+        margin: 0!important;
+        flex-direction: column!important;
+        justify-content: space-evenly!important;
+    }
+
+    #page-nav ul {
+
+        list-style-type: none!important;
+        padding: 0!important;
+        margin: 0!important;
+    }
+
+    #page-nav li {
+
+        text-align: center!important;
+        margin-bottom: 30px!important;
+        
+    }
 }
-
-#page-nav ul {
-
-    list-style-type: none!important;
-    padding: 0!important;
-    margin: 0!important;
-}
-
-#page-nav li {
-
-    text-align: center!important;
-    margin-bottom: 30px!important;
-    
-}
-}
-
-
 
 
 @media screen and (max-width: 768px) {
@@ -278,7 +277,7 @@ body {
     font-size: .8rem!important;
     font-weight: 600!important;
     letter-spacing: .09rem;
-    background-color: rgb(118, 87, 40)!important;
+    background-color: #883720!important;
     padding: .5rem!important;
     border-radius: 7px!important;
     margin-right: 20px!important;
@@ -286,7 +285,7 @@ body {
 
 #page-nav a:hover {
 
-    background-color: #a85e14!important;
+    background-color: #8e5a33!important;
 }
 
 
@@ -333,15 +332,21 @@ body {
     background-color: rgb(232, 232, 232)!important;
 }
      
+#innerpage h1 { 
+
+    margin-bottom: 0;
+}
+
 .bedcount-title {
 
-    color: #000000!important;
+    /*color: #000000!important;*/
+    color: #883720!important;
     font-family: 'Poppins', sans-serif!important;
     font-size: 1.5rem!important;
+    font-weight: 600!important;
     text-transform: uppercase!important;
-    margin-left: 65px!important;
+    margin-left: 28px!important;
     margin-right: 65px!important;
-    padding: 15px;
 }
 
 @media screen and (max-width: 480px) {
@@ -349,7 +354,7 @@ body {
     .bedcount-title {
         font-size: 1.3rem!important;
         padding: 0!important;
-        
+        margin-left: 28px!important;
     }
 }
 
@@ -472,11 +477,7 @@ cursor: pointer;
     color: #000000!important;
 }
 
-.fa-solid {
 
-    padding: .5rem!important;
-    color: #000000!important;
-}
 
 .countyName {
 
@@ -520,9 +521,9 @@ cursor: pointer;
     grid-template-columns: repeat(3,  1fr)!important;
     grid-auto-flow: column;
     text-align: center!important;
-    gap: .8rem!important;
-    font-size: 1rem;
-    font-weight: 500;
+    gap: .6rem!important;
+    font-size: 1rem!important;
+    font-weight: 600!important;
     color: #000000!important;
 }
 
@@ -532,9 +533,17 @@ cursor: pointer;
     font-family: 'Open Sans', sans-serif!important;
     padding: .5rem!important;
     font-size: 1rem!important;
-    font-weight: 500;
+    font-weight: 600!important;
     color: #000000!important;
 }
+
+.fa-solid {
+
+    padding: .4rem!important;
+    color: #000000!important;
+    font-size: 19px!important;
+}
+
      
 .CTA-apply {
 
@@ -568,7 +577,7 @@ a {
 
 .CTA-apply:hover {
 
-        background-color: #a85e14!important;
+    background-color: #883720!important;
 }
     
 @media screen and (max-width: 480px) {
@@ -649,31 +658,23 @@ a {
         
 }    
 
-        
-            
-        
-        
-        
-        .tbody-container {
-            font-size: 1rem;
-            place-content: center!important;
-            text-align: center!important;
-            font-size: .9rem;
-            width: 100%;
-            justify-content: center!important;
-            align-items: center!important;
-           
-            
-        }
-
-        .td-not-bootstrap {
-
-            padding-left: 1.6rem!important;
-            padding-right: 1.6rem!important;
-            text-align: center!important;
-        }
-        
+.tbody-container {
+    font-size: 1rem;
+    place-content: center!important;
+    text-align: center!important;
+    font-size: .9rem;
+    width: 100%;
+    justify-content: center!important;
+    align-items: center!important;
       
+}
+
+.td-not-bootstrap {
+
+    padding-left: 1.6rem!important;
+    padding-right: 1.6rem!important;
+    text-align: center!important;
+}
 
 
  .eligibility-title {
@@ -710,7 +711,7 @@ cursor: pointer;
 }
 
 .accordion-button:hover {
-    background-color:#a85e14!important;
+    background-color:#883720!important;
     
 }
 
@@ -900,10 +901,10 @@ cursor: pointer;
 
 
 
-        function handleBedCountSelect () {
-            const selection = document.getElementById('bed-select');
-            location = selection.value;  
-        }
+function handleBedCountSelect () {
+    const selection = document.getElementById('bed-select');
+    location = selection.value;  
+}
        
 
 function toggleAccordion(accordionId) {
@@ -964,6 +965,67 @@ const eastTable = [
     { 'householdSize': '7', 'income': '$64,680' },
     { 'householdSize': '8', 'income': '$68,880' },
 ];
+
+const sumterTable = [
+
+    { 'householdSize': '1', 'income': '$3' },
+    { 'householdSize': '2', 'income': '$' },
+    { 'householdSize': '3', 'income': '$' },
+    { 'householdSize': '4', 'income': '$' },
+    { 'householdSize': '5', 'income': '$' },
+    { 'householdSize': '6', 'income': '$' },
+    { 'householdSize': '7', 'income': '$' },
+    { 'householdSize': '8', 'income': '$' },
+    ];
+
+const volusiaTable = [
+
+    { 'householdSize': '1', 'income': '$3' },
+    { 'householdSize': '2', 'income': '$' },
+    { 'householdSize': '3', 'income': '$' },
+    { 'householdSize': '4', 'income': '$' },
+    { 'householdSize': '5', 'income': '$' },
+    { 'householdSize': '6', 'income': '$' },
+    { 'householdSize': '7', 'income': '$' },
+    { 'householdSize': '8', 'income': '$' },
+];
+const brevardTable = [
+
+    { 'householdSize': '1', 'income': '$3' },
+    { 'householdSize': '2', 'income': '$' },
+    { 'householdSize': '3', 'income': '$' },
+    { 'householdSize': '4', 'income': '$' },
+    { 'householdSize': '5', 'income': '$' },
+    { 'householdSize': '6', 'income': '$' },
+    { 'householdSize': '7', 'income': '$' },
+    { 'householdSize': '8', 'income': '$' },
+];
+
+const flaglerTable = [
+
+    { 'householdSize': '1', 'income': '$3' },
+    { 'householdSize': '2', 'income': '$' },
+    { 'householdSize': '3', 'income': '$' },
+    { 'householdSize': '4', 'income': '$' },
+    { 'householdSize': '5', 'income': '$' },
+    { 'householdSize': '6', 'income': '$' },
+    { 'householdSize': '7', 'income': '$' },
+    { 'householdSize': '8', 'income': '$' },
+];
+
+const sarasotaTable = [
+
+    { 'householdSize': '1', 'income': '$3' },
+    { 'householdSize': '2', 'income': '$' },
+    { 'householdSize': '3', 'income': '$' },
+    { 'householdSize': '4', 'income': '$' },
+    { 'householdSize': '5', 'income': '$' },
+    { 'householdSize': '6', 'income': '$' },
+    { 'householdSize': '7', 'income': '$' },
+    { 'householdSize': '8', 'income': '$' },
+];
+
+
 
 //Table element generator:
 
@@ -1031,6 +1093,32 @@ counties.forEach((item) => {
                 const generatedTableWest = generateTable(westTable);
                 tableContainer.appendChild(generatedTableWest);
                 break;    
+
+            case 'Sumter County':     
+                const generatedTableSumter = generateTable(sumterTable);
+                tableContainer.appendChild(generatedTableSumter);
+                break;
+
+            case 'Volusia County':     
+                const generatedTableVolusia = generateTable(volusiaTable);
+                tableContainer.appendChild(generatedTableVolusia);
+                break;
+
+            case 'Brevard County':     
+                const generatedTableBrevard = generateTable(brevardTable);
+                tableContainer.appendChild(generatedTableBrevard);
+                break;
+
+            case 'Flagler County':     
+                const generatedTableFlagler = generateTable(flaglerTable);
+                tableContainer.appendChild(generatedTableFlagler);
+                break;
+
+            case 'Sarasota County':     
+                const generatedTableSarasota = generateTable(sarasotaTable);
+                tableContainer.appendChild(generatedTableSarasota);
+                break;
+                
 
             default:
                 console.log('no table match found');
@@ -1114,7 +1202,7 @@ updatedDates.forEach((item, index) =>
         </div>
 
 <section class="bedroom-section" id="one-bed-section">
-            <h1 class="bedcount-title">1 Bedroom Units</h1>
+            <h1 class="bedcount-title">1 Bedroom Apartment Homes</h1>
                 <div class="main-container" > 
                 <!--card starts here-->
                 <div class="card-container">    
@@ -1133,7 +1221,7 @@ updatedDates.forEach((item, index) =>
                                             <div class="unit-details">
                                                 <div><i class="fa-solid fa-bed"></i>3 Beds</div>
                                                 <div><i class="fa-solid fa-bath"></i>2 Baths</div>
-                                                <div><i class="fa-solid fa-dollar-sign"></i>999</div>
+                                                <div>Rent:<i class="fa-solid fa-dollar-sign"></i>999</div>
                                             </div>
                                             <div class="admin-details">
                                                 <p>Deposit Starting at: $1,200</p>
@@ -1161,105 +1249,7 @@ updatedDates.forEach((item, index) =>
                 </div>
                     <!--card ends-->
                           <!--card starts here-->
-                          <div class="card-container">    
-                            <div class="card" >
-                                <div class="image-container-wrapper"><a href="https://www.lakesumterapartments.com/" target="_blank">
-                                <div class="image-container" style="background-image: url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1920/s3/2/82930/lake%20sumter_012624.jpg');">
-                            </div> 
-                             </a>
-                            </div>                              
-                                <h2 class="property-name"><a href="https://www.lakesumterapartments.com/" target="_blank">Lake Sumter Apartments</a></h2>
-                                <div class="countyName">Hillsborough County</div>
-                                    <div class="card-body">
-                                            <div><i class="fa-solid fa-location-dot fa-xl"></i>
-                                              <h4 class="address"><a href="https://maps.app.goo.gl/Q6UkghWb2DwFuEpt5" target="_blank">10816 NE 87th Loop 
-                                              <br>Lady Lake, FL 32162</h4></a></div>
-                                                    <div class="unit-details">
-                                                        <div><i class="fa-solid fa-bed"></i>3 Beds</div>
-                                                        <div><i class="fa-solid fa-bath"></i>2 Baths</div>
-                                                        <div><i class="fa-solid fa-dollar-sign"></i>999</div>
-                                                    </div>
-                                                    <div class="admin-details">
-                                                        <p>Deposit Starting at: $1,200</p>
-                                                        <p>Application Fee: $90</p>
-                                                    </div>
-                                                    <div class="accordion-container">
-                                                        <button class="accordion-button" onclick="toggleAccordion('modal2')">View Income Restrictions</button>
-                                                        <div class="accordion-content" id="modal2">
-                                                            <span class="close-btn-x"  onclick="toggleAccordion('modal2')">x</span>
-                                                            <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
-                                                            <table class="table">
-                                                                <thead class="thead">
-                                                                  <tr class="tr">
-                                                                      <th scope="col" class="th">Household Size</th>
-                                                                      <th scope="col" class="th">Max Allowable Household Income for 60%</th>
-                                                                  </tr>
-                                                                </thead>
-                                                                <table class="tbody-container table"></table>
-                                                        </div>
-                                                    </div>
-                                                    <button class="CTA-apply"><a href="https://www.lakesumterapartments.com/letsgetstarted" target="_blank">Get Started</a></button>
-                                                    <p class="date-updated"></p>
-                                    </div>
-                                </div>
-                        </div>
-                        <!--card ends-->
-                        
-                        <!--empty card container when only 2 cards to maintain perfect spacing-->
-                        <div class="card-container"> </div>
-                        <!--card ends-->   
-                </div>
-</section>
-
-<section class="bedroom-section" id="two-bed-section">
-<h1 class="bedcount-title">2 Bedroom Units</h1>
-                <div class="main-container" > 
-                <!--card starts here-->
                 <div class="card-container">    
-                    <div class="card" >
-                        <div class="image-container-wrapper"><a href="https://www.lakesumterapartments.com/" target="_blank">
-                        <div class="image-container" style="background-image: url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1920/s3/2/82930/lake%20sumter_012624.jpg');">
-                    </div> 
-                     </a>
-                    </div>                              
-                        <h2 class="property-name"><a href="https://www.lakesumterapartments.com/" target="_blank">Lake Sumter Apartments</a></h2>
-                        <div class="countyName">Volusia County</div>
-                            <div class="card-body">
-                                    <div><i class="fa-solid fa-location-dot fa-xl"></i>
-                                      <h4 class="address"><a href="https://maps.app.goo.gl/Q6UkghWb2DwFuEpt5" target="_blank">10816 NE 87th Loop 
-                                      <br>Lady Lake, FL 32162</h4></a></div>
-                                            <div class="unit-details">
-                                                <div><i class="fa-solid fa-bed"></i>3 Beds</div>
-                                                <div><i class="fa-solid fa-bath"></i>2 Baths</div>
-                                                <div><i class="fa-solid fa-dollar-sign"></i>999</div>
-                                            </div>
-                                            <div class="admin-details">
-                                                <p>Deposit Starting at: $1,200</p>
-                                                <p>Application Fee: $90</p>
-                                            </div>
-                                            <div class="accordion-container">
-                                                <button class="accordion-button" onclick="toggleAccordion('modal3')">View Income Restrictions</button>
-                                                <div class="accordion-content" id="modal3">
-                                                    <span class="close-btn-x"  onclick="toggleAccordion('modal3')">x</span>
-                                                    <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
-                                                    <table class="table">
-                                                        <thead class="thead">
-                                                          <tr class="tr">
-                                                              <th scope="col" class="th">Household Size</th>
-                                                              <th scope="col" class="th">Max Allowable Household Income for 60%</th>
-                                                          </tr>
-                                                        </thead>
-                                                        <table class="tbody-container table"></table>
-                                                </div>
-                                            </div>
-                                            <button class="CTA-apply"><a href="https://www.lakesumterapartments.com/letsgetstarted" target="_blank">Get Started</a></button>
-                                            <p class="date-updated"></p>
-                            </div>
-                        </div>
-                </div>
-                <!--card ends-->
-                   <!--card starts here-->
-                   <div class="card-container">    
                     <div class="card" >
                         <div class="image-container-wrapper"><a href="https://www.lakesumterapartments.com/" target="_blank">
                         <div class="image-container" style="background-image: url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1920/s3/2/82930/lake%20sumter_012624.jpg');">
@@ -1275,16 +1265,16 @@ updatedDates.forEach((item, index) =>
                                             <div class="unit-details">
                                                 <div><i class="fa-solid fa-bed"></i>3 Beds</div>
                                                 <div><i class="fa-solid fa-bath"></i>2 Baths</div>
-                                                <div><i class="fa-solid fa-dollar-sign"></i>999</div>
+                                                <div>Rent:<i class="fa-solid fa-dollar-sign"></i>999</div>
                                             </div>
                                             <div class="admin-details">
                                                 <p>Deposit Starting at: $1,200</p>
                                                 <p>Application Fee: $90</p>
                                             </div>
                                             <div class="accordion-container">
-                                                <button class="accordion-button" onclick="toggleAccordion('modal4')">View Income Restrictions</button>
-                                                <div class="accordion-content" id="modal4">
-                                                    <span class="close-btn-x"  onclick="toggleAccordion('modal4')">x</span>
+                                                <button class="accordion-button" onclick="toggleAccordion('modal1')">View Income Restrictions</button>
+                                                <div class="accordion-content" id="modal1">
+                                                    <span class="close-btn-x"  onclick="toggleAccordion('modal1')">x</span>
                                                     <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
                                                     <table class="table">
                                                         <thead class="thead">
@@ -1301,151 +1291,289 @@ updatedDates.forEach((item, index) =>
                             </div>
                         </div>
                 </div>
-                <!--card ends-->
-                    <!--card starts here-->
-                    <div class="card-container">    
-                        <div class="card" >
-                            <div class="image-container-wrapper"><a href="https://www.lakesumterapartments.com/" target="_blank">
-                            <div class="image-container" style="background-image: url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1920/s3/2/82930/lake%20sumter_012624.jpg');">
-                        </div> 
-                         </a>
-                        </div>                              
-                            <h2 class="property-name"><a href="https://www.lakesumterapartments.com/" target="_blank">Lake Sumter Apartments</a></h2>
-                            <div class="countyName">Sumter County</div>
-                                <div class="card-body">
-                                        <div><i class="fa-solid fa-location-dot fa-xl"></i>
-                                          <h4 class="address"><a href="https://maps.app.goo.gl/Q6UkghWb2DwFuEpt5" target="_blank">10816 NE 87th Loop 
-                                          <br>Lady Lake, FL 32162</h4></a></div>
-                                                <div class="unit-details">
-                                                    <div><i class="fa-solid fa-bed"></i>3 Beds</div>
-                                                    <div><i class="fa-solid fa-bath"></i>2 Baths</div>
-                                                    <div><i class="fa-solid fa-dollar-sign"></i>999</div>
+                    <!--card ends-->
+                        <!--card starts here-->
+                <div class="card-container">    
+                    <div class="card" >
+                        <div class="image-container-wrapper"><a href="https://www.lakesumterapartments.com/" target="_blank">
+                        <div class="image-container" style="background-image: url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1920/s3/2/82930/lake%20sumter_012624.jpg');">
+                    </div> 
+                     </a>
+                    </div>                              
+                        <h2 class="property-name"><a href="https://www.lakesumterapartments.com/" target="_blank">Lake Sumter Apartments</a></h2>
+                        <div class="countyName">Sumter County</div>
+                            <div class="card-body">
+                                    <div><i class="fa-solid fa-location-dot fa-xl"></i>
+                                      <h4 class="address"><a href="https://maps.app.goo.gl/Q6UkghWb2DwFuEpt5" target="_blank">10816 NE 87th Loop 
+                                      <br>Lady Lake, FL 32162</h4></a></div>
+                                            <div class="unit-details">
+                                                <div><i class="fa-solid fa-bed"></i>3 Beds</div>
+                                                <div><i class="fa-solid fa-bath"></i>2 Baths</div>
+                                                <div>Rent:<i class="fa-solid fa-dollar-sign"></i>999</div>
+                                            </div>
+                                            <div class="admin-details">
+                                                <p>Deposit Starting at: $1,200</p>
+                                                <p>Application Fee: $90</p>
+                                            </div>
+                                            <div class="accordion-container">
+                                                <button class="accordion-button" onclick="toggleAccordion('modal1')">View Income Restrictions</button>
+                                                <div class="accordion-content" id="modal1">
+                                                    <span class="close-btn-x"  onclick="toggleAccordion('modal1')">x</span>
+                                                    <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
+                                                    <table class="table">
+                                                        <thead class="thead">
+                                                          <tr class="tr">
+                                                              <th scope="col" class="th">Household Size</th>
+                                                              <th scope="col" class="th">Max Allowable Household Income for 60%</th>
+                                                          </tr>
+                                                        </thead>
+                                                        <table class="tbody-container table"></table>
                                                 </div>
-                                                <div class="admin-details">
-                                                    <p>Deposit Starting at: $1,200</p>
-                                                    <p>Application Fee: $90</p>
-                                                </div>
-                                                <div class="accordion-container">
-                                                    <button class="accordion-button" onclick="toggleAccordion('modal5')">View Income Restrictions</button>
-                                                    <div class="accordion-content" id="modal5">
-                                                        <span class="close-btn-x"  onclick="toggleAccordion('modal5')">x</span>
-                                                        <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
-                                                        <table class="table">
-                                                            <thead class="thead">
-                                                              <tr class="tr">
-                                                                  <th scope="col" class="th">Household Size</th>
-                                                                  <th scope="col" class="th">Max Allowable Household Income for 60%</th>
-                                                              </tr>
-                                                            </thead>
-                                                            <table class="tbody-container table"></table>
-                                                    </div>
-                                                </div>
-                                                <button class="CTA-apply"><a href="https://www.lakesumterapartments.com/letsgetstarted" target="_blank">Get Started</a></button>
-                                                <p class="date-updated"></p>
-                                </div>
+                                            </div>
+                                            <button class="CTA-apply"><a href="https://www.lakesumterapartments.com/letsgetstarted" target="_blank">Get Started</a></button>
+                                            <p class="date-updated"></p>
                             </div>
-                    </div>
+                        </div>
+                </div>
+                    <!--card ends-->
+                </div>
+</section>
+
+<section class="bedroom-section" id="two-bed-section">
+<h1 class="bedcount-title">2 Bedroom Apartment Homes</h1>
+                <div class="main-container" > 
+                <!--card starts here-->
+                <div class="card-container">    
+                    <div class="card" >
+                        <div class="image-container-wrapper"><a href="https://www.lakesumterapartments.com/" target="_blank">
+                        <div class="image-container" style="background-image: url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1920/s3/2/82930/lake%20sumter_012624.jpg');">
+                    </div> 
+                     </a>
+                    </div>                              
+                        <h2 class="property-name"><a href="https://www.lakesumterapartments.com/" target="_blank">Lake Sumter Apartments</a></h2>
+                        <div class="countyName">Sumter County</div>
+                            <div class="card-body">
+                                    <div><i class="fa-solid fa-location-dot fa-xl"></i>
+                                      <h4 class="address"><a href="https://maps.app.goo.gl/Q6UkghWb2DwFuEpt5" target="_blank">10816 NE 87th Loop 
+                                      <br>Lady Lake, FL 32162</h4></a></div>
+                                            <div class="unit-details">
+                                                <div><i class="fa-solid fa-bed"></i>3 Beds</div>
+                                                <div><i class="fa-solid fa-bath"></i>2 Baths</div>
+                                                <div>Rent:<i class="fa-solid fa-dollar-sign"></i>999</div>
+                                            </div>
+                                            <div class="admin-details">
+                                                <p>Deposit Starting at: $1,200</p>
+                                                <p>Application Fee: $90</p>
+                                            </div>
+                                            <div class="accordion-container">
+                                                <button class="accordion-button" onclick="toggleAccordion('modal1')">View Income Restrictions</button>
+                                                <div class="accordion-content" id="modal1">
+                                                    <span class="close-btn-x"  onclick="toggleAccordion('modal1')">x</span>
+                                                    <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
+                                                    <table class="table">
+                                                        <thead class="thead">
+                                                          <tr class="tr">
+                                                              <th scope="col" class="th">Household Size</th>
+                                                              <th scope="col" class="th">Max Allowable Household Income for 60%</th>
+                                                          </tr>
+                                                        </thead>
+                                                        <table class="tbody-container table"></table>
+                                                </div>
+                                            </div>
+                                            <button class="CTA-apply"><a href="https://www.lakesumterapartments.com/letsgetstarted" target="_blank">Get Started</a></button>
+                                            <p class="date-updated"></p>
+                            </div>
+                        </div>
+                </div>
+                    <!--card ends-->
+                   <!--card starts here-->
+                <div class="card-container">    
+                    <div class="card" >
+                        <div class="image-container-wrapper"><a href="https://www.lakesumterapartments.com/" target="_blank">
+                        <div class="image-container" style="background-image: url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1920/s3/2/82930/lake%20sumter_012624.jpg');">
+                    </div> 
+                     </a>
+                    </div>                              
+                        <h2 class="property-name"><a href="https://www.lakesumterapartments.com/" target="_blank">Lake Sumter Apartments</a></h2>
+                        <div class="countyName">Sumter County</div>
+                            <div class="card-body">
+                                    <div><i class="fa-solid fa-location-dot fa-xl"></i>
+                                      <h4 class="address"><a href="https://maps.app.goo.gl/Q6UkghWb2DwFuEpt5" target="_blank">10816 NE 87th Loop 
+                                      <br>Lady Lake, FL 32162</h4></a></div>
+                                            <div class="unit-details">
+                                                <div><i class="fa-solid fa-bed"></i>3 Beds</div>
+                                                <div><i class="fa-solid fa-bath"></i>2 Baths</div>
+                                                <div>Rent:<i class="fa-solid fa-dollar-sign"></i>999</div>
+                                            </div>
+                                            <div class="admin-details">
+                                                <p>Deposit Starting at: $1,200</p>
+                                                <p>Application Fee: $90</p>
+                                            </div>
+                                            <div class="accordion-container">
+                                                <button class="accordion-button" onclick="toggleAccordion('modal1')">View Income Restrictions</button>
+                                                <div class="accordion-content" id="modal1">
+                                                    <span class="close-btn-x"  onclick="toggleAccordion('modal1')">x</span>
+                                                    <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
+                                                    <table class="table">
+                                                        <thead class="thead">
+                                                          <tr class="tr">
+                                                              <th scope="col" class="th">Household Size</th>
+                                                              <th scope="col" class="th">Max Allowable Household Income for 60%</th>
+                                                          </tr>
+                                                        </thead>
+                                                        <table class="tbody-container table"></table>
+                                                </div>
+                                            </div>
+                                            <button class="CTA-apply"><a href="https://www.lakesumterapartments.com/letsgetstarted" target="_blank">Get Started</a></button>
+                                            <p class="date-updated"></p>
+                            </div>
+                        </div>
+                </div>
                     <!--card ends-->
                     <!--card starts here-->
-                    <div class="card-container">    
-                        <div class="card" >
-                            <div class="image-container-wrapper"><a href="https://www.lakesumterapartments.com/" target="_blank">
-                            <div class="image-container" style="background-image: url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1920/s3/2/82930/lake%20sumter_012624.jpg');">
-                        </div> 
-                         </a>
-                        </div>                              
-                            <h2 class="property-name"><a href="https://www.lakesumterapartments.com/" target="_blank">Lake Sumter Apartments</a></h2>
-                            <div class="countyName">Sumter County</div>
-                                <div class="card-body">
-                                        <div><i class="fa-solid fa-location-dot fa-xl"></i>
-                                          <h4 class="address"><a href="https://maps.app.goo.gl/Q6UkghWb2DwFuEpt5" target="_blank">10816 NE 87th Loop 
-                                          <br>Lady Lake, FL 32162</h4></a></div>
-                                                <div class="unit-details">
-                                                    <div><i class="fa-solid fa-bed"></i>3 Beds</div>
-                                                    <div><i class="fa-solid fa-bath"></i>2 Baths</div>
-                                                    <div><i class="fa-solid fa-dollar-sign"></i>999</div>
+                <div class="card-container">    
+                    <div class="card" >
+                        <div class="image-container-wrapper"><a href="https://www.lakesumterapartments.com/" target="_blank">
+                        <div class="image-container" style="background-image: url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1920/s3/2/82930/lake%20sumter_012624.jpg');">
+                    </div> 
+                     </a>
+                    </div>                              
+                        <h2 class="property-name"><a href="https://www.lakesumterapartments.com/" target="_blank">Lake Sumter Apartments</a></h2>
+                        <div class="countyName">Sumter County</div>
+                            <div class="card-body">
+                                    <div><i class="fa-solid fa-location-dot fa-xl"></i>
+                                      <h4 class="address"><a href="https://maps.app.goo.gl/Q6UkghWb2DwFuEpt5" target="_blank">10816 NE 87th Loop 
+                                      <br>Lady Lake, FL 32162</h4></a></div>
+                                            <div class="unit-details">
+                                                <div><i class="fa-solid fa-bed"></i>3 Beds</div>
+                                                <div><i class="fa-solid fa-bath"></i>2 Baths</div>
+                                                <div>Rent:<i class="fa-solid fa-dollar-sign"></i>999</div>
+                                            </div>
+                                            <div class="admin-details">
+                                                <p>Deposit Starting at: $1,200</p>
+                                                <p>Application Fee: $90</p>
+                                            </div>
+                                            <div class="accordion-container">
+                                                <button class="accordion-button" onclick="toggleAccordion('modal1')">View Income Restrictions</button>
+                                                <div class="accordion-content" id="modal1">
+                                                    <span class="close-btn-x"  onclick="toggleAccordion('modal1')">x</span>
+                                                    <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
+                                                    <table class="table">
+                                                        <thead class="thead">
+                                                          <tr class="tr">
+                                                              <th scope="col" class="th">Household Size</th>
+                                                              <th scope="col" class="th">Max Allowable Household Income for 60%</th>
+                                                          </tr>
+                                                        </thead>
+                                                        <table class="tbody-container table"></table>
                                                 </div>
-                                                <div class="admin-details">
-                                                    <p>Deposit Starting at: $1,200</p>
-                                                    <p>Application Fee: $90</p>
-                                                </div>
-                                                <div class="accordion-container">
-                                                    <button class="accordion-button" onclick="toggleAccordion('modal6')">View Income Restrictions</button>
-                                                    <div class="accordion-content" id="modal6">
-                                                        <span class="close-btn-x"  onclick="toggleAccordion('modal6')">x</span>
-                                                        <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
-                                                        <table class="table">
-                                                            <thead class="thead">
-                                                              <tr class="tr">
-                                                                  <th scope="col" class="th">Household Size</th>
-                                                                  <th scope="col" class="th">Max Allowable Household Income for 60%</th>
-                                                              </tr>
-                                                            </thead>
-                                                            <table class="tbody-container table"></table>
-                                                    </div>
-                                                </div>
-                                                <button class="CTA-apply"><a href="https://www.lakesumterapartments.com/letsgetstarted" target="_blank">Get Started</a></button>
-                                                <p class="date-updated"></p>
-                                </div>
+                                            </div>
+                                            <button class="CTA-apply"><a href="https://www.lakesumterapartments.com/letsgetstarted" target="_blank">Get Started</a></button>
+                                            <p class="date-updated"></p>
                             </div>
-                    </div>
+                        </div>
+                </div>
                     <!--card ends-->
                     <!--card starts here-->
-                    <div class="card-container">    
-                        <div class="card" >
-                            <div class="image-container-wrapper"><a href="https://www.thevillagesonmillenia.com/" target="_blank">
-                            <div class="image-container" style="background-image: url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1920/s3/2/82930/villages%20on%20millenia_aerial%20(36)_rev.jpg');">
-                        </div> 
-                         </a>
-                        </div>                              
-                            <h2 class="property-name"><a href="https://www.thevillagesonmillenia.com/" target="_blank">Villages on Millenia</a></h2>
-                            <div class="countyName">Hillsborough County</div>
-                                <div class="card-body">
-                                        <div><i class="fa-solid fa-location-dot fa-xl"></i>
-                                          <h4 class="address"><a href="https://maps.app.goo.gl/wP84AhPSVyQqSQvw5" target="_blank">5000 Millenia Blvd 
-                                          <br>Orlando, FL 32839</h4></a></div>
-                                                <div class="unit-details">
-                                                    <div><i class="fa-solid fa-bed"></i>1 Beds</div>
-                                                    <div><i class="fa-solid fa-bath"></i>1 Baths</div>
-                                                    <div><i class="fa-solid fa-dollar-sign"></i>1,299</div>
+                <div class="card-container">    
+                    <div class="card" >
+                        <div class="image-container-wrapper"><a href="https://www.lakesumterapartments.com/" target="_blank">
+                        <div class="image-container" style="background-image: url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1920/s3/2/82930/lake%20sumter_012624.jpg');">
+                    </div> 
+                     </a>
+                    </div>                              
+                        <h2 class="property-name"><a href="https://www.lakesumterapartments.com/" target="_blank">Lake Sumter Apartments</a></h2>
+                        <div class="countyName">Sumter County</div>
+                            <div class="card-body">
+                                    <div><i class="fa-solid fa-location-dot fa-xl"></i>
+                                      <h4 class="address"><a href="https://maps.app.goo.gl/Q6UkghWb2DwFuEpt5" target="_blank">10816 NE 87th Loop 
+                                      <br>Lady Lake, FL 32162</h4></a></div>
+                                            <div class="unit-details">
+                                                <div><i class="fa-solid fa-bed"></i>3 Beds</div>
+                                                <div><i class="fa-solid fa-bath"></i>2 Baths</div>
+                                                <div>Rent:<i class="fa-solid fa-dollar-sign"></i>999</div>
+                                            </div>
+                                            <div class="admin-details">
+                                                <p>Deposit Starting at: $1,200</p>
+                                                <p>Application Fee: $90</p>
+                                            </div>
+                                            <div class="accordion-container">
+                                                <button class="accordion-button" onclick="toggleAccordion('modal1')">View Income Restrictions</button>
+                                                <div class="accordion-content" id="modal1">
+                                                    <span class="close-btn-x"  onclick="toggleAccordion('modal1')">x</span>
+                                                    <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
+                                                    <table class="table">
+                                                        <thead class="thead">
+                                                          <tr class="tr">
+                                                              <th scope="col" class="th">Household Size</th>
+                                                              <th scope="col" class="th">Max Allowable Household Income for 60%</th>
+                                                          </tr>
+                                                        </thead>
+                                                        <table class="tbody-container table"></table>
                                                 </div>
-                                                <div class="admin-details">
-                                                    <p>Deposit Starting at: $1,000</p>
-                                                    <p>Application Fee: $90</p>
-                                                </div>
-                                                <div class="accordion-container">
-                                                    <button class="accordion-button" onclick="toggleAccordion('modal7')">View Income Restrictions</button>
-                                                    <div class="accordion-content" id="modal7">
-                                                        <span class="close-btn-x"  onclick="toggleAccordion('modal7')">x</span>
-                                                        <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
-                                                        <table class="table">
-                                                            <thead class="thead">
-                                                              <tr class="tr">
-                                                                  <th scope="col" class="th">Household Size</th>
-                                                                  <th scope="col" class="th">Max Allowable Household Income for 60%</th>
-                                                              </tr>
-                                                            </thead>
-                                                            <table class="tbody-container"></table>
-                                                    </div>
-                                                </div>
-                                                <button class="CTA-apply"><a href="https://www.thevillagesonmillenia.com/letsgetstarted" target="_blank">Get Started</a></button>
-                                                <p class="date-updated"></p>
-                                </div>
+                                            </div>
+                                            <button class="CTA-apply"><a href="https://www.lakesumterapartments.com/letsgetstarted" target="_blank">Get Started</a></button>
+                                            <p class="date-updated"></p>
                             </div>
-                    </div>
+                        </div>
+                </div>
+                    <!--card ends-->
+                    <!--card starts here-->
+                <div class="card-container">    
+                    <div class="card" >
+                        <div class="image-container-wrapper"><a href="https://www.lakesumterapartments.com/" target="_blank">
+                        <div class="image-container" style="background-image: url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1920/s3/2/82930/lake%20sumter_012624.jpg');">
+                    </div> 
+                     </a>
+                    </div>                              
+                        <h2 class="property-name"><a href="https://www.lakesumterapartments.com/" target="_blank">Lake Sumter Apartments</a></h2>
+                        <div class="countyName">Sumter County</div>
+                            <div class="card-body">
+                                    <div><i class="fa-solid fa-location-dot fa-xl"></i>
+                                      <h4 class="address"><a href="https://maps.app.goo.gl/Q6UkghWb2DwFuEpt5" target="_blank">10816 NE 87th Loop 
+                                      <br>Lady Lake, FL 32162</h4></a></div>
+                                            <div class="unit-details">
+                                                <div><i class="fa-solid fa-bed"></i>3 Beds</div>
+                                                <div><i class="fa-solid fa-bath"></i>2 Baths</div>
+                                                <div>Rent:<i class="fa-solid fa-dollar-sign"></i>999</div>
+                                            </div>
+                                            <div class="admin-details">
+                                                <p>Deposit Starting at: $1,200</p>
+                                                <p>Application Fee: $90</p>
+                                            </div>
+                                            <div class="accordion-container">
+                                                <button class="accordion-button" onclick="toggleAccordion('modal1')">View Income Restrictions</button>
+                                                <div class="accordion-content" id="modal1">
+                                                    <span class="close-btn-x"  onclick="toggleAccordion('modal1')">x</span>
+                                                    <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
+                                                    <table class="table">
+                                                        <thead class="thead">
+                                                          <tr class="tr">
+                                                              <th scope="col" class="th">Household Size</th>
+                                                              <th scope="col" class="th">Max Allowable Household Income for 60%</th>
+                                                          </tr>
+                                                        </thead>
+                                                        <table class="tbody-container table"></table>
+                                                </div>
+                                            </div>
+                                            <button class="CTA-apply"><a href="https://www.lakesumterapartments.com/letsgetstarted" target="_blank">Get Started</a></button>
+                                            <p class="date-updated"></p>
+                            </div>
+                        </div>
+                </div>
                     <!--card ends-->
                 </div>
 
 </section>
 
 <section class="bedroom-section" id="three-bed-section">
-    <h1 class="bedcount-title">3 Bedroom Units</h1>
+    <h1 class="bedcount-title">3 Bedroom Apartment Homes</h1>
     <p class="bedcount-title-p">None Available At This Time</p>
 </section>
 <br>
 <br>
 <section class="bedroom-section" id="four-bed-section">
-    <h1 class="bedcount-title">4 Bedroom Units</h1>
+    <h1 class="bedcount-title">4 Bedroom Apartment Homes</h1>
     <p class="bedcount-title-p">None Available At This Time</p>
 </section>
 </main> 
