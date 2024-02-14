@@ -321,7 +321,6 @@ body {
     padding: .5rem!important;
     background-color: rgb(156, 156, 156)!important;
     
-    
 }
 
 .bed-count-dropdown option {
@@ -583,8 +582,6 @@ a {
 }
 
 
-
-
 .overlay {
 
     display: none!important;
@@ -614,7 +611,6 @@ a {
     background-color: #757575;
 }
 
-
 .table th {
 
     text-align: center;
@@ -622,39 +618,37 @@ a {
     padding-left: .6rem;
 }
 
-
 .table {
             
-            text-align: center!important;
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            font-family: 'Open Sans', sans-serif;
-            border-spacing: 0.8rem;
-            
-            
-           
-        }
+    text-align: center!important;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;
+    border-spacing: 0.8rem;  
+    
+}
         
-        .thead {
-            font-size: 1rem;        
-            text-align: center!important;
-        }
-        
-        
-        .th {
-            color: #646464;
-            text-align: center;
-            padding-right: .6rem;
-        }    
-           
-        .td-not-bootstrap {
+.thead {
+    font-size: 1rem;        
+    text-align: center!important;
+}
 
-            padding-left: 1.6rem!important;
-            padding-right: 1.6rem!important;
-            text-align: center!important;
 
-        }    
+.th {
+    color: #646464;
+    text-align: center;
+    padding-right: .6rem;
+}    
+    
+.td-not-bootstrap {
+
+    padding-left: 1.6rem!important;
+    padding-right: 1.6rem!important;
+    text-align: center!important;
+    font-size: 1rem!important;
+        
+}    
 
         
             
@@ -820,7 +814,7 @@ cursor: pointer;
             border-radius: 10px;
             font-family: 'Open Sans', sans-serif;
             border-spacing: 0.5rem;
-           
+            
             
     }
 
@@ -882,7 +876,7 @@ cursor: pointer;
             padding-left: 1.6rem!important;
             padding-right: 1.6rem!important;
             text-align: center!important;
-            
+            font-size: 1rem!important;
              
         }
 
@@ -933,6 +927,8 @@ function toggleAccordion(accordionId) {
 <script type="module" defer>
 
 
+/*Below is where you would update the values for eligibility tables. You only need to update the value in the income column and not any of the functions below */
+
 const centralTable = [
 
     { 'householdSize': '1', 'income': '$36,900' },
@@ -970,13 +966,12 @@ const eastTable = [
     { 'householdSize': '8', 'income': '$68,880' },
 ];
 
-
+//Table element generator:
 
  function generateTable(tableData) {
 
     const tbody = document.createElement('tbody');
     tbody.classList.add('tbody');
-    
     
     const tableRows = tableData.map(({ householdSize, income }) => {
         const row = document.createElement('tr');
@@ -1003,10 +998,9 @@ const eastTable = [
 }
 
 
+//Table data selected based on the county specified. County name is CASE SENSITIVE and must include the word County:
 
 const counties = document.querySelectorAll('.countyName');
-
-
 
 counties.forEach((item) => {
     const tableContainer = item.parentElement.querySelector('.tbody-container');
@@ -1015,35 +1009,35 @@ counties.forEach((item) => {
     if (tableContainer) {
 
         switch (item.innerHTML) {
-        case 'Sumter County':
-        case 'Lake County':
-        case 'Orange County':
-        case 'Osceola County':
-            const generatedTableCentral = generateTable(centralTable);
-            tableContainer.appendChild(generatedTableCentral);
-            break;
+            case 'Sumter County':
+            case 'Lake County':
+            case 'Orange County':
+            case 'Osceola County':
+                const generatedTableCentral = generateTable(centralTable);
+                tableContainer.appendChild(generatedTableCentral);
+                break;
 
-        case 'Volusia County':
-        case 'Brevard County':  
-        case 'Flagler County':
-        case 'Martin County':  
-        case 'St Lucie County':    
-            const generatedTableEast = generateTable(eastTable);
-            tableContainer.appendChild(generatedTableEast);
-            break;
+            case 'Volusia County':
+            case 'Brevard County':  
+            case 'Flagler County':
+            case 'Martin County':  
+            case 'St Lucie County':    
+                const generatedTableEast = generateTable(eastTable);
+                tableContainer.appendChild(generatedTableEast);
+                break;
 
-        case 'Hernando County':
-        case 'Hillsborough County':  
-        case 'Pasco County':
-        case 'Pinellas County':  
-        case 'Sarasota County':    
-            const generatedTableEast = generateTable(westTable);
-            tableContainer.appendChild(generatedTableWest);
-            break;    
+            case 'Hernando County':
+            case 'Hillsborough County':  
+            case 'Pasco County':
+            case 'Pinellas County':  
+            case 'Sarasota County':    
+                const generatedTableWest = generateTable(westTable);
+                tableContainer.appendChild(generatedTableWest);
+                break;    
 
-        default:
-            console.log('no table match found');
-            break;
+            default:
+                console.log('no table match found');
+                break;
     }
 
 
@@ -1056,19 +1050,13 @@ counties.forEach((item) => {
 
 </script>
 
-
-
-
 <script type="module">
-
     
-/*UPDATE THE DATE ON ALL CARDS BY UPDATING THE VALUE OF CONST DATE = "" BELOW. BE SURE TO LEAVE QUOTATION MARKS  */
+/*UPDATES THE DATE ON ALL CARDS BY UPDATING THE VALUE OF CONST DATE = "" BELOW. BE SURE TO LEAVE QUOTATION MARKS  */
 
 const date = "2/3/24";
 
-
 /*NO NEED TO ALTER THE BELOW FUNCTION*/
-
 const updatedDates = document.querySelectorAll('.date-updated');
 
 updatedDates.forEach((item, index) => 
@@ -1077,11 +1065,8 @@ updatedDates.forEach((item, index) =>
 
 </script>
 
-
-
 </head>
 <body>
-
 
   <div id="intro-container">
     <div id="intro-title">
@@ -1164,33 +1149,7 @@ updatedDates.forEach((item, index) =>
                                                               <th scope="col" class="th">Max Allowable Household Income for 60%</th>
                                                           </tr>
                                                         </thead>
-                                                              <tbody class="tbody">
-                                                                    <tr class="tr">
-                                                                      <td class="td-not-bootstrap">1</td><td class="td-not-bootstrap">$33,480</td>
-                                                                      </tr>
-                                                                      <tr class="tr">
-                                                                          <td class="td-not-bootstrap">2</td><td class="td-not-bootstrap">$38,280</td>
-                                                                      </tr>
-                                                                      <tr class="tr">
-                                                                          <td class="td-not-bootstrap">3</td><td class="td-not-bootstrap">$43,080</td>
-                                                                      </tr>
-                                                                      <tr class="tr">
-                                                                          <td class="td-not-bootstrap">4</td><td class="td-not-bootstrap">$47,820</td>
-                                                                      </tr>
-                                                                      <tr class="tr">
-                                                                          <td class="td-not-bootstrap">5</td><td class="td-not-bootstrap">$51,660</td>
-                                                                      </tr>
-                                                                      <tr class="tr">
-                                                                          <td class="td-not-bootstrap">6</td><td class="td-not-bootstrap">$55,500</td>
-                                                                      </tr>
-                                                                      <tr class="tr">
-                                                                          <td class="td-not-bootstrap">7</td><td class="td-not-bootstrap">$59,340</td>
-                                                                      </tr>
-                                                                      <tr class="tr">
-                                                                          <td class="td-not-bootstrap">8</td><td class="td-not-bootstrap">$63,180</td>
-                                                                      </tr>
-                                                                    </tbody>
-                                                      </table>
+                                                        <table class="tbody-container table"></table>
                                                 </div>
                                             </div>
                                             <button class="CTA-apply"><a href="https://www.lakesumterapartments.com/letsgetstarted" target="_blank">Get Started</a></button>
@@ -1202,24 +1161,24 @@ updatedDates.forEach((item, index) =>
                           <!--card starts here-->
                           <div class="card-container">    
                             <div class="card" >
-                                <div class="image-container-wrapper"><a href="https://www.thevillagesonmillenia.com/" target="_blank">
-                                <div class="image-container" style="background-image: url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1920/s3/2/82930/villages%20on%20millenia_aerial%20(36)_rev.jpg');">
+                                <div class="image-container-wrapper"><a href="https://www.lakesumterapartments.com/" target="_blank">
+                                <div class="image-container" style="background-image: url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1920/s3/2/82930/lake%20sumter_012624.jpg');">
                             </div> 
                              </a>
                             </div>                              
-                                <h2 class="property-name"><a href="https://www.thevillagesonmillenia.com/" target="_blank">Villages on Millenia</a></h2>
-                                <div class="countyName">Orange County</div>
+                                <h2 class="property-name"><a href="https://www.lakesumterapartments.com/" target="_blank">Lake Sumter Apartments</a></h2>
+                                <div class="countyName">Hillsborough County</div>
                                     <div class="card-body">
                                             <div><i class="fa-solid fa-location-dot fa-xl"></i>
-                                              <h4 class="address"><a href="https://maps.app.goo.gl/wP84AhPSVyQqSQvw5" target="_blank">5000 Millenia Blvd 
-                                              <br>Orlando, FL 32839</h4></a></div>
+                                              <h4 class="address"><a href="https://maps.app.goo.gl/Q6UkghWb2DwFuEpt5" target="_blank">10816 NE 87th Loop 
+                                              <br>Lady Lake, FL 32162</h4></a></div>
                                                     <div class="unit-details">
-                                                        <div><i class="fa-solid fa-bed"></i>1 Beds</div>
-                                                        <div><i class="fa-solid fa-bath"></i>1 Baths</div>
-                                                        <div><i class="fa-solid fa-dollar-sign"></i>1,299</div>
+                                                        <div><i class="fa-solid fa-bed"></i>3 Beds</div>
+                                                        <div><i class="fa-solid fa-bath"></i>2 Baths</div>
+                                                        <div><i class="fa-solid fa-dollar-sign"></i>999</div>
                                                     </div>
                                                     <div class="admin-details">
-                                                        <p>Deposit Starting at: $1,000</p>
+                                                        <p>Deposit Starting at: $1,200</p>
                                                         <p>Application Fee: $90</p>
                                                     </div>
                                                     <div class="accordion-container">
@@ -1234,44 +1193,19 @@ updatedDates.forEach((item, index) =>
                                                                       <th scope="col" class="th">Max Allowable Household Income for 60%</th>
                                                                   </tr>
                                                                 </thead>
-                                                                <tbody class="tbody">
-                                                                  <tr class="tr">
-                                                                        <td class="td-not-bootstrap">1</td><td class="td-not-bootstrap">$36,900</td>
-                                                                    </tr>
-                                                                    <tr class="tr">
-                                                                        <td class="td-not-bootstrap">2</td><td class="td-not-bootstrap">$42,180</td>
-                                                                    </tr>
-                                                                    <tr class="tr">
-                                                                        <td class="td-not-bootstrap">3</td><td class="td-not-bootstrap">$47,460</td>
-                                                                    </tr>
-                                                                    <tr class="tr">
-                                                                        <td class="td-not-bootstrap">4</td><td class="td-not-bootstrap">$52,680</td>
-                                                                    </tr>
-                                                                    <tr class="tr">
-                                                                        <td class="td-not-bootstrap">5</td><td class="td-not-bootstrap">$56,940</td>
-                                                                    </tr>
-                                                                    <tr class="tr">
-                                                                        <td class="td-not-bootstrap">6</td><td class="td-not-bootstrap">$61,140</td>
-                                                                    </tr>
-                                                                    <tr class="tr">
-                                                                        <td class="td-not-bootstrap">7</td><td class="td-not-bootstrap">$65,340</td>
-                                                                    </tr>
-                                                                    <tr class="tr">
-                                                                        <td class="td-not-bootstrap">8</td><td class="td-not-bootstrap">$69,540</td>
-                                                                    </tr>
-                                                                  </tbody>
-                                                              </table>
+                                                                <table class="tbody-container table"></table>
                                                         </div>
                                                     </div>
-                                                    <button class="CTA-apply"><a href="https://www.thevillagesonmillenia.com/letsgetstarted" target="_blank">Get Started</a></button>
+                                                    <button class="CTA-apply"><a href="https://www.lakesumterapartments.com/letsgetstarted" target="_blank">Get Started</a></button>
                                                     <p class="date-updated"></p>
                                     </div>
                                 </div>
                         </div>
                         <!--card ends-->
-                        <!--card starts here-->
+                        
+                        <!--empty card container when only 2 cards to maintain perfect spacing-->
                         <div class="card-container"> </div>
-                    <!--card ends-->   
+                        <!--card ends-->   
                 </div>
 </section>
 
@@ -1287,7 +1221,7 @@ updatedDates.forEach((item, index) =>
                      </a>
                     </div>                              
                         <h2 class="property-name"><a href="https://www.lakesumterapartments.com/" target="_blank">Lake Sumter Apartments</a></h2>
-                        <div class="countyName">Sumter County</div>
+                        <div class="countyName">Volusia County</div>
                             <div class="card-body">
                                     <div><i class="fa-solid fa-location-dot fa-xl"></i>
                                       <h4 class="address"><a href="https://maps.app.goo.gl/Q6UkghWb2DwFuEpt5" target="_blank">10816 NE 87th Loop 
@@ -1313,33 +1247,7 @@ updatedDates.forEach((item, index) =>
                                                               <th scope="col" class="th">Max Allowable Household Income for 60%</th>
                                                           </tr>
                                                         </thead>
-                                                        <tbody class="tbody">
-                                                          <tr class="tr">
-                                                                <td class="td-not-bootstrap">1</td><td class="td-not-bootstrap">$32,520</td>
-                                                            </tr>
-                                                            <tr class="tr">
-                                                                <td class="td-not-bootstrap">2</td><td class="td-not-bootstrap">$37,200</td>
-                                                            </tr>
-                                                            <tr class="tr">
-                                                                <td class="td-not-bootstrap">3</td><td class="td-not-bootstrap">$41,820</td>
-                                                            </tr>
-                                                            <tr class="tr">
-                                                                <td class="td-not-bootstrap">4</td><td class="td-not-bootstrap">$46,440</td>
-                                                            </tr>
-                                                            <tr class="tr">
-                                                                <td class="td-not-bootstrap">5</td><td class="td-not-bootstrap">$50,160</td>
-                                                            </tr>
-                                                            <tr class="tr">
-                                                                <td class="td-not-bootstrap">6</td><td class="td-not-bootstrap">$53,880</td>
-                                                            </tr>
-                                                            <tr class="tr">
-                                                                <td class="td-not-bootstrap">7</td><td class="td-not-bootstrap">$57,600</td>
-                                                            </tr>
-                                                            <tr class="tr">
-                                                                <td class="td-not-bootstrap">8</td><td class="td-not-bootstrap">$61,320</td>
-                                                            </tr>
-                                                          </tbody>    
-                                                      </table>
+                                                        <table class="tbody-container table"></table>
                                                 </div>
                                             </div>
                                             <button class="CTA-apply"><a href="https://www.lakesumterapartments.com/letsgetstarted" target="_blank">Get Started</a></button>
@@ -1347,77 +1255,7 @@ updatedDates.forEach((item, index) =>
                             </div>
                         </div>
                 </div>
-                    <!--card ends-->
-                    <!--card starts here-->
-                    <div class="card-container">    
-                        <div class="card" >
-                            <div class="image-container-wrapper"><a href="https://www.lakesumterapartments.com/" target="_blank">
-                            <div class="image-container" style="background-image: url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1920/s3/2/82930/lake%20sumter_012624.jpg');">
-                        </div> 
-                         </a>
-                        </div>                              
-                            <h2 class="property-name"><a href="https://www.lakesumterapartments.com/" target="_blank">Lake Sumter Apartments</a></h2>
-                            <div class="countyName">Sumter County</div>
-                                <div class="card-body">
-                                        <div><i class="fa-solid fa-location-dot fa-xl"></i>
-                                          <h4 class="address"><a href="https://maps.app.goo.gl/Q6UkghWb2DwFuEpt5" target="_blank">10816 NE 87th Loop 
-                                          <br>Lady Lake, FL 32162</h4></a></div>
-                                                <div class="unit-details">
-                                                    <div><i class="fa-solid fa-bed"></i>3 Beds</div>
-                                                    <div><i class="fa-solid fa-bath"></i>2 Baths</div>
-                                                    <div><i class="fa-solid fa-dollar-sign"></i>999</div>
-                                                </div>
-                                                <div class="admin-details">
-                                                    <p>Deposit Starting at: $1,200</p>
-                                                    <p>Application Fee: $90</p>
-                                                </div>
-                                                <div class="accordion-container">
-                                                    <button class="accordion-button" onclick="toggleAccordion('modal4')">View Income Restrictions</button>
-                                                    <div class="accordion-content" id="modal4">
-                                                        <span class="close-btn-x"  onclick="toggleAccordion('modal4')">x</span>
-                                                        <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
-                                                        <table class="table">
-                                                            <thead class="thead">
-                                                              <tr class="tr">
-                                                                  <th scope="col" class="th">Household Size</th>
-                                                                  <th scope="col" class="th">Max Allowable Household Income for 60%</th>
-                                                              </tr>
-                                                            </thead>
-                                                            <tbody class="tbody">
-                                                              <tr class="tr">
-                                                                    <td class="td-not-bootstrap">1</td><td class="td-not-bootstrap">$32,520</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">2</td><td class="td-not-bootstrap">$37,200</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">3</td><td class="td-not-bootstrap">$41,820</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">4</td><td class="td-not-bootstrap">$46,440</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">5</td><td class="td-not-bootstrap">$50,160</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">6</td><td class="td-not-bootstrap">$53,880</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">7</td><td class="td-not-bootstrap">$57,600</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">8</td><td class="td-not-bootstrap">$61,320</td>
-                                                                </tr>
-                                                              </tbody>    
-                                                          </table>
-                                                    </div>
-                                                </div>
-                                                <button class="CTA-apply"><a href="https://www.lakesumterapartments.com/letsgetstarted" target="_blank">Get Started</a></button>
-                                                <p class="date-updated"></p>
-                                </div>
-                            </div>
-                    </div>
-                    <!--card ends-->
+                <!--card ends-->
                    <!--card starts here-->
                    <div class="card-container">    
                     <div class="card" >
@@ -1442,9 +1280,9 @@ updatedDates.forEach((item, index) =>
                                                 <p>Application Fee: $90</p>
                                             </div>
                                             <div class="accordion-container">
-                                                <button class="accordion-button" onclick="toggleAccordion('modal5')">View Income Restrictions</button>
-                                                <div class="accordion-content" id="modal5">
-                                                    <span class="close-btn-x"  onclick="toggleAccordion('modal5')">x</span>
+                                                <button class="accordion-button" onclick="toggleAccordion('modal4')">View Income Restrictions</button>
+                                                <div class="accordion-content" id="modal4">
+                                                    <span class="close-btn-x"  onclick="toggleAccordion('modal4')">x</span>
                                                     <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
                                                     <table class="table">
                                                         <thead class="thead">
@@ -1453,33 +1291,7 @@ updatedDates.forEach((item, index) =>
                                                               <th scope="col" class="th">Max Allowable Household Income for 60%</th>
                                                           </tr>
                                                         </thead>
-                                                        <tbody class="tbody">
-                                                          <tr class="tr">
-                                                                <td class="td-not-bootstrap">1</td><td class="td-not-bootstrap">$32,520</td>
-                                                            </tr>
-                                                            <tr class="tr">
-                                                                <td class="td-not-bootstrap">2</td><td class="td-not-bootstrap">$37,200</td>
-                                                            </tr>
-                                                            <tr class="tr">
-                                                                <td class="td-not-bootstrap">3</td><td class="td-not-bootstrap">$41,820</td>
-                                                            </tr>
-                                                            <tr class="tr">
-                                                                <td class="td-not-bootstrap">4</td><td class="td-not-bootstrap">$46,440</td>
-                                                            </tr>
-                                                            <tr class="tr">
-                                                                <td class="td-not-bootstrap">5</td><td class="td-not-bootstrap">$50,160</td>
-                                                            </tr>
-                                                            <tr class="tr">
-                                                                <td class="td-not-bootstrap">6</td><td class="td-not-bootstrap">$53,880</td>
-                                                            </tr>
-                                                            <tr class="tr">
-                                                                <td class="td-not-bootstrap">7</td><td class="td-not-bootstrap">$57,600</td>
-                                                            </tr>
-                                                            <tr class="tr">
-                                                                <td class="td-not-bootstrap">8</td><td class="td-not-bootstrap">$61,320</td>
-                                                            </tr>
-                                                          </tbody>    
-                                                      </table>
+                                                        <table class="tbody-container table"></table>
                                                 </div>
                                             </div>
                                             <button class="CTA-apply"><a href="https://www.lakesumterapartments.com/letsgetstarted" target="_blank">Get Started</a></button>
@@ -1488,6 +1300,50 @@ updatedDates.forEach((item, index) =>
                         </div>
                 </div>
                 <!--card ends-->
+                    <!--card starts here-->
+                    <div class="card-container">    
+                        <div class="card" >
+                            <div class="image-container-wrapper"><a href="https://www.lakesumterapartments.com/" target="_blank">
+                            <div class="image-container" style="background-image: url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1920/s3/2/82930/lake%20sumter_012624.jpg');">
+                        </div> 
+                         </a>
+                        </div>                              
+                            <h2 class="property-name"><a href="https://www.lakesumterapartments.com/" target="_blank">Lake Sumter Apartments</a></h2>
+                            <div class="countyName">Sumter County</div>
+                                <div class="card-body">
+                                        <div><i class="fa-solid fa-location-dot fa-xl"></i>
+                                          <h4 class="address"><a href="https://maps.app.goo.gl/Q6UkghWb2DwFuEpt5" target="_blank">10816 NE 87th Loop 
+                                          <br>Lady Lake, FL 32162</h4></a></div>
+                                                <div class="unit-details">
+                                                    <div><i class="fa-solid fa-bed"></i>3 Beds</div>
+                                                    <div><i class="fa-solid fa-bath"></i>2 Baths</div>
+                                                    <div><i class="fa-solid fa-dollar-sign"></i>999</div>
+                                                </div>
+                                                <div class="admin-details">
+                                                    <p>Deposit Starting at: $1,200</p>
+                                                    <p>Application Fee: $90</p>
+                                                </div>
+                                                <div class="accordion-container">
+                                                    <button class="accordion-button" onclick="toggleAccordion('modal5')">View Income Restrictions</button>
+                                                    <div class="accordion-content" id="modal5">
+                                                        <span class="close-btn-x"  onclick="toggleAccordion('modal5')">x</span>
+                                                        <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
+                                                        <table class="table">
+                                                            <thead class="thead">
+                                                              <tr class="tr">
+                                                                  <th scope="col" class="th">Household Size</th>
+                                                                  <th scope="col" class="th">Max Allowable Household Income for 60%</th>
+                                                              </tr>
+                                                            </thead>
+                                                            <table class="tbody-container table"></table>
+                                                    </div>
+                                                </div>
+                                                <button class="CTA-apply"><a href="https://www.lakesumterapartments.com/letsgetstarted" target="_blank">Get Started</a></button>
+                                                <p class="date-updated"></p>
+                                </div>
+                            </div>
+                    </div>
+                    <!--card ends-->
                     <!--card starts here-->
                     <div class="card-container">    
                         <div class="card" >
@@ -1523,33 +1379,7 @@ updatedDates.forEach((item, index) =>
                                                                   <th scope="col" class="th">Max Allowable Household Income for 60%</th>
                                                               </tr>
                                                             </thead>
-                                                            <tbody class="tbody">
-                                                              <tr class="tr">
-                                                                    <td class="td-not-bootstrap">1</td><td class="td-not-bootstrap">$32,520</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">2</td><td class="td-not-bootstrap">$37,200</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">3</td><td class="td-not-bootstrap">$41,820</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">4</td><td class="td-not-bootstrap">$46,440</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">5</td><td class="td-not-bootstrap">$50,160</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">6</td><td class="td-not-bootstrap">$53,880</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">7</td><td class="td-not-bootstrap">$57,600</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">8</td><td class="td-not-bootstrap">$61,320</td>
-                                                                </tr>
-                                                              </tbody>    
-                                                          </table>
+                                                            <table class="tbody-container table"></table>
                                                     </div>
                                                 </div>
                                                 <button class="CTA-apply"><a href="https://www.lakesumterapartments.com/letsgetstarted" target="_blank">Get Started</a></button>
@@ -1561,24 +1391,24 @@ updatedDates.forEach((item, index) =>
                     <!--card starts here-->
                     <div class="card-container">    
                         <div class="card" >
-                            <div class="image-container-wrapper"><a href="https://www.lakesumterapartments.com/" target="_blank">
-                            <div class="image-container" style="background-image: url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1920/s3/2/82930/lake%20sumter_012624.jpg');">
+                            <div class="image-container-wrapper"><a href="https://www.thevillagesonmillenia.com/" target="_blank">
+                            <div class="image-container" style="background-image: url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1920/s3/2/82930/villages%20on%20millenia_aerial%20(36)_rev.jpg');">
                         </div> 
                          </a>
                         </div>                              
-                            <h2 class="property-name"><a href="https://www.lakesumterapartments.com/" target="_blank">Lake Sumter Apartments</a></h2>
-                            <div class="countyName">Sumter County</div>
+                            <h2 class="property-name"><a href="https://www.thevillagesonmillenia.com/" target="_blank">Villages on Millenia</a></h2>
+                            <div class="countyName">Hillsborough County</div>
                                 <div class="card-body">
                                         <div><i class="fa-solid fa-location-dot fa-xl"></i>
-                                          <h4 class="address"><a href="https://maps.app.goo.gl/Q6UkghWb2DwFuEpt5" target="_blank">10816 NE 87th Loop 
-                                          <br>Lady Lake, FL 32162</h4></a></div>
+                                          <h4 class="address"><a href="https://maps.app.goo.gl/wP84AhPSVyQqSQvw5" target="_blank">5000 Millenia Blvd 
+                                          <br>Orlando, FL 32839</h4></a></div>
                                                 <div class="unit-details">
-                                                    <div><i class="fa-solid fa-bed"></i>3 Beds</div>
-                                                    <div><i class="fa-solid fa-bath"></i>2 Baths</div>
-                                                    <div><i class="fa-solid fa-dollar-sign"></i>999</div>
+                                                    <div><i class="fa-solid fa-bed"></i>1 Beds</div>
+                                                    <div><i class="fa-solid fa-bath"></i>1 Baths</div>
+                                                    <div><i class="fa-solid fa-dollar-sign"></i>1,299</div>
                                                 </div>
                                                 <div class="admin-details">
-                                                    <p>Deposit Starting at: $1,200</p>
+                                                    <p>Deposit Starting at: $1,000</p>
                                                     <p>Application Fee: $90</p>
                                                 </div>
                                                 <div class="accordion-container">
@@ -1593,106 +1423,10 @@ updatedDates.forEach((item, index) =>
                                                                   <th scope="col" class="th">Max Allowable Household Income for 60%</th>
                                                               </tr>
                                                             </thead>
-                                                            <tbody class="tbody">
-                                                              <tr class="tr">
-                                                                    <td class="td-not-bootstrap">1</td><td class="td-not-bootstrap">$32,520</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">2</td><td class="td-not-bootstrap">$37,200</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">3</td><td class="td-not-bootstrap">$41,820</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">4</td><td class="td-not-bootstrap">$46,440</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">5</td><td class="td-not-bootstrap">$50,160</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">6</td><td class="td-not-bootstrap">$53,880</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">7</td><td class="td-not-bootstrap">$57,600</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">8</td><td class="td-not-bootstrap">$61,320</td>
-                                                                </tr>
-                                                              </tbody>    
-                                                          </table>
+                                                            <table class="tbody-container"></table>
                                                     </div>
                                                 </div>
-                                                <button class="CTA-apply"><a href="https://www.lakesumterapartments.com/letsgetstarted" target="_blank">Get Started</a></button>
-                                                <p class="date-updated"></p>
-                                </div>
-                            </div>
-                    </div>
-                    <!--card ends-->
-                    <!--card starts here-->
-                    <div class="card-container">    
-                        <div class="card" >
-                            <div class="image-container-wrapper"><a href="https://www.lakesumterapartments.com/" target="_blank">
-                            <div class="image-container" style="background-image: url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1920/s3/2/82930/lake%20sumter_012624.jpg');">
-                        </div> 
-                         </a>
-                        </div>                              
-                            <h2 class="property-name"><a href="https://www.lakesumterapartments.com/" target="_blank">Lake Sumter Apartments</a></h2>
-                            <div class="countyName">Sumter County</div>
-                                <div class="card-body">
-                                        <div><i class="fa-solid fa-location-dot fa-xl"></i>
-                                          <h4 class="address"><a href="https://maps.app.goo.gl/Q6UkghWb2DwFuEpt5" target="_blank">10816 NE 87th Loop 
-                                          <br>Lady Lake, FL 32162</h4></a></div>
-                                                <div class="unit-details">
-                                                    <div><i class="fa-solid fa-bed"></i>3 Beds</div>
-                                                    <div><i class="fa-solid fa-bath"></i>2 Baths</div>
-                                                    <div><i class="fa-solid fa-dollar-sign"></i>999</div>
-                                                </div>
-                                                <div class="admin-details">
-                                                    <p>Deposit Starting at: $1,200</p>
-                                                    <p>Application Fee: $90</p>
-                                                </div>
-                                                <div class="accordion-container">
-                                                    <button class="accordion-button" onclick="toggleAccordion('modal8')">View Income Restrictions</button>
-                                                    <div class="accordion-content" id="modal8">
-                                                        <span class="close-btn-x"  onclick="toggleAccordion('modal8')">x</span>
-                                                        <h2 class= "eligibility-title">Income Eligibility Requirements</h2>
-                                                        <table class="table">
-                                                            <thead class="thead">
-                                                              <tr class="tr">
-                                                                  <th scope="col" class="th">Household Size</th>
-                                                                  <th scope="col" class="th">Max Allowable Household Income for 60%</th>
-                                                              </tr>
-                                                            </thead>
-                                                            <tbody class="tbody">
-                                                              <tr class="tr">
-                                                                    <td class="td-not-bootstrap">1</td><td class="td-not-bootstrap">$32,520</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">2</td><td class="td-not-bootstrap">$37,200</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">3</td><td class="td-not-bootstrap">$41,820</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">4</td><td class="td-not-bootstrap">$46,440</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">5</td><td class="td-not-bootstrap">$50,160</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">6</td><td class="td-not-bootstrap">$53,880</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">7</td><td class="td-not-bootstrap">$57,600</td>
-                                                                </tr>
-                                                                <tr class="tr">
-                                                                    <td class="td-not-bootstrap">8</td><td class="td-not-bootstrap">$61,320</td>
-                                                                </tr>
-                                                              </tbody>    
-                                                          </table>
-                                                    </div>
-                                                </div>
-                                                <button class="CTA-apply"><a href="https://www.lakesumterapartments.com/letsgetstarted" target="_blank">Get Started</a></button>
+                                                <button class="CTA-apply"><a href="https://www.thevillagesonmillenia.com/letsgetstarted" target="_blank">Get Started</a></button>
                                                 <p class="date-updated"></p>
                                 </div>
                             </div>
