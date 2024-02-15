@@ -929,17 +929,17 @@ function toggleAccordion(accordionId) {
 
 /*Below is where you would update the values for eligibility tables. You only need to update the value in the income column and not any of the functions below */
 
+//eastTable contains the values for Martin and St Lucie Counties:
+const martinStLucieTable = [
 
-const eastTable = [
-
-    { 'householdSize': '1', 'income': '$32,520' },
-    { 'householdSize': '2', 'income': '$37,200' },
-    { 'householdSize': '3', 'income': '$41,820' },
-    { 'householdSize': '4', 'income': '$46,440' },
-    { 'householdSize': '5', 'income': '$50,160' },
-    { 'householdSize': '6', 'income': '$53,880' },
-    { 'householdSize': '7', 'income': '$57,600' },
-    { 'householdSize': '8', 'income': '$61,320' },
+    { 'householdSize': '1', 'income': '$35,580' },
+    { 'householdSize': '2', 'income': '$40,680' },
+    { 'householdSize': '3', 'income': '$45,780' },
+    { 'householdSize': '4', 'income': '$50,820' },
+    { 'householdSize': '5', 'income': '$54,900' },
+    { 'householdSize': '6', 'income': '$58,980' },
+    { 'householdSize': '7', 'income': '$63,060' },
+    { 'householdSize': '8', 'income': '$67,140' },
 ];
 
 
@@ -1024,8 +1024,8 @@ counties.forEach((item) => {
         switch (item.innerHTML) {
             case 'Martin County':  
             case 'St Lucie County':    
-                const generatedTableEast = generateTable(eastTable);
-                tableContainer.appendChild(generatedTableEast);
+                const generatedTableMartinStLucie = generateTable(martinStLucieTable);
+                tableContainer.appendChild(generatedTableMartinStLucie);
                 break;
 
             case 'Volusia County':     
