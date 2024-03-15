@@ -1121,39 +1121,10 @@ let counties = document.querySelectorAll('.countyName');
                 break;
         }
     } else {
-        console.log('no .tbody-container found for', item.innerHTML);
+        console.log('no .tbody-container found for', counties[i].innerHTML);
     }
     
  }
-
-/* counties.forEach((item) => {
-    const tableContainer = item.parentElement.querySelector('.tbody-container'); 
-
-
-    if (tableContainer) {
-        switch (item.innerHTML) {
-            case 'Lake County':
-            case 'Orange County':
-            case 'Osceola County':
-            case 'Seminole County':
-                const generatedTableCentral = generateTable(centralTable);
-                tableContainer.appendChild(generatedTableCentral);
-                break;
-
-            case 'Sumter County':     
-                const generatedTableSumter = generateTable(sumterTable);
-                tableContainer.appendChild(generatedTableSumter);
-                break;
-
-            default:
-                console.log('no table match found');
-                break;
-        }
-    } else {
-        console.log('no .tbody-container found for', item.innerHTML);
-    }
-});
-*/
 
 </script><script type="module">
     

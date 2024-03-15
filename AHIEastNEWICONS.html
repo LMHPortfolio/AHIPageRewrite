@@ -1135,15 +1135,13 @@ const flaglerTable = [
 
 //Table data selected based on the county specified. County name is CASE SENSITIVE and must include the word County:
 
-const counties = document.querySelectorAll('.countyName');
+let counties = document.querySelectorAll('.countyName');
 
-counties.forEach((item) => {
-    const tableContainer = item.parentElement.querySelector('.tbody-container');
-
-
+ for (let i=0; i<counties.length; i++) {
+    let tableContainer = counties[i].parentElement.querySelector('.tbody-container');
+    
     if (tableContainer) {
-
-        switch (item.innerHTML) {
+        switch (counties[i].innerHTML){
             case 'Martin County':  
             case 'St Lucie County':    
                 const generatedTableMartinStLucie = generateTable(martinStLucieTable);
@@ -1170,9 +1168,9 @@ counties.forEach((item) => {
                 break;
         }
     } else {
-        console.log('no .tbody-container found for', item.innerHTML);
+        console.log('no .tbody-container found for', counties[i].innerHTML);
     }
-});
+}
 
 </script>
 
