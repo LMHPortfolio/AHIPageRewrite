@@ -1017,12 +1017,15 @@ function toggleAccordion(accordionId) {
     const accordionContent = document.getElementById(accordionId);
     accordionContent.classList.toggle('active');
 
-    const allAccordions = document.querySelectorAll('.accordion-content');
-    allAccordions.forEach((accordion) => {
-        if (accordion.id !== accordionId) {
+    let allAccordions = document.querySelectorAll('.accordion-content');
+
+    for (let i =0; i<allAccordions.length; i++) {
+        
+        if (allAccordions[i].id !== allAccordions[i].accordionId) {
             accordion.classList.remove('active');
         }
-    });
+    }
+
 }
 
 
