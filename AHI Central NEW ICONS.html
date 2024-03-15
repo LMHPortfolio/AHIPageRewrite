@@ -1127,10 +1127,11 @@ counties.forEach((item) => {
 const date = "2/23/24";
 
 /*NO NEED TO ALTER THE BELOW FUNCTION*/
-const updatedDates = document.querySelectorAll('.date-updated');
+let updatedDates = document.querySelectorAll('.date-updated');
 
-updatedDates.forEach((item, index) => 
-    item.innerHTML = `Updated:${date}. See website for pricing details.`);
+for (let i =0; i<updatedDates.length; i++) {
+    updatedDates[i].innerHTML = `Updated:${date}. Availability subject to change. See website for pricing details.`;
+}
     
 
 </script>
