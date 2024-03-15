@@ -1021,9 +1021,12 @@ function toggleAccordion(accordionId) {
 
     for (let i =0; i<allAccordions.length; i++) {
         
-        if (allAccordions[i].id !== allAccordions[i].accordionId) {
+        let accordion = allAccordions[i];
+
+        if(accordion.id !== accordion.id) {
             accordion.classList.remove('active');
         }
+
     }
 }
 
@@ -1092,10 +1095,38 @@ const sumterTable = [
 
 //Table data selected based on the county specified. County name is CASE SENSITIVE and must include the word County:
 
-const counties = document.querySelectorAll('.countyName');
+let counties = document.querySelectorAll('.countyName');
 
-counties.forEach((item) => {
-    const tableContainer = item.parentElement.querySelector('.tbody-container');
+ for (let i=0; i<counties.length; i++) {
+    let tableContainer = counties[i].parentElement.querySelector('.tbody-container');
+    
+    if (tableContainer) {
+        switch (counties[i].innerHTML) {
+            case 'Lake County':
+            case 'Orange County':
+            case 'Osceola County':
+            case 'Seminole County':
+                const generatedTableCentral = generateTable(centralTable);
+                tableContainer.appendChild(generatedTableCentral);
+                break;
+
+            case 'Sumter County':     
+                const generatedTableSumter = generateTable(sumterTable);
+                tableContainer.appendChild(generatedTableSumter);
+                break;
+
+            default:
+                console.log('no table match found');
+                break;
+        }
+    } else {
+        console.log('no .tbody-container found for', item.innerHTML);
+    }
+    
+ }
+
+/* counties.forEach((item) => {
+    const tableContainer = item.parentElement.querySelector('.tbody-container'); 
 
 
     if (tableContainer) {
@@ -1121,6 +1152,7 @@ counties.forEach((item) => {
         console.log('no .tbody-container found for', item.innerHTML);
     }
 });
+*/
 
 </script><script type="module">
     

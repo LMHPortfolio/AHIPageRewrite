@@ -1032,9 +1032,12 @@ function toggleAccordion(accordionId) {
 
     for (let i =0; i<allAccordions.length; i++) {
         
-        if (allAccordions[i].id !== allAccordions[i].accordionId) {
+        let accordion = allAccordions[i];
+
+        if(accordion.id !== accordion.id) {
             accordion.classList.remove('active');
         }
+
     }
 }
 
