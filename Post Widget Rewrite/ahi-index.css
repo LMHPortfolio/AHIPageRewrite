@@ -1,0 +1,15 @@
+.ahi-property-image {
+    background-size: cover!important;
+    background-position: center!important;
+    height: 250px;
+width:100%;
+    margin-right:12rem;
+    border-radius: 12px 12px 0px 0px;
+    padding:0px;
+    }
+    
+.ahi-card {
+    border-radius: 12px;
+    width: 350px;
+    height: 660px;
+}
