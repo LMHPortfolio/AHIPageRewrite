@@ -137,7 +137,7 @@ if (window.location.href.includes('/availableaffordablehousing')) {
 
 
 //Table data selected based on the county specified. County name is CASE SENSITIVE and must include the word County:
-
+document.addEventListener("DOMContentLoaded", () => {
     let counties = document.querySelectorAll('.countyName');
 
     for (let i=0; i<counties.length; i++) {
@@ -195,5 +195,5 @@ if (window.location.href.includes('/availableaffordablehousing')) {
     }
 
 
-}
-
+   }
+ }
