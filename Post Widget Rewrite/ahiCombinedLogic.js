@@ -2,6 +2,21 @@
 
 if (window.location.href.includes('/availableaffordablehousing')) {
 
+    function toggleAccordion(accordionId) {
+        const accordionContent = document.getElementById(accordionId);
+        accordionContent.classList.toggle("active");
+
+        let allAccordions = document.querySelectorAll(".accordion-content");
+
+        for (let i = 0; i < allAccordions.length; i++) {
+            let accordion = allAccordions[i];
+
+            if (accordion.id !== accordion.id) {
+                accordion.classList.remove("active");
+            }
+        }
+    }
+
     const centralTable = [
 
         { 'householdSize': '1', 'income': '$36,900' },
