@@ -40,7 +40,7 @@ if (location.pathname === "/availableaffordablehousing-centralflorida" || locati
         { 'householdSize': '8', 'income': '$63,180' },
     ];
 
-//eastTable contains the values for Martin and St Lucie Counties:
+/*eastTable contains the values for Martin and St Lucie Counties:*/
     const martinStLucieTable = [
 
         { 'householdSize': '1', 'income': '$35,580' },
@@ -150,7 +150,7 @@ if (location.pathname === "/availableaffordablehousing-centralflorida" || locati
     }
 
 
-//Table data selected based on the county specified. County name is CASE SENSITIVE and must include the word County:
+/*Table data selected based on the county specified. County name is CASE SENSITIVE and must include the word County:*/
 document.addEventListener("DOMContentLoaded", () => {
     let counties = document.querySelectorAll('.countyName');
 
