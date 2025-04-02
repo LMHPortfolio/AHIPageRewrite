@@ -1,4 +1,3 @@
-/*Below is where you would update the values for eligibility tables. You only need to update the value in the income column and not any of the functions below */
 
 if (location.pathname === "/availableaffordablehousing-centralflorida" || location.pathname === "/availableaffordablehousing-eastflorida" || location.pathname === "/availableaffordablehousing-westflorida") {
 
