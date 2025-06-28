@@ -1,0 +1,611 @@
+
+.ahi-property-image {
+    background-size: cover!important;
+    background-position: center!important;
+    height: 250px;
+width:100%;
+    margin-right:12rem;
+    border-radius: 12px 12px 0px 0px;
+    padding:0px;
+    }
+    
+.ahi-card {
+    border-radius: 12px;
+    width: 350px;
+    height: 660px;
+}
+
+.address-title a {
+    font-size: 1.5rem;
+    text-decoration:none;
+    font-weight: 600;
+    color: #212529;
+}
+
+.community-phone {
+    font-size: 1rem;
+
+    font-weight: 600;
+    color: #212529;
+}
+
+
+.overlay {
+    display: none !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+}
+
+.close-btn-x {
+    position: absolute !important;
+    top: 0px !important;
+    right: 15px !important;
+    cursor: pointer !important;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 3px;
+}
+
+.close-btn-x:hover {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+table {
+    border-collapse: unset;
+}
+
+.table-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif !important;
+    color: #373737;
+    font-weight: 700;
+    line-height: 1.3rem;
+    margin-top: 1.4rem;
+}
+
+.table-new th {
+    text-align: center;
+    padding-right: 0.6rem;
+    padding-left: 0.6rem;
+    color: #373737;
+    border: none !important;
+}
+
+.table-new {
+    text-align: center !important;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: "Open Sans", sans-serif;
+    border-spacing: 0.8rem;
+}
+
+.thead-not-bootstrap {
+    font-size: 1rem;
+    text-align: center !important;
+    border-top: unset;
+}
+
+.th-new {
+    color: #373737;
+    text-align: center;
+    padding-right: 0.6rem;
+    line-height: 1.3rem;
+}
+
+.td-not-bootstrap {
+    padding-left: 1.6rem !important;
+    padding-right: 1.6rem !important;
+    text-align: center !important;
+    font-size: 1rem !important;
+}
+
+.tbody-container {
+    font-size: 1rem;
+    place-content: center !important;
+    text-align: center !important;
+    font-size: 0.9rem;
+    width: 100%;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.td-not-bootstrap {
+    padding-left: 1.6rem !important;
+    padding-right: 1.6rem !important;
+    text-align: center !important;
+}
+
+.eligibility-title {
+    display: flex;
+    flex-direction: row;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: none;
+    font-weight: 600;
+    color: #212529;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.eligibility-title:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.accordion-container {
+    place-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.accordion-button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #868686 !important;
+    color: #ffffff;
+    font-size: 0.9rem;
+    border: none !important;
+    box-shadow: 1px 2px 2px 1px #cfcfcf !important;
+    cursor: pointer;
+}
+
+.accordion-button:hover {
+    background-color: #883720 !important;
+}
+
+.header-new {
+    border-bottom-color: #ffffff !important;
+}
+
+@media screen and (max-width: 480px) {
+    .accordion-button {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.accordion-content {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    padding: 1rem;
+    background: #fff !important;
+    border: 1px solid #ccc !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    z-index: 1 !important;
+    border-radius: 10px !important;
+}
+
+@media screen and (min-width: 990px) and (max-width: 1270px) {
+    .accordion-content {
+        top: 60% !important;
+    }
+}
+
+.accordion-content.active {
+    display: block;
+    text-align: center;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .accordion-content {
+        position: relative;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        max-width: 90vh !important;
+        min-width: 50vh !important;
+        min-height: 50vh !important;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .accordion-content {
+        border-spacing: 0.5rem;
+    }
+
+    .eligibility-title {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1rem;
+        text-align: center;
+        text-transform: none;
+        font-weight: 700;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .eligibility-title {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .accordion-content {
+        position: absolute;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    .table-new {
+        max-height: 75vh;
+        max-width: 75vh;
+        text-align: center !important;
+        background-color: #ffffff;
+
+        border-radius: 10px;
+        font-family: "Open Sans", sans-serif;
+        border-spacing: 1rem;
+    }
+
+    .eligibility-title {
+        font-family: "Open Sans", sans-serif;
+        text-align: center !important;
+        text-transform: none;
+        font-weight: 600;
+        padding: 0.2rem;
+    }
+
+    .thead {
+        font-size: 1rem;
+        text-align: center !important;
+    }
+
+    .th-new {
+        padding-right: 0.6rem;
+        text-align: center;
+        border-top: none;
+    }
+
+    .tr {
+        font-size: 1rem;
+    }
+
+    .tbody {
+        place-content: center !important;
+        text-align: center !important;
+        font-size: 0.9rem;
+        width: 100%;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .tbody-container {
+        place-content: center !important;
+        text-align: center !important;
+        font-size: 0.9rem;
+        width: 100%;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .td-not-bootstrap {
+        padding-left: 1.6rem !important;
+        padding-right: 1.6rem !important;
+        text-align: center !important;
+        font-size: 1rem !important;
+    }
+}
+
+
+
+
+
+
+
+
+//if (location.pathname === "/availableaffordablehousing-centralflorida" || location.pathname
+    // === "/availableaffordablehousing-eastflorida" || location.pathname ===
+    // "/availableaffordablehousing-westflorida") {
+
+
+    function toggleAccordion(accordionId) {
+        const accordionContent = document.getElementById(accordionId);
+        accordionContent.classList.toggle("active");
+
+        let allAccordions = document.querySelectorAll(".accordion-content");
+
+        for (let i = 0; i < allAccordions.length; i++) {
+            let accordion = allAccordions[i];
+
+            if (accordion.id !== accordion.id) {
+                accordion.classList.remove("active");
+            }
+        }
+    }
+
+
+
+
+
+        const centralTable = [
+
+            { householdSize: "1", income: "$40,560" },
+            { householdSize: "2", income: "$46,320" },
+            { householdSize: "3", income: "$52,140" },
+            { householdSize: "4", income: "$57,900" },
+            { householdSize: "5", income: "$62,580" },
+            { householdSize: "6", income: "$67,200" },
+            { householdSize: "7", income: "$71,820" },
+            { householdSize: "8", income: "$76,440" },
+        ];
+
+        const sumterTable = [
+
+            { householdSize: "1", income: "$36,780" },
+            { householdSize: "2", income: "$42,060" },
+            { householdSize: "3", income: "$47,340" },
+            { householdSize: "4", income: "$52,560" },
+            { householdSize: "5", income: "$56,820" },
+            { householdSize: "6", income: "$61,020" },
+            { householdSize: "7", income: "$65,220" },
+            { householdSize: "8", income: "$69,420" },
+        ];
+
+        /*eastTable contains the values for Martin and St Lucie Counties:*/
+        const martinStLucieTable = [
+
+            { householdSize: "1", income: "$38,520" },
+            { householdSize: "2", income: "$44,040" },
+            { householdSize: "3", income: "$49,560" },
+            { householdSize: "4", income: "$55,020" },
+            { householdSize: "5", income: "$59,460" },
+            { householdSize: "6", income: "$63,840" },
+            { householdSize: "7", income: "$68,280" },
+            { householdSize: "8", income: "$72,660" },
+        ];
+
+
+        const volusiaTable = [
+
+            { householdSize: "1", income: "$34,800" },
+            { householdSize: "2", income: "$39,780" },
+            { householdSize: "3", income: "$44,760" },
+            { householdSize: "4", income: "$49,680" },
+            { householdSize: "5", income: "$53,700" },
+            { householdSize: "6", income: "$57,660" },
+            { householdSize: "7", income: "$61,620" },
+            { householdSize: "8", income: "$65,580" },
+        ];
+        const brevardTable = [
+
+            { householdSize: "1", income: "$39,720" },
+            { householdSize: "2", income: "$45,360" },
+            { householdSize: "3", income: "$51,060" },
+            { householdSize: "4", income: "$56,760" },
+            { householdSize: "5", income: "$61,260" },
+            { householdSize: "6", income: "$65,820" },
+            { householdSize: "7", income: "$70,380" },
+            { householdSize: "8", income: "$74,940" },
+        ];
+
+        const flaglerTable = [
+
+            { householdSize: "1", income: "$36,480" },
+            { householdSize: "2", income: "$41,700" },
+            { householdSize: "3", income: "$46,920" },
+            { householdSize: "4", income: "$52,140" },
+            { householdSize: "5", income: "$56,340" },
+            { householdSize: "6", income: "$60,480" },
+            { householdSize: "7", income: "$64,680" },
+            { householdSize: "8", income: "$68,820" },
+        ];
+
+        /*Below is where you would update the values for eligibility tables. You only need to update the value in the income column and not any of the functions below */
+
+        const westTable = [
+            { householdSize: "1", income: "$40,140" },
+            { householdSize: "2", income: "$45,840" },
+            { householdSize: "3", income: "$51,600" },
+            { householdSize: "4", income: "$57,300" },
+            { householdSize: "5", income: "$61,920" },
+            { householdSize: "6", income: "$66,480" },
+            { householdSize: "7", income: "$71,100" },
+            { householdSize: "8", income: "$75,660" },
+        ];
+
+
+        const sarasotaTable = [
+
+            { householdSize: "1", income: "$42,240" },
+            { householdSize: "2", income: "$48,240" },
+            { householdSize: "3", income: "$54,300" },
+            { householdSize: "4", income: "$60,300" },
+            { householdSize: "5", income: "$65,160" },
+            { householdSize: "6", income: "$69,960" },
+            { householdSize: "7", income: "$74,820" },
+            { householdSize: "8", income: "$79,620" },
+        ];
+
+
+        //Table element generator:
+
+        function generateTable(tableData) {
+
+            const tbody = document.createElement('tbody');
+            tbody.classList.add('tbody');
+
+            const tableRows = tableData.map(({householdSize, income}) => {
+                const row = document.createElement('tr');
+                row.classList.add('tr');
+
+                const cell1 = document.createElement('td');
+                cell1.classList.add('td-not-bootstrap');
+                cell1.innerHTML = householdSize;
+                row.appendChild(cell1);
+
+                const cell2 = document.createElement('td');
+                cell2.classList.add('td-not-bootstrap');
+                cell2.innerHTML = income;
+                row.appendChild(cell2);
+
+                return row;
+            });
+
+            tableRows.forEach((tableRow) => {
+                tbody.appendChild(tableRow);
+            });
+
+            return tbody;
+        }
+
+
+
+
+        /*Table data selected based on the county specified. County name is CASE SENSITIVE and must include the word County:*/
+        document.addEventListener("DOMContentLoaded", () => {
+            let counties = document.querySelectorAll('.countyName');
+
+            for (let i = 0; i < counties.length; i++) {
+                let tableContainer = counties[i].parentElement.querySelector('.tbody-container');
+
+                if (tableContainer) {
+                    switch (counties[i].innerHTML) {
+                        case 'Martin County':
+                        case 'St Lucie County':
+                            const generatedTableMartinStLucie = generateTable(martinStLucieTable);
+                            tableContainer.appendChild(generatedTableMartinStLucie);
+                            break;
+                        case 'Volusia County':
+                            const generatedTableVolusia = generateTable(volusiaTable);
+                            tableContainer.appendChild(generatedTableVolusia);
+                            break;
+                        case 'Brevard County':
+                            const generatedTableBrevard = generateTable(brevardTable);
+                            tableContainer.appendChild(generatedTableBrevard);
+                            break;
+                        case 'Flagler County':
+                            const generatedTableFlagler = generateTable(flaglerTable);
+                            tableContainer.appendChild(generatedTableFlagler);
+                            break;
+                        case 'Lake County':
+                        case 'Orange County':
+                        case 'Osceola County':
+                        case 'Seminole County':
+                            const generatedTableCentral = generateTable(centralTable);
+                            tableContainer.appendChild(generatedTableCentral);
+                            break;
+                        case 'Sumter County':
+                            const generatedTableSumter = generateTable(sumterTable);
+                            tableContainer.appendChild(generatedTableSumter);
+                            break;
+                        case 'Hernando County':
+                        case 'Hillsborough County':
+                        case 'Pasco County':
+                        case 'Pinellas County':
+                            const generatedTableWest = generateTable(westTable);
+                            tableContainer.appendChild(generatedTableWest);
+                            break;
+                        case 'Sarasota County':
+                            const generatedTableSarasota = generateTable(sarasotaTable);
+                            tableContainer.appendChild(generatedTableSarasota);
+                            break;
+                        default:
+                            console.log('no table match found');
+                            break;
+                    }
+                } else {
+                    console.log('no .tbody-container found for', counties[i].innerHTML);
+                }
+
+            }
+
+
+
+        })
+
+
+
+
+    //}
+
+
+
+
+
+<!--new column class="apartment-card p-0 box-shadow mb-4 align-items-stretch col-12 offset-0 d-flex col-lg-4 justify-content-center align-items-center flex-column"-->
+
+
+<div class="row">
+    <div class="col-12 offset-0 justify-content-center align-content-center">
+
+        <a href="https://www.lakewoodpointeapts.com/" class="text-lg font-weight-bold px-3 pt-3" target="_blank">Lakewood Pointe Apartments</a>
+        <div class="countyName font-weight-medium py-1 px-3">Orange County</div>
+
+        <div class="d-flex pt-2 px-3">
+            <div class="pr-2">
+                <img alt="map-pin-icon" class="map-pin-icon" width="16px" src="https://resource.rentcafe.com/image/upload/f_auto,q_auto/s3//2/82930/location-dot-solid.png">
+            </div>
+            <div>
+                <!--Address Section -->
+                <a href="https://maps.app.goo.gl/tBKmjHgbQTgWLYKH7" class="font-weight-medium" target="_blank">11106 Lakewood Pointe Dr<br>
+                    Seffner, FL 33584</a>
+            </div>
+        </div>
+
+        <!--Bed Section -->
+        <div class="unit-details d-flex justify-content-between font-weight-medium pt-2 px-3">
+            <div class="mr-2">
+                <img alt="bed-icon" class="bed-icon mr-2" width="22px" src="https://cdngeneralcf.rentcafe.com/dmslivecafe/2/82930/bed-icon.png">4 Beds</div>
+
+            <div class="mr-2"><img alt="bathroom-icon" class="bathroom-icon mr-2" width="19px" src="https://cdngeneralcf.rentcafe.com/dmslivecafe/2/82930/bath-icon.png">3 Baths</div>
+
+            <div class="mr-2">Rent:<img alt="dollar-sign-icon" class="dollar-sign-icon mx-2" width="8px" src="https://cdngeneralcf.rentcafe.com/dmslivecafe/2/82930/dollar-sign-solid.png">1,476</div>
+        </div>
+
+        <!--Admin Details -->
+        <div class="admin-details font-weight-medium text-left pt-2 px-3">
+            <p class="mb-1">Deposit Starting at: $1,250</p>
+
+            <p class="mb-1">Application Fee: $90</p>
+        </div>
+        <div class="cta text-center justify-content-between pt-3">
+            <h2 class="eligibility-title accordion-container btn btn-hover-primary box-shadow" onclick="toggleAccordion('orange1')">
+                View Income Restrictions
+            </h2>
+            <div aria-label="close" class="accordion-content" id="orange1">
+                <span class="close-btn-x" onclick="toggleAccordion('orange1')">x</span>
+
+                <p class="table-title">Income Eligibility Requirements</p><table class="table">
+                <thead class="table-head-new">
+                <tr>
+
+                </tr>
+                <tr class="tr-top-new">
+                    <th class="header-new" scope="col">Household Size</th>
+                    <th class="header-new" scope="col">
+                        Max Allowable Household Income
+                    </th>
+                </tr>
+                </thead>
+            </table>
+
+                <table class="tbody-container table"></table>
+            </div>
+
+            <div class="ysi-button-widget ysi-button-wrapper m-auto text-center pt-2">
+                <!--Update the button link below. You don't need to update the date-->
+                <a class="btn btn-hover-primary btn-dark" href="https://www.wickhamclubapt.com/letsgetstarted" style="border-radius: 10px !important" target="_blank" rel="noopener">
+                    Get Started
+                    <span class="sr-only">Opens in a new tab</span>
+                </a>
+            </div>
+            <p class="date-updated pt-3 pb-2">
+                Updated:10/18/24.<br>See website for pricing details.
+            </p>
+        </div>
+    </div>
+</div>
