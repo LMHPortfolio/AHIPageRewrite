@@ -16,105 +16,104 @@ if (location.pathname === "/availableaffordablehousing-centralflorida" || locati
         }
     }
 
-    const centralTable = [
+     const centralTable = [
 
-        { 'householdSize': '1', 'income': '$36,900' },
-        { 'householdSize': '2', 'income': '$42,180' },
-        { 'householdSize': '3', 'income': '$47,460' },
-        { 'householdSize': '4', 'income': '$52,680' },
-        { 'householdSize': '5', 'income': '$56,940' },
-        { 'householdSize': '6', 'income': '$61,140' },
-        { 'householdSize': '7', 'income': '$65,340' },
-        { 'householdSize': '8', 'income': '$69,540' },
-    ];
+            { householdSize: "1", income: "$40,560" },
+            { householdSize: "2", income: "$46,320" },
+            { householdSize: "3", income: "$52,140" },
+            { householdSize: "4", income: "$57,900" },
+            { householdSize: "5", income: "$62,580" },
+            { householdSize: "6", income: "$67,200" },
+            { householdSize: "7", income: "$71,820" },
+            { householdSize: "8", income: "$76,440" },
+        ];
 
-    const sumterTable = [
+        const sumterTable = [
 
-        { 'householdSize': '1', 'income': '$33,480' },
-        { 'householdSize': '2', 'income': '$38,280' },
-        { 'householdSize': '3', 'income': '$43,080' },
-        { 'householdSize': '4', 'income': '$47,820' },
-        { 'householdSize': '5', 'income': '$51,660' },
-        { 'householdSize': '6', 'income': '$55,500' },
-        { 'householdSize': '7', 'income': '$59,340' },
-        { 'householdSize': '8', 'income': '$63,180' },
-    ];
+            { householdSize: "1", income: "$36,780" },
+            { householdSize: "2", income: "$42,060" },
+            { householdSize: "3", income: "$47,340" },
+            { householdSize: "4", income: "$52,560" },
+            { householdSize: "5", income: "$56,820" },
+            { householdSize: "6", income: "$61,020" },
+            { householdSize: "7", income: "$65,220" },
+            { householdSize: "8", income: "$69,420" },
+        ];
 
-/*eastTable contains the values for Martin and St Lucie Counties:*/
-    const martinStLucieTable = [
+        /*eastTable contains the values for Martin and St Lucie Counties:*/
+        const martinStLucieTable = [
 
-        { 'householdSize': '1', 'income': '$35,580' },
-        { 'householdSize': '2', 'income': '$40,680' },
-        { 'householdSize': '3', 'income': '$45,780' },
-        { 'householdSize': '4', 'income': '$50,820' },
-        { 'householdSize': '5', 'income': '$54,900' },
-        { 'householdSize': '6', 'income': '$58,980' },
-        { 'householdSize': '7', 'income': '$63,060' },
-        { 'householdSize': '8', 'income': '$67,140' },
-    ];
-
-
-    const volusiaTable = [
-
-        { 'householdSize': '1', 'income': '$32,520' },
-        { 'householdSize': '2', 'income': '$37,200' },
-        { 'householdSize': '3', 'income': '$41,820' },
-        { 'householdSize': '4', 'income': '$46,440' },
-        { 'householdSize': '5', 'income': '$50,160' },
-        { 'householdSize': '6', 'income': '$53,880' },
-        { 'householdSize': '7', 'income': '$57,680' },
-        { 'householdSize': '8', 'income': '$61,320' },
-    ];
-    const brevardTable = [
-
-        { 'householdSize': '1', 'income': '$36,120' },
-        { 'householdSize': '2', 'income': '$41,280' },
-        { 'householdSize': '3', 'income': '$46,440' },
-        { 'householdSize': '4', 'income': '$51,600' },
-        { 'householdSize': '5', 'income': '$55,740' },
-        { 'householdSize': '6', 'income': '$59,880' },
-        { 'householdSize': '7', 'income': '$64,020' },
-        { 'householdSize': '8', 'income': '$68,160' },
-    ];
-
-    const flaglerTable = [
-
-        { 'householdSize': '1', 'income': '$33,180' },
-        { 'householdSize': '2', 'income': '$37,920' },
-        { 'householdSize': '3', 'income': '$42,660' },
-        { 'householdSize': '4', 'income': '$47,400' },
-        { 'householdSize': '5', 'income': '$51,240' },
-        { 'householdSize': '6', 'income': '$55,020' },
-        { 'householdSize': '7', 'income': '$58,800' },
-        { 'householdSize': '8', 'income': '$62,580' },
-    ];
-
-    /*Below is where you would update the values for eligibility tables. You only need to update the value in the income column and not any of the functions below */
-
-    const westTable = [
-
-        { 'householdSize': '1', 'income': '$36,540' },
-        { 'householdSize': '2', 'income': '$41,760' },
-        { 'householdSize': '3', 'income': '$46,980' },
-        { 'householdSize': '4', 'income': '$52,140' },
-        { 'householdSize': '5', 'income': '$56,340' },
-        { 'householdSize': '6', 'income': '$60,540' },
-        { 'householdSize': '7', 'income': '$64,680' },
-        { 'householdSize': '8', 'income': '$68,880' },
-    ];
+            { householdSize: "1", income: "$38,520" },
+            { householdSize: "2", income: "$44,040" },
+            { householdSize: "3", income: "$49,560" },
+            { householdSize: "4", income: "$55,020" },
+            { householdSize: "5", income: "$59,460" },
+            { householdSize: "6", income: "$63,840" },
+            { householdSize: "7", income: "$68,280" },
+            { householdSize: "8", income: "$72,660" },
+        ];
 
 
-    const sarasotaTable = [
+        const volusiaTable = [
 
-        { 'householdSize': '1', 'income': '$38,400' },
-        { 'householdSize': '2', 'income': '$43,920' },
-        { 'householdSize': '3', 'income': '$49,380' },
-        { 'householdSize': '4', 'income': '$54,840' },
-        { 'householdSize': '5', 'income': '$59,280' },
-        { 'householdSize': '6', 'income': '$63,660' },
-        { 'householdSize': '7', 'income': '$68,040' },
-        { 'householdSize': '8', 'income': '$72,420' },
-    ];
+            { householdSize: "1", income: "$34,800" },
+            { householdSize: "2", income: "$39,780" },
+            { householdSize: "3", income: "$44,760" },
+            { householdSize: "4", income: "$49,680" },
+            { householdSize: "5", income: "$53,700" },
+            { householdSize: "6", income: "$57,660" },
+            { householdSize: "7", income: "$61,620" },
+            { householdSize: "8", income: "$65,580" },
+        ];
+        const brevardTable = [
+
+            { householdSize: "1", income: "$39,720" },
+            { householdSize: "2", income: "$45,360" },
+            { householdSize: "3", income: "$51,060" },
+            { householdSize: "4", income: "$56,760" },
+            { householdSize: "5", income: "$61,260" },
+            { householdSize: "6", income: "$65,820" },
+            { householdSize: "7", income: "$70,380" },
+            { householdSize: "8", income: "$74,940" },
+        ];
+
+        const flaglerTable = [
+
+            { householdSize: "1", income: "$36,480" },
+            { householdSize: "2", income: "$41,700" },
+            { householdSize: "3", income: "$46,920" },
+            { householdSize: "4", income: "$52,140" },
+            { householdSize: "5", income: "$56,340" },
+            { householdSize: "6", income: "$60,480" },
+            { householdSize: "7", income: "$64,680" },
+            { householdSize: "8", income: "$68,820" },
+        ];
+
+        /*Below is where you would update the values for eligibility tables. You only need to update the value in the income column and not any of the functions below */
+
+        const westTable = [
+            { householdSize: "1", income: "$40,140" },
+            { householdSize: "2", income: "$45,840" },
+            { householdSize: "3", income: "$51,600" },
+            { householdSize: "4", income: "$57,300" },
+            { householdSize: "5", income: "$61,920" },
+            { householdSize: "6", income: "$66,480" },
+            { householdSize: "7", income: "$71,100" },
+            { householdSize: "8", income: "$75,660" },
+        ];
+
+
+        const sarasotaTable = [
+
+            { householdSize: "1", income: "$42,240" },
+            { householdSize: "2", income: "$48,240" },
+            { householdSize: "3", income: "$54,300" },
+            { householdSize: "4", income: "$60,300" },
+            { householdSize: "5", income: "$65,160" },
+            { householdSize: "6", income: "$69,960" },
+            { householdSize: "7", income: "$74,820" },
+            { householdSize: "8", income: "$79,620" },
+        ];
 
 
 
